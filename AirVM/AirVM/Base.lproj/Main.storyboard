@@ -670,18 +670,18 @@
             <objects>
                 <viewController id="XfG-lQ-9wD" customClass="AirVMViewController" sceneMemberID="viewController">
                     <view key="view" id="m2S-Jp-Qdl">
-                        <rect key="frame" x="0.0" y="0.0" width="480" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="634" height="480"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <splitView arrangesAllSubviews="NO" dividerStyle="paneSplitter" vertical="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mEf-oq-37Q">
-                                <rect key="frame" x="0.0" y="0.0" width="480" height="464"/>
+                                <rect key="frame" x="0.0" y="0.0" width="634" height="464"/>
                                 <subviews>
                                     <customView fixedFrame="YES" id="4ng-M9-wdf">
-                                        <rect key="frame" x="0.0" y="0.0" width="110" height="464"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="146" height="464"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                     </customView>
                                     <customView fixedFrame="YES" id="DOQ-zQ-Dh9" customClass="PersonClusterView">
-                                        <rect key="frame" x="120" y="0.0" width="360" height="464"/>
+                                        <rect key="frame" x="156" y="0.0" width="478" height="464"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                     </customView>
                                 </subviews>
@@ -704,7 +704,7 @@
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-114" y="792"/>
+            <point key="canvasLocation" x="152" y="828"/>
         </scene>
     </scenes>
 </document>

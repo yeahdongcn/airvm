@@ -1,0 +1,344 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		9C1A8BB91D145DF2006218C8 /* AirVMViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C1A8BB81D145DF2006218C8 /* AirVMViewController.m */; };
+		9C1A8BBC1D145E02006218C8 /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C1A8BBB1D145E02006218C8 /* Person.m */; };
+		9C1A8BC21D145E13006218C8 /* PersonClusterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C1A8BBE1D145E13006218C8 /* PersonClusterView.m */; };
+		9C1A8BC31D145E13006218C8 /* PersonView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C1A8BC01D145E13006218C8 /* PersonView.m */; };
+		9C1A8BC41D145E13006218C8 /* PersonView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C1A8BC11D145E13006218C8 /* PersonView.xib */; };
+		9C1A8BC61D145E25006218C8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9C1A8BC51D145E25006218C8 /* Assets.xcassets */; };
+		9C1A8BCA1D145E4D006218C8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C1A8BC71D145E4D006218C8 /* Main.storyboard */; };
+		9C1A8BCB1D145E4D006218C8 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9C1A8BC91D145E4D006218C8 /* Info.plist */; };
+		9C1A8BCF1D145E61006218C8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C1A8BCD1D145E61006218C8 /* AppDelegate.m */; };
+		9C1A8BD01D145E61006218C8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C1A8BCE1D145E61006218C8 /* main.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		9C1A8BB71D145DF2006218C8 /* AirVMViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AirVMViewController.h; path = AirVM/UI/Controller/AirVMViewController.h; sourceTree = SOURCE_ROOT; };
+		9C1A8BB81D145DF2006218C8 /* AirVMViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AirVMViewController.m; path = AirVM/UI/Controller/AirVMViewController.m; sourceTree = SOURCE_ROOT; };
+		9C1A8BBA1D145E02006218C8 /* Person.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Person.h; path = AirVM/UI/Model/Person.h; sourceTree = SOURCE_ROOT; };
+		9C1A8BBB1D145E02006218C8 /* Person.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Person.m; path = AirVM/UI/Model/Person.m; sourceTree = SOURCE_ROOT; };
+		9C1A8BBD1D145E13006218C8 /* PersonClusterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PersonClusterView.h; path = AirVM/UI/View/PersonClusterView.h; sourceTree = SOURCE_ROOT; };
+		9C1A8BBE1D145E13006218C8 /* PersonClusterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PersonClusterView.m; path = AirVM/UI/View/PersonClusterView.m; sourceTree = SOURCE_ROOT; };
+		9C1A8BBF1D145E13006218C8 /* PersonView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PersonView.h; path = AirVM/UI/View/PersonView.h; sourceTree = SOURCE_ROOT; };
+		9C1A8BC01D145E13006218C8 /* PersonView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PersonView.m; path = AirVM/UI/View/PersonView.m; sourceTree = SOURCE_ROOT; };
+		9C1A8BC11D145E13006218C8 /* PersonView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = PersonView.xib; path = AirVM/UI/View/PersonView.xib; sourceTree = SOURCE_ROOT; };
+		9C1A8BC51D145E25006218C8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = AirVM/Assets.xcassets; sourceTree = SOURCE_ROOT; };
+		9C1A8BC81D145E4D006218C8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = AirVM/Base.lproj/Main.storyboard; sourceTree = SOURCE_ROOT; };
+		9C1A8BC91D145E4D006218C8 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = AirVM/Info.plist; sourceTree = SOURCE_ROOT; };
+		9C1A8BCC1D145E61006218C8 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = AirVM/AppDelegate.h; sourceTree = SOURCE_ROOT; };
+		9C1A8BCD1D145E61006218C8 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = AirVM/AppDelegate.m; sourceTree = SOURCE_ROOT; };
+		9C1A8BCE1D145E61006218C8 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = AirVM/main.m; sourceTree = SOURCE_ROOT; };
+		9C6977F11D14398900908CF5 /* AirVM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AirVM.app; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		9C6977EE1D14398900908CF5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		9C6977E81D14398900908CF5 = {
+			isa = PBXGroup;
+			children = (
+				9C6977F31D14398900908CF5 /* AirVM */,
+				9C6977F21D14398900908CF5 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		9C6977F21D14398900908CF5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9C6977F11D14398900908CF5 /* AirVM.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9C6977F31D14398900908CF5 /* AirVM */ = {
+			isa = PBXGroup;
+			children = (
+				9C1A8BC71D145E4D006218C8 /* Main.storyboard */,
+				9C1A8BC91D145E4D006218C8 /* Info.plist */,
+				9C69780A1D1439CD00908CF5 /* Controller */,
+				9C6978091D1439C700908CF5 /* Model */,
+				9C6978081D1439C000908CF5 /* View */,
+				9C1A8BC51D145E25006218C8 /* Assets.xcassets */,
+				9C6977F71D14398900908CF5 /* Supporting Files */,
+			);
+			name = AirVM;
+			path = FusionAir;
+			sourceTree = "<group>";
+		};
+		9C6977F71D14398900908CF5 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				9C1A8BCC1D145E61006218C8 /* AppDelegate.h */,
+				9C1A8BCD1D145E61006218C8 /* AppDelegate.m */,
+				9C1A8BCE1D145E61006218C8 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		9C6978081D1439C000908CF5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				9C1A8BBD1D145E13006218C8 /* PersonClusterView.h */,
+				9C1A8BBE1D145E13006218C8 /* PersonClusterView.m */,
+				9C1A8BBF1D145E13006218C8 /* PersonView.h */,
+				9C1A8BC01D145E13006218C8 /* PersonView.m */,
+				9C1A8BC11D145E13006218C8 /* PersonView.xib */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		9C6978091D1439C700908CF5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				9C1A8BBA1D145E02006218C8 /* Person.h */,
+				9C1A8BBB1D145E02006218C8 /* Person.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		9C69780A1D1439CD00908CF5 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				9C1A8BB71D145DF2006218C8 /* AirVMViewController.h */,
+				9C1A8BB81D145DF2006218C8 /* AirVMViewController.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		9C6977F01D14398900908CF5 /* AirVM */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9C6978051D14398900908CF5 /* Build configuration list for PBXNativeTarget "AirVM" */;
+			buildPhases = (
+				9C6977ED1D14398900908CF5 /* Sources */,
+				9C6977EE1D14398900908CF5 /* Frameworks */,
+				9C6977EF1D14398900908CF5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AirVM;
+			productName = FusionAir;
+			productReference = 9C6977F11D14398900908CF5 /* AirVM.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		9C6977E91D14398900908CF5 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = VMware;
+				TargetAttributes = {
+					9C6977F01D14398900908CF5 = {
+						CreatedOnToolsVersion = 7.2.1;
+					};
+				};
+			};
+			buildConfigurationList = 9C6977EC1D14398900908CF5 /* Build configuration list for PBXProject "AirVM" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 9C6977E81D14398900908CF5;
+			productRefGroup = 9C6977F21D14398900908CF5 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				9C6977F01D14398900908CF5 /* AirVM */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		9C6977EF1D14398900908CF5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9C1A8BCB1D145E4D006218C8 /* Info.plist in Resources */,
+				9C1A8BCA1D145E4D006218C8 /* Main.storyboard in Resources */,
+				9C1A8BC41D145E13006218C8 /* PersonView.xib in Resources */,
+				9C1A8BC61D145E25006218C8 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		9C6977ED1D14398900908CF5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9C1A8BBC1D145E02006218C8 /* Person.m in Sources */,
+				9C1A8BB91D145DF2006218C8 /* AirVMViewController.m in Sources */,
+				9C1A8BC21D145E13006218C8 /* PersonClusterView.m in Sources */,
+				9C1A8BC31D145E13006218C8 /* PersonView.m in Sources */,
+				9C1A8BD01D145E61006218C8 /* main.m in Sources */,
+				9C1A8BCF1D145E61006218C8 /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		9C1A8BC71D145E4D006218C8 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9C1A8BC81D145E4D006218C8 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		9C6978031D14398900908CF5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		9C6978041D14398900908CF5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		9C6978061D14398900908CF5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "$(SRCROOT)/AirVM/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.vmware.FusionAir;
+				PRODUCT_NAME = AirVM;
+			};
+			name = Debug;
+		};
+		9C6978071D14398900908CF5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "$(SRCROOT)/AirVM/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.vmware.FusionAir;
+				PRODUCT_NAME = AirVM;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		9C6977EC1D14398900908CF5 /* Build configuration list for PBXProject "AirVM" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9C6978031D14398900908CF5 /* Debug */,
+				9C6978041D14398900908CF5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9C6978051D14398900908CF5 /* Build configuration list for PBXNativeTarget "AirVM" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9C6978061D14398900908CF5 /* Debug */,
+				9C6978071D14398900908CF5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 9C6977E91D14398900908CF5 /* Project object */;
+}
