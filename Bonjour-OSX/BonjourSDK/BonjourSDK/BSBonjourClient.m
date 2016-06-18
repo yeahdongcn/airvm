@@ -34,7 +34,6 @@
 
 @implementation BSBonjourClient
 
-
 #pragma mark -
 #pragma mark Initialization
 - (id)initWithServiceType:(NSString *)serviceType transportProtocol:(NSString *)transportProtocol delegate:(id<BSBonjourClientDelegate>)delegate {
@@ -84,14 +83,14 @@
 #pragma mark Connection & Data Transmission
 - (void)connectToServiceAtIndex:(NSInteger)index completetionBlock:(ConnectSuccess)connectSuccess {
     NSNetService *service = [_foundServices objectAtIndex:index];
-    [self connectToServiceAtIndex:index completetionBlock:connectSuccess];
+    [self connectToService:service completetionBlock:connectSuccess];
 }
 
 - (void)connectToService:(NSNetService *)service completetionBlock:(ConnectSuccess)connectSuccess {
     if (_connection) {
         [self disconnectFromService];
     }
-
+    
     _connection = [[BSBonjourConnection alloc] initWithNetService:service];
     _connection.delegate = self;
     self.connectsuccess = connectSuccess;
@@ -113,7 +112,9 @@
 #pragma mark -
 #pragma mark BSBonjourConnectionDelegate
 - (void)connectionEstablished:(BSBonjourConnection *)connection {
+    
     self.connectsuccess(connection);
+    
     if (self.delegate) {
         [self.delegate connectionEstablished:connection];
     }

@@ -6,16 +6,26 @@
 //  Copyright (c) 2014年 Peng Sun. All rights reserved.
 //
 
+/*
+ 
+ 1. start BSBonjourServer
+ 2. start BSBonjourClient
+ 3. BSBonjourClient startSearch, get all friends in AirVMManager
+ 4. Using sendVM:TargetVM to send local VM VNC info to others
+ 5. Others will get reply in receivedData:(NSData *)data, parse data to vnc info
+ 
+ 
+ */
+
 #import "AppDelegate.h"
+
+#include <ifaddrs.h>
+#include <arpa/inet.h>
 
 #import <BonjourSDK/BonjourSDK.h>
 
 #import "BJPublishActionButtonTransformer.h"
 #import "BJPublishActionButtonEnableTransformer.h"
-
-
-#include <ifaddrs.h>
-#include <arpa/inet.h>
 
 #define kServiceName     @"airvm"
 #define kServiceProtocol @"tcp"
@@ -30,7 +40,6 @@
 
 @property (nonatomic, strong) BSBonjourServer *bonjourServer;
 @property (nonatomic, strong) BSBonjourClient *bonjourClient;
-
 
 @property (nonatomic, assign) ServiceStartStatus status;
 @property (nonatomic, strong) NSString *         statusText;
@@ -60,16 +69,8 @@
 
     self.status = Stopped;
     self.statusText = @"Not Published";
-    
-    
     self.bonjourClient = [[BSBonjourClient alloc] initWithServiceType:kServiceName transportProtocol:kServiceProtocol delegate:self];
     [self.bonjourClient startSearching];
-
-    //TEST CODE
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        [[AirVMManager sharedInstance] dump];
-        [self sendVM:[[[AirVMManager sharedInstance] getAllAirVMs] objectAtIndex:0]];
-    });
 }
 
 - (void)applicationWillTerminate:(NSNotification *)aNotification {
@@ -79,6 +80,7 @@
 }
 
 - (IBAction)toggleAction:(id)sender {
+    
     if (self.status == Started) {
         self.status = Stopping;
         [self stopServer];
@@ -124,12 +126,13 @@
 }
 
 - (void)connectionEstablished:(BSBonjourConnection *)connection {
-//    [self sendOpenVNCCommand:connection];
+//    [connection sendData:[self.editor.string dataUsingEncoding:NSUTF8StringEncoding]];
     NSLog(@"connectionEstablished");
 }
 
 - (void)connectionAttemptFailed:(BSBonjourConnection *)connection {
     NSLog(@"Connection Failed...");
+    [self.bonjourClient startSearching];
 }
 
 - (void)connectionTerminated:(BSBonjourConnection *)connection {
@@ -143,42 +146,46 @@
     } else { // accept share from others to open vnc client
         
     }
-    
     self.editor.string = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
-    
-    //post notification if receive a open vnc data
 }
 
 #pragma mark BSBonjourClientDelegate
--(void) searchStarted {
-    NSLog(@"client search started!");
+
+- (void)searchStarted {
+    
+}
+- (void)searchFailed:(NSError *)error {
+    
+}
+- (void)searchStopped {
+    
 }
 
--(void)updateServiceList {
-    NSLog(@"client updateServiceList!");
+- (void)updateServiceList {
     
+    [[AirVMManager sharedInstance] resetAirVMs];
     for (NSNetService* service in self.bonjourClient.foundServices) {
-        //TODO connect serveral services!!!
-        [self.bonjourClient connectToService:service completetionBlock:^(BSBonjourConnection *connection) {
-            
-        }];
+        AirVM* vm = [[AirVM alloc] init];
+        vm.machineName = service.name;
+        vm.netService = service;
+        [[AirVMManager sharedInstance] addAirVM:vm];
     }
 }
 
-
 #pragma mark util
-
 - (void)sendOpenVNCCommand:(BSBonjourConnection *)connection {
-    // send current vm information to others
+//     send current vm information to others
     NSDictionary* dic = @{@"op":@"airvm",@"machineName": [[NSHost currentHost] localizedName], @"vncIP":[self getIPAddress], @"vncPort" : @"9547"};
-    NSData *data =    [NSJSONSerialization dataWithJSONObject:dic options:NSJSONWritingPrettyPrinted error:nil];
+    NSData *data =   [NSJSONSerialization dataWithJSONObject:dic options:NSJSONWritingPrettyPrinted error:nil];
     [connection sendData:data];
+    
 }
 
 // send connection info to target computer, here we use AirVM map to target computer as well
 -(void) sendVM:(AirVM*) vm {
-    [self.bonjourClient connectToService:self.bonjourClient.foundServices[0] completetionBlock:^(BSBonjourConnection *connection) {
+    [self.bonjourClient connectToService:vm.netService completetionBlock:^(BSBonjourConnection *connection) {
         [self sendOpenVNCCommand:connection];
+        [self.bonjourClient startSearching];
     }];
 }
 

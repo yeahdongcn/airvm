@@ -1,1 +1,7 @@
 Bonjour-OSX is a Bonjour test project, Need to merge to UI project
+
+1. start BSBonjourServer
+2. start BSBonjourClient
+3. BSBonjourClient startSearch, get all friends in AirVMManager
+4. Using sendVM:TargetVM to send local VM VNC info to others
+5. Others will get reply in receivedData:(NSData *)data, parse data to vnc info

@@ -9,11 +9,12 @@
 #import <Foundation/Foundation.h>
 #import "BSBonjourConnection.h"
 
+
+typedef void (^ConnectSuccess)(BSBonjourConnection* connection);
+
 #define kBSBonjourClientDomain @"BSBonjourBrowse"
 #define kBSBonjourClientErrorBrowseFailed   -1
 #define kBSBonjourClientErrorConnectFailed  -2
-
-typedef void (^ConnectSuccess)(BSBonjourConnection* connection);
 
 @protocol BSBonjourClientDelegate <NSObject>
 
@@ -36,12 +37,12 @@ typedef void (^ConnectSuccess)(BSBonjourConnection* connection);
     BSBonjourConnection *_connection;
 }
 
+@property(nonatomic) ConnectSuccess connectsuccess;
+
 #pragma mark -
 #pragma mark Bonjour Service Type Naming
 @property (nonatomic, strong) NSString *serviceType;
 @property (nonatomic, strong) NSString *transportProtocol;
-@property(nonatomic) ConnectSuccess connectsuccess;
-
 - (NSString *)combinedType;
 
 #pragma mark -
