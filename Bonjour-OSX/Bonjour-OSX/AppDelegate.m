@@ -66,10 +66,10 @@
     [self.bonjourClient startSearching];
 
     //TEST CODE
-//    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-//        [[AirVMManager sharedInstance] dump];
-//        [self sendVM:[[[AirVMManager sharedInstance] getAllAirVMs] objectAtIndex:0]];
-//    });
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [[AirVMManager sharedInstance] dump];
+        [self sendVM:[[[AirVMManager sharedInstance] getAllAirVMs] objectAtIndex:0]];
+    });
 }
 
 - (void)applicationWillTerminate:(NSNotification *)aNotification {
@@ -124,6 +124,7 @@
 }
 
 - (void)connectionEstablished:(BSBonjourConnection *)connection {
+//    [self sendOpenVNCCommand:connection];
     NSLog(@"connectionEstablished");
 }
 
@@ -158,7 +159,9 @@
     
     for (NSNetService* service in self.bonjourClient.foundServices) {
         //TODO connect serveral services!!!
-        [self.bonjourClient connectToService:service];
+        [self.bonjourClient connectToService:service completetionBlock:^(BSBonjourConnection *connection) {
+            
+        }];
     }
 }
 
@@ -174,7 +177,9 @@
 
 // send connection info to target computer, here we use AirVM map to target computer as well
 -(void) sendVM:(AirVM*) vm {
-    [self.bonjourClient connectToService:vm.netService];
+    [self.bonjourClient connectToService:self.bonjourClient.foundServices[0] completetionBlock:^(BSBonjourConnection *connection) {
+        [self sendOpenVNCCommand:connection];
+    }];
 }
 
 - (NSString *)getIPAddress {

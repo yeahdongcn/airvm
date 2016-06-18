@@ -13,6 +13,8 @@
 #define kBSBonjourClientErrorBrowseFailed   -1
 #define kBSBonjourClientErrorConnectFailed  -2
 
+typedef void (^ConnectSuccess)(BSBonjourConnection* connection);
+
 @protocol BSBonjourClientDelegate <NSObject>
 
 - (void)searchStarted;
@@ -38,6 +40,8 @@
 #pragma mark Bonjour Service Type Naming
 @property (nonatomic, strong) NSString *serviceType;
 @property (nonatomic, strong) NSString *transportProtocol;
+@property(nonatomic) ConnectSuccess connectsuccess;
+
 - (NSString *)combinedType;
 
 #pragma mark -
@@ -59,8 +63,8 @@
 
 #pragma mark -
 #pragma mark Connection & Data Transmission
-- (void)connectToServiceAtIndex:(NSInteger)index;
-- (void)connectToService:(NSNetService *)service;
+- (void)connectToServiceAtIndex:(NSInteger)index completetionBlock:(ConnectSuccess)connectSuccess;
+- (void)connectToService:(NSNetService *)service completetionBlock:(ConnectSuccess)connectSuccess;
 - (void)sendData:(NSData *)data;
 - (void)disconnectFromService;
 

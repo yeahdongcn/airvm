@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "BSBonjourConnection.h"
 
 @interface AirVM : NSObject
 
@@ -14,6 +15,7 @@
 @property(nonatomic) NSString* vncIP;
 @property(nonatomic) NSString* vncPort;
 @property(nonatomic) NSNetService* netService;
+@property(nonatomic) BSBonjourConnection* connection;
 
 @end
 
