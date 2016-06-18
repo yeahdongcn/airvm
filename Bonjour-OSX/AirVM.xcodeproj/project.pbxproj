@@ -131,7 +131,7 @@
 		DFBFD7DB19E8CCD9006BD016 = {
 			isa = PBXGroup;
 			children = (
-				DFBFD7E619E8CCD9006BD016 /* Bonjour-OSX */,
+				DFBFD7E619E8CCD9006BD016 /* AirVM */,
 				DF42255919EA4EE0004C893D /* BonjourSDK */,
 				DF9552AA19E918CA00628D82 /* Frameworks */,
 				DFBFD7E519E8CCD9006BD016 /* Products */,
@@ -146,7 +146,7 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		DFBFD7E619E8CCD9006BD016 /* Bonjour-OSX */ = {
+		DFBFD7E619E8CCD9006BD016 /* AirVM */ = {
 			isa = PBXGroup;
 			children = (
 				E87B65851D156AE800135348 /* View */,
@@ -160,6 +160,7 @@
 				DFBFD7F019E8CCD9006BD016 /* MainMenu.xib */,
 				DFBFD7E719E8CCD9006BD016 /* Supporting Files */,
 			);
+			name = AirVM;
 			path = "Bonjour-OSX";
 			sourceTree = "<group>";
 		};
