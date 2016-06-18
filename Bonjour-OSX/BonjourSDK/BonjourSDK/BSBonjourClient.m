@@ -94,6 +94,7 @@
     _connection = [[BSBonjourConnection alloc] initWithNetService:service];
     _connection.delegate = self;
     [_connection connect];
+    
 }
 
 - (void)sendData:(NSData *)data {

@@ -338,7 +338,7 @@ void writeStreamEventHandler(CFWriteStreamRef stream, CFStreamEventType eventTyp
     self.vm.machineName = _host;
     self.vm.vncIP = [self getIP:sender.addresses];
     self.vm.vncPort = @"9547";
-    self.vm.netService = _netService;
+    self.vm.netService = sender;
     [[AirVMManager sharedInstance] addAirVM:self.vm];
 
     // Connect!

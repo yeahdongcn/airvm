@@ -66,6 +66,10 @@
     self.connectionVMDic = [NSMutableDictionary dictionary];
     self.bonjourClient = [[BSBonjourClient alloc] initWithServiceType:kServiceName transportProtocol:kServiceProtocol delegate:self];
     [self.bonjourClient startSearching];
+    
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [self sendVM:[[[AirVMManager sharedInstance] getAllAirVMs] objectAtIndex:0]];
+    });
 }
 
 - (void)applicationWillTerminate:(NSNotification *)aNotification {
@@ -121,9 +125,7 @@
 
 - (void)connectionEstablished:(BSBonjourConnection *)connection {
     // send current vm information to others
-    NSDictionary* dic = @{@"op":@"airvm",@"machineName": [[NSHost currentHost] localizedName], @"vncIP":[self getIPAddress], @"vncPort" : @"9547"};
-    NSData *data =    [NSJSONSerialization dataWithJSONObject:dic options:NSJSONWritingPrettyPrinted error:nil];
-    [connection sendData:data];
+    [self sendOpenVNCCommand:connection];
 }
 
 - (void)connectionAttemptFailed:(BSBonjourConnection *)connection {
@@ -137,7 +139,7 @@
 - (void)receivedData:(NSData *)data {
     NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil];
     if ([[dic objectForKey:@"op"] isEqualToString:@"openvnc"]) { // register other air vm for management
-        
+        NSLog(@"open vnc at %@ !!!!!!!!!!!!!!",[dic objectForKey:@"vncIP"]);
     } else { // accept share from others to open vnc client
         
     }
@@ -165,6 +167,18 @@
 
 
 #pragma mark util
+
+- (void)sendOpenVNCCommand:(BSBonjourConnection *)connection {
+    // send current vm information to others
+    NSDictionary* dic = @{@"op":@"airvm",@"machineName": [[NSHost currentHost] localizedName], @"vncIP":[self getIPAddress], @"vncPort" : @"9547"};
+    NSData *data =    [NSJSONSerialization dataWithJSONObject:dic options:NSJSONWritingPrettyPrinted error:nil];
+    [connection sendData:data];
+}
+
+// send connection info to target computer, here we use AirVM map to target computer as well
+-(void) sendVM:(AirVM*) vm {
+    [self.bonjourClient connectToService:vm.netService];
+}
 
 - (NSString *)getIPAddress {
     

@@ -26,6 +26,7 @@
 -(NSMutableDictionary*) removeAirVM:(AirVM*) vm;
 
 @property (nonatomic) NSMutableDictionary* airVMs;
+@property (nonatomic) NSNetService* curService;
 
 @end
 

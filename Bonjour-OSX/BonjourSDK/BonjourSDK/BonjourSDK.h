@@ -9,3 +9,4 @@
 #import <BonjourSDK/BSBonjourConnection.h>
 #import <BonjourSDK/BSBonjourServer.h>
 #import <BonjourSDK/BSBonjourClient.h>
+#import <BonjourSDK/AirVMManager.h>
