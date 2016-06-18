@@ -21,6 +21,8 @@
 		DFFC3FE319F6A4AB00C17B1B /* BSBonjourConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = DFABBDCD19EF5889000D77E3 /* BSBonjourConnection.m */; };
 		DFFC3FE419F6A4AB00C17B1B /* BSBonjourServer.m in Sources */ = {isa = PBXBuildFile; fileRef = DFABBDC919EF57E3000D77E3 /* BSBonjourServer.m */; };
 		DFFC3FE519F6A4AB00C17B1B /* BSBonjourClient.m in Sources */ = {isa = PBXBuildFile; fileRef = DFABBDD119EF94F8000D77E3 /* BSBonjourClient.m */; };
+		E8FB17E81D1504110014743D /* AirVMManager.h in Headers */ = {isa = PBXBuildFile; fileRef = E8FB17E61D1504110014743D /* AirVMManager.h */; };
+		E8FB17E91D1504110014743D /* AirVMManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E8FB17E71D1504110014743D /* AirVMManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +37,8 @@
 		DFABBDD119EF94F8000D77E3 /* BSBonjourClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSBonjourClient.m; sourceTree = "<group>"; };
 		DFB9F59E19EA4CB4001F8A04 /* BonjourSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = BonjourSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DFB9F5A119EA4CB5001F8A04 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E8FB17E61D1504110014743D /* AirVMManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AirVMManager.h; sourceTree = "<group>"; };
+		E8FB17E71D1504110014743D /* AirVMManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AirVMManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +80,8 @@
 		DF7D1C9E19EA466300EB0487 /* BonjourSDK */ = {
 			isa = PBXGroup;
 			children = (
+				E8FB17E61D1504110014743D /* AirVMManager.h */,
+				E8FB17E71D1504110014743D /* AirVMManager.m */,
 				DF7D1CA119EA466300EB0487 /* BonjourSDK.h */,
 				DFABBDCC19EF5889000D77E3 /* BSBonjourConnection.h */,
 				DFABBDCD19EF5889000D77E3 /* BSBonjourConnection.m */,
@@ -120,6 +126,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DF7D1CA219EA466300EB0487 /* BonjourSDK.h in Headers */,
+				E8FB17E81D1504110014743D /* AirVMManager.h in Headers */,
 				DFABBDD219EF94F8000D77E3 /* BSBonjourClient.h in Headers */,
 				DFABBDCA19EF57E3000D77E3 /* BSBonjourServer.h in Headers */,
 				DFABBDCE19EF5889000D77E3 /* BSBonjourConnection.h in Headers */,
@@ -236,6 +243,7 @@
 				DFABBDCB19EF57E3000D77E3 /* BSBonjourServer.m in Sources */,
 				DFABBDCF19EF5889000D77E3 /* BSBonjourConnection.m in Sources */,
 				DFABBDD319EF94F8000D77E3 /* BSBonjourClient.m in Sources */,
+				E8FB17E91D1504110014743D /* AirVMManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

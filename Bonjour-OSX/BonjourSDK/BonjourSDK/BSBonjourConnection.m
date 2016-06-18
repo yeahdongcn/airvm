@@ -7,6 +7,8 @@
 //
 
 #import "BSBonjourConnection.h"
+#include <arpa/inet.h>
+#include "AirVMManager.h"
 
 void readStreamEventHandler(CFReadStreamRef stream, CFStreamEventType eventType, void *info);
 void writeStreamEventHandler(CFWriteStreamRef stream, CFStreamEventType eventType, void *info);
@@ -14,6 +16,8 @@ void writeStreamEventHandler(CFWriteStreamRef stream, CFStreamEventType eventTyp
 @interface BSBonjourConnection ()
 
 @property(nonatomic, assign) CFSocketNativeHandle connectedSocketHandle;
+
+@property (nonatomic, strong) AirVM* vm;
 
 - (void) clean;
 - (BOOL) setupSocketStreams;
@@ -210,6 +214,7 @@ void readStreamEventHandler(CFReadStreamRef stream, CFStreamEventType eventType,
         if ( !_readStreamOpen || !_writeStreamOpen ) {
             [self.delegate connectionAttemptFailed:self];
         } else {
+            [self terminateVM];
             [self.delegate connectionTerminated:self];
         }
     }
@@ -223,6 +228,7 @@ void readStreamEventHandler(CFReadStreamRef stream, CFStreamEventType eventType,
         CFIndex len = CFReadStreamRead(_readStream, buf, sizeof(buf));
         if ( len <= 0 ) {
             [self close];
+            [self terminateVM];
             [self.delegate connectionTerminated:self];
             return;
         }
@@ -261,6 +267,7 @@ void writeStreamEventHandler(CFWriteStreamRef stream, CFStreamEventType eventTyp
             [self.delegate connectionAttemptFailed:self];
         }
         else {
+            [self terminateVM];
             [self.delegate connectionTerminated:self];
         }
     }
@@ -284,6 +291,7 @@ void writeStreamEventHandler(CFWriteStreamRef stream, CFStreamEventType eventTyp
 
     if ( writtenBytes == -1 ) {
         [self close];
+        [self terminateVM];
         [self.delegate connectionTerminated:self];
 
         return;
@@ -322,15 +330,63 @@ void writeStreamEventHandler(CFWriteStreamRef stream, CFStreamEventType eventTyp
     // Save connection info
     _host = _netService.hostName;
     _port = _netService.port;
-
+    
     // Don't need the service anymore
     _netService = nil;
+    
+    self.vm = [[AirVM alloc] init];
+    self.vm.machineName = _host;
+    self.vm.vncIP = [self getIP:sender.addresses];
+    self.vm.vncPort = @"9547";
+    self.vm.netService = _netService;
+    [[AirVMManager sharedInstance] addAirVM:self.vm];
 
     // Connect!
     if ( ![self connect] ) {
         [self.delegate connectionAttemptFailed:self];
         [self close];
     }
+}
+
+-(void) terminateVM {
+    [[AirVMManager sharedInstance] removeAirVM:self.vm];
+}
+
+-(NSString*) getIP:(NSArray<NSData *> *) addresses {
+    char addressBuffer[INET6_ADDRSTRLEN];
+    
+    for (NSData *data in addresses)
+    {
+        memset(addressBuffer, 0, INET6_ADDRSTRLEN);
+        
+        typedef union {
+            struct sockaddr sa;
+            struct sockaddr_in ipv4;
+            struct sockaddr_in6 ipv6;
+        } ip_socket_address;
+        
+        ip_socket_address *socketAddress = (ip_socket_address *)[data bytes];
+        
+        if ((socketAddress->sa.sa_family == AF_INET))
+        {
+            const char *addressStr = inet_ntop(
+                                               socketAddress->sa.sa_family,
+                                               (socketAddress->sa.sa_family == AF_INET ? (void *)&(socketAddress->ipv4.sin_addr) : (void *)&(socketAddress->ipv6.sin6_addr)),
+                                               addressBuffer,
+                                               sizeof(addressBuffer));
+            
+            int port = ntohs(socketAddress->sa.sa_family == AF_INET ? socketAddress->ipv4.sin_port : socketAddress->ipv6.sin6_port);
+            
+            if (addressStr && port)
+            {
+                NSLog(@"Found service at %s:%d", addressStr, port);
+            }
+        }
+    }
+    
+    NSString *string_content = [[NSString alloc] initWithCString:(const char*)addressBuffer];
+
+    return string_content;
 }
 
 
