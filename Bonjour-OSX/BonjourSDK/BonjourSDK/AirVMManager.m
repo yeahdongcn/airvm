@@ -31,13 +31,18 @@ static AirVMManager* instance;
 }
 
 -(NSMutableDictionary*) addAirVM:(AirVM*) vm {
-    [instance.airVMs setObject:vm forKey:vm.vncIP];
+    [instance.airVMs setObject:vm forKey:vm.machineName];
     return instance.airVMs;
 }
 
 -(NSMutableDictionary*) removeAirVM:(AirVM*) vm {
-    [instance.airVMs removeObjectForKey:vm.vncIP];
+    // sometimes, we will get empty IP, then we use machine name as key,
+    [instance.airVMs removeObjectForKey:vm.machineName];
     return instance.airVMs;
+}
+
+-(void) dump {
+    NSLog( @"%@", instance.airVMs );
 }
 
 @end

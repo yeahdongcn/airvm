@@ -17,7 +17,7 @@
 #include <ifaddrs.h>
 #include <arpa/inet.h>
 
-#define kServiceName     @"share_editor"
+#define kServiceName     @"airvm"
 #define kServiceProtocol @"tcp"
 
 @interface AppDelegate () {
@@ -30,7 +30,6 @@
 
 @property (nonatomic, strong) BSBonjourServer *bonjourServer;
 @property (nonatomic, strong) BSBonjourClient *bonjourClient;
-@property (nonatomic, strong) NSMutableDictionary* connectionVMDic;
 
 
 @property (nonatomic, assign) ServiceStartStatus status;
@@ -63,13 +62,14 @@
     self.statusText = @"Not Published";
     
     
-    self.connectionVMDic = [NSMutableDictionary dictionary];
     self.bonjourClient = [[BSBonjourClient alloc] initWithServiceType:kServiceName transportProtocol:kServiceProtocol delegate:self];
     [self.bonjourClient startSearching];
-    
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        [self sendVM:[[[AirVMManager sharedInstance] getAllAirVMs] objectAtIndex:0]];
-    });
+
+    //TEST CODE
+//    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+//        [[AirVMManager sharedInstance] dump];
+//        [self sendVM:[[[AirVMManager sharedInstance] getAllAirVMs] objectAtIndex:0]];
+//    });
 }
 
 - (void)applicationWillTerminate:(NSNotification *)aNotification {
@@ -124,8 +124,7 @@
 }
 
 - (void)connectionEstablished:(BSBonjourConnection *)connection {
-    // send current vm information to others
-    [self sendOpenVNCCommand:connection];
+    NSLog(@"connectionEstablished");
 }
 
 - (void)connectionAttemptFailed:(BSBonjourConnection *)connection {
@@ -156,8 +155,6 @@
 
 -(void)updateServiceList {
     NSLog(@"client updateServiceList!");
-    
-    [self getIPAddress];
     
     for (NSNetService* service in self.bonjourClient.foundServices) {
         //TODO connect serveral services!!!

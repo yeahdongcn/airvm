@@ -16,7 +16,7 @@ typedef enum : NSInteger {
     Stopped,
 } ServiceStartStatus;
 
-@interface AppDelegate : NSObject <NSApplicationDelegate, BSBonjourServerDelegate>
+@interface AppDelegate : NSObject <NSApplicationDelegate, BSBonjourServerDelegate, BSBonjourClientDelegate>
 
 
 @end
