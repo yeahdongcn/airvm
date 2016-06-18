@@ -42,6 +42,7 @@
 @property (nonatomic, strong) BSBonjourClient *bonjourClient;
 
 @property (nonatomic, assign) ServiceStartStatus status;
+@property (nonatomic, assign) Boolean connectOthers;
 @property (nonatomic, strong) NSString *         statusText;
 
 @property (nonatomic, strong, readwrite) NSNetService *     netService;
@@ -67,6 +68,7 @@
                                                     transportProtocol:kServiceProtocol
                                                              delegate:self];
 
+    self.connectOthers = NO;
     self.status = Stopped;
     self.statusText = @"Not Published";
     self.bonjourClient = [[BSBonjourClient alloc] initWithServiceType:kServiceName transportProtocol:kServiceProtocol delegate:self];
@@ -77,6 +79,14 @@
     if (self.status == Started) {
         [self stopServer];
     }
+}
+
+
+- (IBAction)toggleSendAction:(id)sender {
+    NSLog(@"toggleSendAction");
+    
+    [self sendVM:[[AirVMManager sharedInstance] getAllAirVMs][0]];
+    
 }
 
 - (IBAction)toggleAction:(id)sender {
@@ -163,12 +173,14 @@
 
 - (void)updateServiceList {
     
+    self.connectOthers = NO;
     [[AirVMManager sharedInstance] resetAirVMs];
     for (NSNetService* service in self.bonjourClient.foundServices) {
         AirVM* vm = [[AirVM alloc] init];
         vm.machineName = service.name;
         vm.netService = service;
         [[AirVMManager sharedInstance] addAirVM:vm];
+        self.connectOthers = YES;
     }
 }
 
