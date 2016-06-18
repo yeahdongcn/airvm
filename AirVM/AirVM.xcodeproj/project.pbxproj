@@ -10,13 +10,13 @@
 		9C1A8BB91D145DF2006218C8 /* AirVMViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C1A8BB81D145DF2006218C8 /* AirVMViewController.m */; };
 		9C1A8BBC1D145E02006218C8 /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C1A8BBB1D145E02006218C8 /* Person.m */; };
 		9C1A8BC21D145E13006218C8 /* PersonClusterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C1A8BBE1D145E13006218C8 /* PersonClusterView.m */; };
-		9C1A8BC31D145E13006218C8 /* PersonView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C1A8BC01D145E13006218C8 /* PersonView.m */; };
-		9C1A8BC41D145E13006218C8 /* PersonView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C1A8BC11D145E13006218C8 /* PersonView.xib */; };
 		9C1A8BC61D145E25006218C8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9C1A8BC51D145E25006218C8 /* Assets.xcassets */; };
 		9C1A8BCA1D145E4D006218C8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C1A8BC71D145E4D006218C8 /* Main.storyboard */; };
 		9C1A8BCB1D145E4D006218C8 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9C1A8BC91D145E4D006218C8 /* Info.plist */; };
 		9C1A8BCF1D145E61006218C8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C1A8BCD1D145E61006218C8 /* AppDelegate.m */; };
 		9C1A8BD01D145E61006218C8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C1A8BCE1D145E61006218C8 /* main.m */; };
+		9C4B2BB31D15442A0039D460 /* PersonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C4B2BB11D15442A0039D460 /* PersonViewController.m */; };
+		9C4B2BB41D15442A0039D460 /* PersonViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C4B2BB21D15442A0039D460 /* PersonViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,15 +26,15 @@
 		9C1A8BBB1D145E02006218C8 /* Person.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Person.m; path = AirVM/UI/Model/Person.m; sourceTree = SOURCE_ROOT; };
 		9C1A8BBD1D145E13006218C8 /* PersonClusterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PersonClusterView.h; path = AirVM/UI/View/PersonClusterView.h; sourceTree = SOURCE_ROOT; };
 		9C1A8BBE1D145E13006218C8 /* PersonClusterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PersonClusterView.m; path = AirVM/UI/View/PersonClusterView.m; sourceTree = SOURCE_ROOT; };
-		9C1A8BBF1D145E13006218C8 /* PersonView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PersonView.h; path = AirVM/UI/View/PersonView.h; sourceTree = SOURCE_ROOT; };
-		9C1A8BC01D145E13006218C8 /* PersonView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PersonView.m; path = AirVM/UI/View/PersonView.m; sourceTree = SOURCE_ROOT; };
-		9C1A8BC11D145E13006218C8 /* PersonView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = PersonView.xib; path = AirVM/UI/View/PersonView.xib; sourceTree = SOURCE_ROOT; };
 		9C1A8BC51D145E25006218C8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = AirVM/Assets.xcassets; sourceTree = SOURCE_ROOT; };
 		9C1A8BC81D145E4D006218C8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = AirVM/Base.lproj/Main.storyboard; sourceTree = SOURCE_ROOT; };
 		9C1A8BC91D145E4D006218C8 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = AirVM/Info.plist; sourceTree = SOURCE_ROOT; };
 		9C1A8BCC1D145E61006218C8 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = AirVM/AppDelegate.h; sourceTree = SOURCE_ROOT; };
 		9C1A8BCD1D145E61006218C8 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = AirVM/AppDelegate.m; sourceTree = SOURCE_ROOT; };
 		9C1A8BCE1D145E61006218C8 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = AirVM/main.m; sourceTree = SOURCE_ROOT; };
+		9C4B2BB01D15442A0039D460 /* PersonViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PersonViewController.h; path = AirVM/UI/Controller/PersonViewController.h; sourceTree = SOURCE_ROOT; };
+		9C4B2BB11D15442A0039D460 /* PersonViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PersonViewController.m; path = AirVM/UI/Controller/PersonViewController.m; sourceTree = SOURCE_ROOT; };
+		9C4B2BB21D15442A0039D460 /* PersonViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = PersonViewController.xib; path = AirVM/UI/Controller/PersonViewController.xib; sourceTree = SOURCE_ROOT; };
 		9C6977F11D14398900908CF5 /* AirVM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AirVM.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -95,9 +95,6 @@
 			children = (
 				9C1A8BBD1D145E13006218C8 /* PersonClusterView.h */,
 				9C1A8BBE1D145E13006218C8 /* PersonClusterView.m */,
-				9C1A8BBF1D145E13006218C8 /* PersonView.h */,
-				9C1A8BC01D145E13006218C8 /* PersonView.m */,
-				9C1A8BC11D145E13006218C8 /* PersonView.xib */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -116,6 +113,9 @@
 			children = (
 				9C1A8BB71D145DF2006218C8 /* AirVMViewController.h */,
 				9C1A8BB81D145DF2006218C8 /* AirVMViewController.m */,
+				9C4B2BB01D15442A0039D460 /* PersonViewController.h */,
+				9C4B2BB11D15442A0039D460 /* PersonViewController.m */,
+				9C4B2BB21D15442A0039D460 /* PersonViewController.xib */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -179,8 +179,8 @@
 			files = (
 				9C1A8BCB1D145E4D006218C8 /* Info.plist in Resources */,
 				9C1A8BCA1D145E4D006218C8 /* Main.storyboard in Resources */,
-				9C1A8BC41D145E13006218C8 /* PersonView.xib in Resources */,
 				9C1A8BC61D145E25006218C8 /* Assets.xcassets in Resources */,
+				9C4B2BB41D15442A0039D460 /* PersonViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -194,7 +194,7 @@
 				9C1A8BBC1D145E02006218C8 /* Person.m in Sources */,
 				9C1A8BB91D145DF2006218C8 /* AirVMViewController.m in Sources */,
 				9C1A8BC21D145E13006218C8 /* PersonClusterView.m in Sources */,
-				9C1A8BC31D145E13006218C8 /* PersonView.m in Sources */,
+				9C4B2BB31D15442A0039D460 /* PersonViewController.m in Sources */,
 				9C1A8BD01D145E61006218C8 /* main.m in Sources */,
 				9C1A8BCF1D145E61006218C8 /* AppDelegate.m in Sources */,
 			);

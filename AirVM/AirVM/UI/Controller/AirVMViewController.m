@@ -8,8 +8,8 @@
 
 #import "AirVMViewController.h"
 #import "Person.h"
-#import "PersonView.h"
 #import "PersonClusterView.h"
+#import "PersonViewController.h"
 
 @interface AirVMViewController ()
 @property (nonatomic, strong) NSMutableArray * personViews; // of PersonView
@@ -36,7 +36,9 @@
 - (void)drawPersonCluster {
    NSArray *locations = [self locationsOfPersons:self.persons];
    for (int i=0; i<self.persons.count; i++) {
-      PersonView *personView = [[PersonView alloc] initWithFrame:NSMakeRect(0, 0, 95.0, 95.0)];
+      PersonViewController *personViewController = [[PersonViewController alloc] initWithNibName:@"PersonViewController" bundle:nil];
+      //PersonView *personView = [[PersonView alloc] initWithFrame:NSMakeRect(0, 0, 64.0, 64.0)];
+      NSView *personView = personViewController.view;
       NSValue * location = locations[i];
       [personView setFrameOrigin:[location pointValue]];
       
