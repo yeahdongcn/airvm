@@ -72,6 +72,7 @@
     self.status = Stopped;
     self.statusText = @"Not Published";
     self.bonjourClient = [[BSBonjourClient alloc] initWithServiceType:kServiceName transportProtocol:kServiceProtocol delegate:self];
+    [self startServer];
     [self.bonjourClient startSearching];
 }
 
@@ -115,6 +116,7 @@
 - (void)published:(NSString *)name {
     self.status = Started;
     self.statusText = [NSString stringWithFormat:@"Service published with name: %@", name];
+    NSLog([NSString stringWithFormat:@"Service published with name: %@", name]);
 }
 
 - (void)registerFailed:(NSError *)error

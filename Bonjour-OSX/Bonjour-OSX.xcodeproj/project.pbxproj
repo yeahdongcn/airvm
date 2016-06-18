@@ -16,6 +16,12 @@
 		DFBFD7ED19E8CCD9006BD016 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DFBFD7EC19E8CCD9006BD016 /* AppDelegate.m */; };
 		DFBFD7EF19E8CCD9006BD016 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DFBFD7EE19E8CCD9006BD016 /* Images.xcassets */; };
 		DFBFD7F219E8CCD9006BD016 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = DFBFD7F019E8CCD9006BD016 /* MainMenu.xib */; };
+		E87B657C1D156ABD00135348 /* AirVMViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E87B65781D156ABD00135348 /* AirVMViewController.m */; };
+		E87B657D1D156ABD00135348 /* PersonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E87B657A1D156ABD00135348 /* PersonViewController.m */; };
+		E87B657E1D156ABD00135348 /* PersonViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E87B657B1D156ABD00135348 /* PersonViewController.xib */; };
+		E87B65801D156AC900135348 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E87B657F1D156AC900135348 /* Main.storyboard */; };
+		E87B65841D156ADF00135348 /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = E87B65831D156ADF00135348 /* Person.m */; };
+		E87B65881D156AF100135348 /* PersonClusterView.m in Sources */ = {isa = PBXBuildFile; fileRef = E87B65871D156AF100135348 /* PersonClusterView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +64,16 @@
 		DFBFD7EC19E8CCD9006BD016 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		DFBFD7EE19E8CCD9006BD016 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		DFBFD7F119E8CCD9006BD016 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		E87B65771D156ABD00135348 /* AirVMViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AirVMViewController.h; sourceTree = "<group>"; };
+		E87B65781D156ABD00135348 /* AirVMViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AirVMViewController.m; sourceTree = "<group>"; };
+		E87B65791D156ABD00135348 /* PersonViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersonViewController.h; sourceTree = "<group>"; };
+		E87B657A1D156ABD00135348 /* PersonViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersonViewController.m; sourceTree = "<group>"; };
+		E87B657B1D156ABD00135348 /* PersonViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PersonViewController.xib; sourceTree = "<group>"; };
+		E87B657F1D156AC900135348 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		E87B65821D156ADF00135348 /* Person.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
+		E87B65831D156ADF00135348 /* Person.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
+		E87B65861D156AF100135348 /* PersonClusterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersonClusterView.h; sourceTree = "<group>"; };
+		E87B65871D156AF100135348 /* PersonClusterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersonClusterView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,6 +149,10 @@
 		DFBFD7E619E8CCD9006BD016 /* Bonjour-OSX */ = {
 			isa = PBXGroup;
 			children = (
+				E87B65851D156AE800135348 /* View */,
+				E87B65811D156AD400135348 /* Model */,
+				E87B657F1D156AC900135348 /* Main.storyboard */,
+				E87B65751D156AA900135348 /* Controllers */,
 				DF170D6D19EBB4700063B192 /* Utils */,
 				DFBFD7EB19E8CCD9006BD016 /* AppDelegate.h */,
 				DFBFD7EC19E8CCD9006BD016 /* AppDelegate.m */,
@@ -151,6 +171,36 @@
 				DFBFD7E919E8CCD9006BD016 /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E87B65751D156AA900135348 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				E87B65771D156ABD00135348 /* AirVMViewController.h */,
+				E87B65781D156ABD00135348 /* AirVMViewController.m */,
+				E87B65791D156ABD00135348 /* PersonViewController.h */,
+				E87B657A1D156ABD00135348 /* PersonViewController.m */,
+				E87B657B1D156ABD00135348 /* PersonViewController.xib */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		E87B65811D156AD400135348 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E87B65821D156ADF00135348 /* Person.h */,
+				E87B65831D156ADF00135348 /* Person.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		E87B65851D156AE800135348 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E87B65861D156AF100135348 /* PersonClusterView.h */,
+				E87B65871D156AF100135348 /* PersonClusterView.m */,
+			);
+			name = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -239,8 +289,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E87B657E1D156ABD00135348 /* PersonViewController.xib in Resources */,
 				DFBFD7EF19E8CCD9006BD016 /* Images.xcassets in Resources */,
 				DFBFD7F219E8CCD9006BD016 /* MainMenu.xib in Resources */,
+				E87B65801D156AC900135348 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -253,8 +305,12 @@
 			files = (
 				DF170D6B19EBB3EA0063B192 /* BJPublishActionButtonTransformer.m in Sources */,
 				DFBFD7ED19E8CCD9006BD016 /* AppDelegate.m in Sources */,
+				E87B65881D156AF100135348 /* PersonClusterView.m in Sources */,
+				E87B65841D156ADF00135348 /* Person.m in Sources */,
+				E87B657C1D156ABD00135348 /* AirVMViewController.m in Sources */,
 				DF170D7019EBB6B60063B192 /* BJPublishActionButtonEnableTransformer.m in Sources */,
 				DFBFD7EA19E8CCD9006BD016 /* main.m in Sources */,
+				E87B657D1D156ABD00135348 /* PersonViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -364,6 +420,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = "Bonjour-OSX/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.vmware.FusionAir;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -376,6 +433,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = "Bonjour-OSX/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.vmware.FusionAir;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
