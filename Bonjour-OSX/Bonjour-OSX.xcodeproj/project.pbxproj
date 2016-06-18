@@ -1,0 +1,407 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		DF170D6B19EBB3EA0063B192 /* BJPublishActionButtonTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = DF170D6A19EBB3EA0063B192 /* BJPublishActionButtonTransformer.m */; };
+		DF170D7019EBB6B60063B192 /* BJPublishActionButtonEnableTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = DF170D6F19EBB6B60063B192 /* BJPublishActionButtonEnableTransformer.m */; };
+		DF42255819EA4E1C004C893D /* BonjourSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF42255319EA4E10004C893D /* BonjourSDK.framework */; };
+		DF9552A719E918B700628D82 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF9552A619E918B700628D82 /* Foundation.framework */; };
+		DF9552A919E918BD00628D82 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF9552A819E918BD00628D82 /* CFNetwork.framework */; };
+		DFBFD7EA19E8CCD9006BD016 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DFBFD7E919E8CCD9006BD016 /* main.m */; };
+		DFBFD7ED19E8CCD9006BD016 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DFBFD7EC19E8CCD9006BD016 /* AppDelegate.m */; };
+		DFBFD7EF19E8CCD9006BD016 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DFBFD7EE19E8CCD9006BD016 /* Images.xcassets */; };
+		DFBFD7F219E8CCD9006BD016 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = DFBFD7F019E8CCD9006BD016 /* MainMenu.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		DF42255219EA4E10004C893D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DF42254D19EA4E10004C893D /* BonjourSDK.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = DF7D1C9C19EA466300EB0487;
+			remoteInfo = BonjourSDK_OSX;
+		};
+		DF42255419EA4E10004C893D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DF42254D19EA4E10004C893D /* BonjourSDK.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = DFB9F59E19EA4CB4001F8A04;
+			remoteInfo = BonjourSDK_iOS;
+		};
+		DF42255619EA4E16004C893D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DF42254D19EA4E10004C893D /* BonjourSDK.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = DF7D1C9B19EA466300EB0487;
+			remoteInfo = BonjourSDK_OSX;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		DF170D6919EBB3EA0063B192 /* BJPublishActionButtonTransformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BJPublishActionButtonTransformer.h; sourceTree = "<group>"; };
+		DF170D6A19EBB3EA0063B192 /* BJPublishActionButtonTransformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BJPublishActionButtonTransformer.m; sourceTree = "<group>"; };
+		DF170D6E19EBB6B60063B192 /* BJPublishActionButtonEnableTransformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BJPublishActionButtonEnableTransformer.h; sourceTree = "<group>"; };
+		DF170D6F19EBB6B60063B192 /* BJPublishActionButtonEnableTransformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BJPublishActionButtonEnableTransformer.m; sourceTree = "<group>"; };
+		DF42254D19EA4E10004C893D /* BonjourSDK.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = BonjourSDK.xcodeproj; path = BonjourSDK/BonjourSDK.xcodeproj; sourceTree = "<group>"; };
+		DF9552A619E918B700628D82 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		DF9552A819E918BD00628D82 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		DF9552AB19E91BE300628D82 /* Bonjour-OSX.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "Bonjour-OSX.entitlements"; sourceTree = "<group>"; };
+		DFBFD7E419E8CCD9006BD016 /* Bonjour-OSX.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Bonjour-OSX.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DFBFD7E819E8CCD9006BD016 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DFBFD7E919E8CCD9006BD016 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		DFBFD7EB19E8CCD9006BD016 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		DFBFD7EC19E8CCD9006BD016 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		DFBFD7EE19E8CCD9006BD016 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		DFBFD7F119E8CCD9006BD016 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DFBFD7E119E8CCD9006BD016 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DF42255819EA4E1C004C893D /* BonjourSDK.framework in Frameworks */,
+				DF9552A919E918BD00628D82 /* CFNetwork.framework in Frameworks */,
+				DF9552A719E918B700628D82 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		DF170D6D19EBB4700063B192 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				DF170D6919EBB3EA0063B192 /* BJPublishActionButtonTransformer.h */,
+				DF170D6A19EBB3EA0063B192 /* BJPublishActionButtonTransformer.m */,
+				DF170D6E19EBB6B60063B192 /* BJPublishActionButtonEnableTransformer.h */,
+				DF170D6F19EBB6B60063B192 /* BJPublishActionButtonEnableTransformer.m */,
+			);
+			name = Utils;
+			sourceTree = "<group>";
+		};
+		DF42254E19EA4E10004C893D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DF42255319EA4E10004C893D /* BonjourSDK.framework */,
+				DF42255519EA4E10004C893D /* BonjourSDK.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DF42255919EA4EE0004C893D /* BonjourSDK */ = {
+			isa = PBXGroup;
+			children = (
+				DF42254D19EA4E10004C893D /* BonjourSDK.xcodeproj */,
+			);
+			name = BonjourSDK;
+			sourceTree = "<group>";
+		};
+		DF9552AA19E918CA00628D82 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DF9552A819E918BD00628D82 /* CFNetwork.framework */,
+				DF9552A619E918B700628D82 /* Foundation.framework */,
+			);
+			name = Frameworks;
+			path = "Bonjour-OSX";
+			sourceTree = "<group>";
+		};
+		DFBFD7DB19E8CCD9006BD016 = {
+			isa = PBXGroup;
+			children = (
+				DFBFD7E619E8CCD9006BD016 /* Bonjour-OSX */,
+				DF42255919EA4EE0004C893D /* BonjourSDK */,
+				DF9552AA19E918CA00628D82 /* Frameworks */,
+				DFBFD7E519E8CCD9006BD016 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		DFBFD7E519E8CCD9006BD016 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DFBFD7E419E8CCD9006BD016 /* Bonjour-OSX.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DFBFD7E619E8CCD9006BD016 /* Bonjour-OSX */ = {
+			isa = PBXGroup;
+			children = (
+				DF170D6D19EBB4700063B192 /* Utils */,
+				DFBFD7EB19E8CCD9006BD016 /* AppDelegate.h */,
+				DFBFD7EC19E8CCD9006BD016 /* AppDelegate.m */,
+				DFBFD7EE19E8CCD9006BD016 /* Images.xcassets */,
+				DFBFD7F019E8CCD9006BD016 /* MainMenu.xib */,
+				DFBFD7E719E8CCD9006BD016 /* Supporting Files */,
+			);
+			path = "Bonjour-OSX";
+			sourceTree = "<group>";
+		};
+		DFBFD7E719E8CCD9006BD016 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				DF9552AB19E91BE300628D82 /* Bonjour-OSX.entitlements */,
+				DFBFD7E819E8CCD9006BD016 /* Info.plist */,
+				DFBFD7E919E8CCD9006BD016 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DFBFD7E319E8CCD9006BD016 /* Bonjour-OSX */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DFBFD80119E8CCD9006BD016 /* Build configuration list for PBXNativeTarget "Bonjour-OSX" */;
+			buildPhases = (
+				DFBFD7E019E8CCD9006BD016 /* Sources */,
+				DFBFD7E119E8CCD9006BD016 /* Frameworks */,
+				DFBFD7E219E8CCD9006BD016 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DF42255719EA4E16004C893D /* PBXTargetDependency */,
+			);
+			name = "Bonjour-OSX";
+			productName = "Bonjour-OSX";
+			productReference = DFBFD7E419E8CCD9006BD016 /* Bonjour-OSX.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DFBFD7DC19E8CCD9006BD016 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0600;
+				ORGANIZATIONNAME = "Peng Sun";
+				TargetAttributes = {
+					DFBFD7E319E8CCD9006BD016 = {
+						CreatedOnToolsVersion = 6.0;
+						SystemCapabilities = {
+							com.apple.Sandbox = {
+								enabled = 1;
+							};
+						};
+					};
+				};
+			};
+			buildConfigurationList = DFBFD7DF19E8CCD9006BD016 /* Build configuration list for PBXProject "Bonjour-OSX" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = DFBFD7DB19E8CCD9006BD016;
+			productRefGroup = DFBFD7E519E8CCD9006BD016 /* Products */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = DF42254E19EA4E10004C893D /* Products */;
+					ProjectRef = DF42254D19EA4E10004C893D /* BonjourSDK.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				DFBFD7E319E8CCD9006BD016 /* Bonjour-OSX */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		DF42255319EA4E10004C893D /* BonjourSDK.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = BonjourSDK.framework;
+			remoteRef = DF42255219EA4E10004C893D /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		DF42255519EA4E10004C893D /* BonjourSDK.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = BonjourSDK.framework;
+			remoteRef = DF42255419EA4E10004C893D /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DFBFD7E219E8CCD9006BD016 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DFBFD7EF19E8CCD9006BD016 /* Images.xcassets in Resources */,
+				DFBFD7F219E8CCD9006BD016 /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DFBFD7E019E8CCD9006BD016 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DF170D6B19EBB3EA0063B192 /* BJPublishActionButtonTransformer.m in Sources */,
+				DFBFD7ED19E8CCD9006BD016 /* AppDelegate.m in Sources */,
+				DF170D7019EBB6B60063B192 /* BJPublishActionButtonEnableTransformer.m in Sources */,
+				DFBFD7EA19E8CCD9006BD016 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		DF42255719EA4E16004C893D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = BonjourSDK_OSX;
+			targetProxy = DF42255619EA4E16004C893D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		DFBFD7F019E8CCD9006BD016 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DFBFD7F119E8CCD9006BD016 /* Base */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		DFBFD7FF19E8CCD9006BD016 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		DFBFD80019E8CCD9006BD016 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		DFBFD80219E8CCD9006BD016 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Bonjour-OSX/Bonjour-OSX.entitlements";
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "Bonjour-OSX/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		DFBFD80319E8CCD9006BD016 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Bonjour-OSX/Bonjour-OSX.entitlements";
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "Bonjour-OSX/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DFBFD7DF19E8CCD9006BD016 /* Build configuration list for PBXProject "Bonjour-OSX" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DFBFD7FF19E8CCD9006BD016 /* Debug */,
+				DFBFD80019E8CCD9006BD016 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DFBFD80119E8CCD9006BD016 /* Build configuration list for PBXNativeTarget "Bonjour-OSX" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DFBFD80219E8CCD9006BD016 /* Debug */,
+				DFBFD80319E8CCD9006BD016 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = DFBFD7DC19E8CCD9006BD016 /* Project object */;
+}

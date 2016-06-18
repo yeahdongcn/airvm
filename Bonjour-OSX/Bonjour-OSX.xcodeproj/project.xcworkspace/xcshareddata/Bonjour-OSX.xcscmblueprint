@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "75CBF81A48CBFC666EF39C060ED47D31DA4D6817",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "75CBF81A48CBFC666EF39C060ED47D31DA4D6817" : 0,
+    "033183F4D410490FB0869CB5D2E78C2895B8A6A3" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "D5C36B2F-0851-42A3-8D8E-35066EFB7AD2",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "75CBF81A48CBFC666EF39C060ED47D31DA4D6817" : "Bonjour-OSX\/",
+    "033183F4D410490FB0869CB5D2E78C2895B8A6A3" : "Bonjour-OSX\/BonjourSDK\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "Bonjour-OSX",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "Bonjour-OSX.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/void-main\/BonjourSDK.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "033183F4D410490FB0869CB5D2E78C2895B8A6A3"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/void-main\/Bonjour-OSX.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "75CBF81A48CBFC666EF39C060ED47D31DA4D6817"
+    }
+  ]
+}
