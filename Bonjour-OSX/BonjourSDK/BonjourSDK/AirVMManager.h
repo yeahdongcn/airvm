@@ -9,6 +9,10 @@
 #import <Foundation/Foundation.h>
 #import "BSBonjourConnection.h"
 
+static NSString* KNotificationShareVMArrived = @"KNotificationShareVMArrived";
+static NSString* KNotificationShareVMRefreshed = @"KNotificationShareVMRefreshed";
+
+
 @interface AirVM : NSObject
 
 @property(nonatomic) NSString* machineName;

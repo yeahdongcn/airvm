@@ -5,3 +5,7 @@ Bonjour-OSX is a Bonjour test project, Need to merge to UI project
 3. BSBonjourClient startSearch, get all friends in AirVMManager
 4. Using sendVM:TargetVM to send local VM VNC info to others
 5. Others will get reply in receivedData:(NSData *)data, parse data to vnc info
+6. While target Mac changed, will fire KNotificationShareVMRefreshed, observe this and get VMs from AirVMManager
+7. While share VM message arrived, will fire KNotificationShareVMArrived, observe this and get ip from attached userInfo dic
+8. You can also mannually add refresh UI function into AppDelegate::updateServiceList
+9. You can also mannually add open VNC function into AppDelegate::receivedData

@@ -153,8 +153,7 @@
     NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil];
     if ([[dic objectForKey:@"op"] isEqualToString:@"openvnc"]) { // register other air vm for management
         NSLog(@"open vnc at %@ !!!!!!!!!!!!!!",[dic objectForKey:@"vncIP"]);
-    } else { // accept share from others to open vnc client
-        
+        [[NSNotificationCenter defaultCenter] postNotificationName:KNotificationShareVMArrived object:nil userInfo:dic];
     }
     self.editor.string = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
 }
@@ -182,6 +181,8 @@
         [[AirVMManager sharedInstance] addAirVM:vm];
         self.connectOthers = YES;
     }
+    
+    [[NSNotificationCenter defaultCenter] postNotificationName:KNotificationShareVMRefreshed object:nil userInfo:nil];
 }
 
 #pragma mark util

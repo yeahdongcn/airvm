@@ -26,7 +26,7 @@ static AirVMManager* instance;
 }
 
 -(void) resetAirVMs {
-    instance.airVMs.removeAllObjects;
+    [instance.airVMs removeAllObjects];
     instance.airVMs = instance.airVMs = [[NSMutableDictionary alloc] init];
 }
 
