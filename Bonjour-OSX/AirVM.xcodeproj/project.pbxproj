@@ -57,7 +57,7 @@
 		DF9552A619E918B700628D82 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		DF9552A819E918BD00628D82 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		DF9552AB19E91BE300628D82 /* Bonjour-OSX.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "Bonjour-OSX.entitlements"; sourceTree = "<group>"; };
-		DFBFD7E419E8CCD9006BD016 /* Bonjour-OSX.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Bonjour-OSX.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DFBFD7E419E8CCD9006BD016 /* AirVM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AirVM.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DFBFD7E819E8CCD9006BD016 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DFBFD7E919E8CCD9006BD016 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		DFBFD7EB19E8CCD9006BD016 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -141,7 +141,7 @@
 		DFBFD7E519E8CCD9006BD016 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				DFBFD7E419E8CCD9006BD016 /* Bonjour-OSX.app */,
+				DFBFD7E419E8CCD9006BD016 /* AirVM.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -206,9 +206,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		DFBFD7E319E8CCD9006BD016 /* Bonjour-OSX */ = {
+		DFBFD7E319E8CCD9006BD016 /* AirVM */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = DFBFD80119E8CCD9006BD016 /* Build configuration list for PBXNativeTarget "Bonjour-OSX" */;
+			buildConfigurationList = DFBFD80119E8CCD9006BD016 /* Build configuration list for PBXNativeTarget "AirVM" */;
 			buildPhases = (
 				DFBFD7E019E8CCD9006BD016 /* Sources */,
 				DFBFD7E119E8CCD9006BD016 /* Frameworks */,
@@ -219,9 +219,9 @@
 			dependencies = (
 				DF42255719EA4E16004C893D /* PBXTargetDependency */,
 			);
-			name = "Bonjour-OSX";
+			name = AirVM;
 			productName = "Bonjour-OSX";
-			productReference = DFBFD7E419E8CCD9006BD016 /* Bonjour-OSX.app */;
+			productReference = DFBFD7E419E8CCD9006BD016 /* AirVM.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -243,7 +243,7 @@
 					};
 				};
 			};
-			buildConfigurationList = DFBFD7DF19E8CCD9006BD016 /* Build configuration list for PBXProject "Bonjour-OSX" */;
+			buildConfigurationList = DFBFD7DF19E8CCD9006BD016 /* Build configuration list for PBXProject "AirVM" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -262,7 +262,7 @@
 			);
 			projectRoot = "";
 			targets = (
-				DFBFD7E319E8CCD9006BD016 /* Bonjour-OSX */,
+				DFBFD7E319E8CCD9006BD016 /* AirVM */,
 			);
 		};
 /* End PBXProject section */
@@ -421,7 +421,7 @@
 				INFOPLIST_FILE = "Bonjour-OSX/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.vmware.FusionAir;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = AirVM;
 			};
 			name = Debug;
 		};
@@ -434,14 +434,14 @@
 				INFOPLIST_FILE = "Bonjour-OSX/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.vmware.FusionAir;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = AirVM;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		DFBFD7DF19E8CCD9006BD016 /* Build configuration list for PBXProject "Bonjour-OSX" */ = {
+		DFBFD7DF19E8CCD9006BD016 /* Build configuration list for PBXProject "AirVM" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				DFBFD7FF19E8CCD9006BD016 /* Debug */,
@@ -450,7 +450,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		DFBFD80119E8CCD9006BD016 /* Build configuration list for PBXNativeTarget "Bonjour-OSX" */ = {
+		DFBFD80119E8CCD9006BD016 /* Build configuration list for PBXNativeTarget "AirVM" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				DFBFD80219E8CCD9006BD016 /* Debug */,

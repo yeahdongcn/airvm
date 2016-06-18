@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:Bonjour-OSX.xcodeproj">
+      location = "self:/Users/wujeff/Documents/Fusion/borathon/airvm/Bonjour-OSX/AirVM.xcodeproj">
    </FileRef>
 </Workspace>
