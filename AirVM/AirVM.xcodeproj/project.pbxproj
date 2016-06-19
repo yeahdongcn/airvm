@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		9C89F2CC1D16366100B7317C /* SharedVM.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C89F2CB1D16366100B7317C /* SharedVM.m */; };
+		9C89F2D01D16408A00B7317C /* PersonView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C89F2CF1D16408A00B7317C /* PersonView.m */; };
 		DF170D6B19EBB3EA0063B192 /* BJPublishActionButtonTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = DF170D6A19EBB3EA0063B192 /* BJPublishActionButtonTransformer.m */; };
 		DF170D7019EBB6B60063B192 /* BJPublishActionButtonEnableTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = DF170D6F19EBB6B60063B192 /* BJPublishActionButtonEnableTransformer.m */; };
 		DF42255819EA4E1C004C893D /* BonjourSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF42255319EA4E10004C893D /* BonjourSDK.framework */; };
@@ -52,6 +53,8 @@
 /* Begin PBXFileReference section */
 		9C89F2CA1D16366100B7317C /* SharedVM.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SharedVM.h; sourceTree = "<group>"; };
 		9C89F2CB1D16366100B7317C /* SharedVM.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SharedVM.m; sourceTree = "<group>"; };
+		9C89F2CE1D16408A00B7317C /* PersonView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersonView.h; sourceTree = "<group>"; };
+		9C89F2CF1D16408A00B7317C /* PersonView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersonView.m; sourceTree = "<group>"; };
 		DF170D6919EBB3EA0063B192 /* BJPublishActionButtonTransformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BJPublishActionButtonTransformer.h; sourceTree = "<group>"; };
 		DF170D6A19EBB3EA0063B192 /* BJPublishActionButtonTransformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BJPublishActionButtonTransformer.m; sourceTree = "<group>"; };
 		DF170D6E19EBB6B60063B192 /* BJPublishActionButtonEnableTransformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BJPublishActionButtonEnableTransformer.h; sourceTree = "<group>"; };
@@ -203,6 +206,8 @@
 		E87B65851D156AE800135348 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				9C89F2CE1D16408A00B7317C /* PersonView.h */,
+				9C89F2CF1D16408A00B7317C /* PersonView.m */,
 				E87B65861D156AF100135348 /* PersonClusterView.h */,
 				E87B65871D156AF100135348 /* PersonClusterView.m */,
 			);
@@ -310,6 +315,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DF170D6B19EBB3EA0063B192 /* BJPublishActionButtonTransformer.m in Sources */,
+				9C89F2D01D16408A00B7317C /* PersonView.m in Sources */,
 				DFBFD7ED19E8CCD9006BD016 /* AppDelegate.m in Sources */,
 				E87B65881D156AF100135348 /* PersonClusterView.m in Sources */,
 				E87B65841D156ADF00135348 /* Person.m in Sources */,

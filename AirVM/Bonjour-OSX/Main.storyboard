@@ -694,7 +694,7 @@
                                                             <color key="gridColor" name="gridColor" catalog="System" colorSpace="catalog"/>
                                                             <tableColumns>
                                                                 <tableColumn width="143" minWidth="40" maxWidth="1000" id="sZ1-ue-NZ3">
-                                                                    <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border">
+                                                                    <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="left" title="Virtual Machines">
                                                                         <font key="font" metaFont="smallSystem"/>
                                                                         <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
                                                                         <color key="backgroundColor" name="headerColor" catalog="System" colorSpace="catalog"/>
@@ -706,7 +706,7 @@
                                                                     </textFieldCell>
                                                                     <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
                                                                     <connections>
-                                                                        <binding destination="Q9A-9D-28J" name="value" keyPath="arrangedObjects.vmName" id="Y1n-Wz-TuY"/>
+                                                                        <binding destination="Q9A-9D-28J" name="value" keyPath="arrangedObjects.vmName" id="1DO-TG-8wY"/>
                                                                     </connections>
                                                                 </tableColumn>
                                                             </tableColumns>

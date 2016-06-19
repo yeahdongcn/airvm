@@ -9,7 +9,7 @@
 #import <Cocoa/Cocoa.h>
 #import <BonjourSDK/BonjourSDK.h>
 
-@interface PersonViewController : NSViewController
+@interface PersonViewController : NSViewController 
 
 - (instancetype)initWithAirVM:(AirVM *)airVM;
 

@@ -17,7 +17,7 @@
 
 @end
 
-@implementation PersonViewController
+@implementation PersonViewController 
 
 - (instancetype)initWithAirVM:(AirVM *)airVM {
    self = [super initWithNibName:@"PersonViewController" bundle:nil];
@@ -34,5 +34,9 @@
    self.portraitView.layer.cornerRadius = self.portraitView.frame.size.width / 2;
    self.nameLabel.stringValue = self.person.machineName;
 }
+
+
+
+
 
 @end
