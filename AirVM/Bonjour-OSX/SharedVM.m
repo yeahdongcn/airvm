@@ -10,4 +10,18 @@
 
 @implementation SharedVM
 
+- (id)initWithCoder:(NSCoder *)decoder {
+   self = [super init];
+   if (!self) {
+      return nil;
+   }
+
+   self.vmName = [decoder decodeObjectForKey:@"vmName"];
+   return self;
+}
+
+- (void)encodeWithCoder:(NSCoder *)encoder {
+   [encoder encodeObject:self.vmName forKey:@"vmName"];
+}
+
 @end

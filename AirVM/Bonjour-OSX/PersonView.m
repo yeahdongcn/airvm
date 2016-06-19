@@ -7,6 +7,7 @@
 //
 
 #import "PersonView.h"
+#import "SharedVM.h"
 
 @implementation PersonView
 
@@ -41,15 +42,18 @@
 
 - (void)concludeDragOperation:(id<NSDraggingInfo>)sender {
    NSLog(@"Drop action trigured with sender %@.", sender);
-   [self alertToOpenSharedVM];
+   NSData *data = [[sender draggingPasteboard] dataForType:NSStringPboardType];
+   SharedVM *vm = [NSKeyedUnarchiver unarchiveObjectWithData:data];
+   [self alertToOpenSharedVM:vm];
 }
 
-- (void)alertToOpenSharedVM {
+// test code
+- (void)alertToOpenSharedVM:(SharedVM *)vm {
    NSAlert *alert = [[NSAlert alloc] init];
-   [alert addButtonWithTitle:@"Open"];
-   [alert addButtonWithTitle:@"Do not Open"];
-   [alert setMessageText:@"Open the shared virtual machine?"];
-   [alert setInformativeText:@"xxx just shared a virtual machine to you throuth AirVM."];
+   [alert addButtonWithTitle:@"Share"];
+   [alert addButtonWithTitle:@"Cancel"];
+   [alert setMessageText:@"To share your virtual machine?"];
+   [alert setInformativeText:[NSString stringWithFormat:@"Share the %@ virtual machine to %@", vm, self]];
    [alert setAlertStyle:NSInformationalAlertStyle];
    [alert runModal];
 }
