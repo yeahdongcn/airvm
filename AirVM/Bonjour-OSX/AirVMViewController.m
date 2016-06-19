@@ -10,17 +10,27 @@
 #import "Person.h"
 #import "PersonClusterView.h"
 #import "PersonViewController.h"
+#import <BonjourSDK/BonjourSDK.h>
 
 @interface AirVMViewController ()
 @property (nonatomic, strong) NSMutableArray * personViewControllers; // of PersonViewController
-@property (nonatomic, strong) NSArray *persons; // of Person
+@property (nonatomic, strong) NSArray *persons; // of AirVM
 @end
 
 @implementation AirVMViewController
 
 - (void)viewDidLoad {
    [super viewDidLoad];
+   [[NSNotificationCenter defaultCenter] addObserver:self
+                                            selector:@selector(updatePersonCluster)
+                                                name:KNotificationShareVMRefreshed
+                                              object:nil];
    [self updatePersonCluster];
+}
+
+- (void)viewWillDisappear {
+   [[NSNotificationCenter defaultCenter] removeObserver:self];
+   [super viewWillDisappear];
 }
 
 #pragma mark Layout Operations
@@ -39,7 +49,7 @@
 - (void)drawPersonCluster {
    NSArray *locations = [self locationsOfPersons:self.persons];
    for (int i=0; i<self.persons.count; i++) {
-      PersonViewController *personViewController = [[PersonViewController alloc] initWithNibName:@"PersonViewController" bundle:nil];
+      PersonViewController *personViewController = [[PersonViewController alloc] initWithAirVM:self.persons[i]];
       [self.personViewControllers addObject:personViewController];
       NSView *personView = personViewController.view;
       NSValue * location = locations[i];
@@ -73,9 +83,10 @@
 
 #pragma mark Data Operations
 - (NSArray *)queryPersonsFromBojour {
-   Person *testA = [[Person alloc] initWithName:@"Zhaokai"];
-   Person *testB = [[Person alloc] initWithName:@"Jeff"];
-   return [NSArray arrayWithObjects:testA, testB, nil];
+//   Person *testA = [[Person alloc] initWithName:@"Zhaokai"];
+//   Person *testB = [[Person alloc] initWithName:@"Jeff"];
+//   return [NSArray arrayWithObjects:testA, testB, nil];
+   return [[AirVMManager sharedInstance] getAllAirVMs];
 }
 
 @end
