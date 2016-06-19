@@ -774,7 +774,10 @@
                     </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
-                <arrayController id="Q9A-9D-28J">
+                <arrayController objectClassName="vmName" id="Q9A-9D-28J">
+                    <declaredKeys>
+                        <string>vmName</string>
+                    </declaredKeys>
                     <connections>
                         <binding destination="XfG-lQ-9wD" name="contentArray" keyPath="sharedVMs" id="Wha-d5-lkD"/>
                     </connections>
