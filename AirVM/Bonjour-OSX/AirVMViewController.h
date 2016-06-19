@@ -12,4 +12,6 @@
 @interface AirVMViewController : NSViewController
 
 @property (weak) IBOutlet PersonClusterView *personClusterView;
+
+@property (nonatomic, strong) NSMutableArray *sharedVMs;
 @end

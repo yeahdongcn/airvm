@@ -33,6 +33,14 @@
    return _persons;
 }
 
+// test code
+- (NSMutableArray *)sharedVMs {
+   if (!_sharedVMs) {
+      _sharedVMs = [[NSMutableArray alloc] initWithObjects:@"Windows 10 x64", nil];
+   }
+   return _sharedVMs;
+}
+
 - (void)viewDidLoad {
    [super viewDidLoad];
    [[NSNotificationCenter defaultCenter] addObserver:self
