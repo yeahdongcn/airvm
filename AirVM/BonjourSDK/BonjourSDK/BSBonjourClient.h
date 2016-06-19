@@ -37,7 +37,7 @@ typedef void (^ConnectSuccess)(BSBonjourConnection* connection);
     BSBonjourConnection *_connection;
 }
 
-@property(nonatomic) ConnectSuccess connectsuccess;
+@property(nonatomic, strong) ConnectSuccess connectsuccess;
 
 #pragma mark -
 #pragma mark Bonjour Service Type Naming
