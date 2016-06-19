@@ -10,6 +10,10 @@
 
 @implementation PersonClusterView
 
++ (NSArray *)locationOfPersonsWithNumber:(NSInteger)numOfPersons {
+   return nil;
+}
+
 - (void)drawRect:(NSRect)dirtyRect {
    [super drawRect:dirtyRect];
 

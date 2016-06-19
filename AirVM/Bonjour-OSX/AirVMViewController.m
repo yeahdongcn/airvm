@@ -12,7 +12,7 @@
 #import "PersonViewController.h"
 
 @interface AirVMViewController ()
-@property (nonatomic, strong) NSMutableArray * personViews; // of PersonView
+@property (nonatomic, strong) NSMutableArray * personViewControllers; // of PersonViewController
 @property (nonatomic, strong) NSArray *persons; // of Person
 @end
 
@@ -25,25 +25,26 @@
 
 #pragma mark Layout Operations
 - (void)clearPersonCluster {
-   for (int i=0; i<self.personViews.count; i++) {
-      if (self.personViews[i]) {
-         [self.personViews[i] removeFromSuperview];
+   for (int i=0; i<self.personViewControllers.count; i++) {
+      if (self.personViewControllers[i]) {
+         if ([self.personViewControllers[i] isKindOfClass:[PersonViewController class]]) {
+            PersonViewController *pvc = self.personViewControllers[i];
+            [pvc.view removeFromSuperview];
+         }
       }
    }
-   [self.personViews removeAllObjects];
+   [self.personViewControllers removeAllObjects];
 }
 
 - (void)drawPersonCluster {
    NSArray *locations = [self locationsOfPersons:self.persons];
    for (int i=0; i<self.persons.count; i++) {
       PersonViewController *personViewController = [[PersonViewController alloc] initWithNibName:@"PersonViewController" bundle:nil];
-      //PersonView *personView = [[PersonView alloc] initWithFrame:NSMakeRect(0, 0, 64.0, 64.0)];
+      [self.personViewControllers addObject:personViewController];
       NSView *personView = personViewController.view;
       NSValue * location = locations[i];
       [personView setFrameOrigin:[location pointValue]];
-      
       [self.personClusterView addSubview:personView];
-      [self.personViews addObject:personView];
    }
    [self.view setNeedsDisplay:YES];
 };
