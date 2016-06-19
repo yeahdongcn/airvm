@@ -10,6 +10,7 @@
 #import "Person.h"
 #import "PersonClusterView.h"
 #import "PersonViewController.h"
+#import "SharedVM.h"
 #import <BonjourSDK/BonjourSDK.h>
 
 @interface AirVMViewController ()
@@ -36,7 +37,9 @@
 // test code
 - (NSMutableArray *)sharedVMs {
    if (!_sharedVMs) {
-      _sharedVMs = [[NSMutableArray alloc] initWithObjects:@"Windows 10 x64", nil];
+      SharedVM * testVM = [[SharedVM alloc] init];
+      testVM.vmName = @"Windows 10 x64bit";
+      _sharedVMs = [[NSMutableArray alloc] initWithObjects:testVM, nil];
    }
    return _sharedVMs;
 }
