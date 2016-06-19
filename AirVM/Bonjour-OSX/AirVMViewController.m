@@ -53,6 +53,10 @@
                                             selector:@selector(updatePersonCluster)
                                                 name:KNotificationShareVMRefreshed
                                               object:nil];
+   [[NSNotificationCenter defaultCenter] addObserver:self
+                                            selector:@selector(alertToOpenSharedVM:)
+                                                name:KNotificationShareVMArrived
+                                              object:nil];
    [self updatePersonCluster];
    [self.sharedVMsTableView reloadData];
 }
@@ -92,6 +96,22 @@
    [self clearPersonCluster];
    self.persons = [self queryPersonsFromBojour];
    [self drawPersonCluster];
+}
+
+- (void)alertToOpenSharedVM:(NSNotification*)notification {
+   NSDictionary *usrDic = [notification userInfo];
+
+#pragma warning TODO
+   // construct a SharedVM using usrDic
+   SharedVM *vm = [[SharedVM alloc] init];
+
+   NSAlert *alert = [[NSAlert alloc] init];
+   [alert addButtonWithTitle:@"Open"];
+   [alert addButtonWithTitle:@"Cancel"];
+   [alert setMessageText:@"Open the shared virtual machine?"];
+   [alert setInformativeText:[NSString stringWithFormat:@"Open the %@ virtual machine", vm]];
+   [alert setAlertStyle:NSInformationalAlertStyle];
+   [alert runModal];
 }
 
 
