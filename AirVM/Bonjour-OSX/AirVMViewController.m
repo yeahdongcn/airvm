@@ -19,6 +19,20 @@
 
 @implementation AirVMViewController
 
+- (NSMutableArray *)personViewControllers {
+   if (!_personViewControllers) {
+      _personViewControllers = [[NSMutableArray alloc] init];
+   }
+   return _personViewControllers;
+}
+
+- (NSArray *)persons {
+   if (!_persons) {
+      _persons = [[NSArray alloc] init];
+   }
+   return _persons;
+}
+
 - (void)viewDidLoad {
    [super viewDidLoad];
    [[NSNotificationCenter defaultCenter] addObserver:self
