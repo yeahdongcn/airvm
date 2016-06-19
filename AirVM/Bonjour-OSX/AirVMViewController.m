@@ -11,6 +11,7 @@
 #import "PersonClusterView.h"
 #import "PersonViewController.h"
 #import "SharedVM.h"
+
 #import <BonjourSDK/BonjourSDK.h>
 
 @interface AirVMViewController ()
@@ -51,6 +52,7 @@
                                                 name:KNotificationShareVMRefreshed
                                               object:nil];
    [self updatePersonCluster];
+   [self.sharedVMsTableView reloadData];
 }
 
 - (void)viewWillDisappear {
@@ -112,6 +114,35 @@
 //   Person *testB = [[Person alloc] initWithName:@"Jeff"];
 //   return [NSArray arrayWithObjects:testA, testB, nil];
    return [[AirVMManager sharedInstance] getAllAirVMs];
+}
+
+#pragma mark Table View Operations
+- (NSInteger)numberOfRowsInTableView:(NSTableView *)tableView {
+   return self.sharedVMs.count;
+}
+
+- (NSView *)tableView:(NSTableView *)tableView
+   viewForTableColumn:(NSTableColumn *)tableColumn
+                  row:(NSInteger)row {
+   NSTableCellView *cell = [tableView makeViewWithIdentifier:@"SHAREDVMTABLECELLVIEW" owner:nil];
+   SharedVM *vm = self.sharedVMs[row];
+   cell.textField.stringValue = vm.vmName;
+   return cell;
+}
+
+- (BOOL)tableView:(NSTableView *)aTableView writeRowsWithIndexes:(NSIndexSet *)rowIndexes toPasteboard:(NSPasteboard*)pboard {
+   NSData *data = [NSKeyedArchiver archivedDataWithRootObject:rowIndexes];
+   [pboard declareTypes:[NSArray arrayWithObject:NSStringPboardType] owner:self];
+   [pboard setData:data forType:NSStringPboardType];
+   return YES;
+}
+
+- (NSDragOperation)tableView:(NSTableView*)tv validateDrop:(id )info proposedRow:(NSInteger)row proposedDropOperation:(NSTableViewDropOperation)op {
+   return NSDragOperationAll;
+}
+
+- (BOOL)tableView:(NSTableView*)tv acceptDrop:(id)info row:(NSInteger)row dropOperation:(NSTableViewDropOperation)op {
+   return YES;
 }
 
 @end

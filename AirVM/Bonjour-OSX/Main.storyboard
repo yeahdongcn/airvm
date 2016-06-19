@@ -686,11 +686,11 @@
                                                     <rect key="frame" x="1" y="0.0" width="146" height="479"/>
                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                     <subviews>
-                                                        <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" columnReordering="NO" columnSelection="YES" multipleSelection="NO" autosaveColumns="NO" headerView="br5-V6-MGh" id="d83-Ol-kPp">
+                                                        <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" columnReordering="NO" columnSelection="YES" multipleSelection="NO" autosaveColumns="NO" rowSizeStyle="automatic" headerView="br5-V6-MGh" viewBased="YES" id="d83-Ol-kPp">
                                                             <rect key="frame" x="0.0" y="0.0" width="146" height="456"/>
                                                             <autoresizingMask key="autoresizingMask"/>
                                                             <size key="intercellSpacing" width="3" height="2"/>
-                                                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                                            <color key="backgroundColor" name="controlHighlightColor" catalog="System" colorSpace="catalog"/>
                                                             <color key="gridColor" name="gridColor" catalog="System" colorSpace="catalog"/>
                                                             <tableColumns>
                                                                 <tableColumn width="143" minWidth="40" maxWidth="1000" id="sZ1-ue-NZ3">
@@ -705,14 +705,34 @@
                                                                         <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
                                                                     </textFieldCell>
                                                                     <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
-                                                                    <connections>
-                                                                        <binding destination="Q9A-9D-28J" name="value" keyPath="arrangedObjects.vmName" id="1DO-TG-8wY"/>
-                                                                    </connections>
+                                                                    <prototypeCellViews>
+                                                                        <tableCellView identifier="SHAREDVMTABLECELLVIEW" id="mMG-qu-qR8">
+                                                                            <rect key="frame" x="1" y="1" width="143" height="17"/>
+                                                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                                            <subviews>
+                                                                                <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0Rv-4Q-bAa">
+                                                                                    <rect key="frame" x="0.0" y="0.0" width="142" height="17"/>
+                                                                                    <textFieldCell key="cell" sendsActionOnEndEditing="YES" title="Table View Cell" id="hNw-YT-34e">
+                                                                                        <font key="font" metaFont="system"/>
+                                                                                        <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                                                        <color key="backgroundColor" name="gridColor" catalog="System" colorSpace="catalog"/>
+                                                                                    </textFieldCell>
+                                                                                </textField>
+                                                                            </subviews>
+                                                                            <connections>
+                                                                                <outlet property="textField" destination="0Rv-4Q-bAa" id="G9Z-ex-gdg"/>
+                                                                            </connections>
+                                                                        </tableCellView>
+                                                                    </prototypeCellViews>
                                                                 </tableColumn>
                                                             </tableColumns>
+                                                            <connections>
+                                                                <outlet property="dataSource" destination="XfG-lQ-9wD" id="SX3-tX-31n"/>
+                                                                <outlet property="delegate" destination="XfG-lQ-9wD" id="bTS-xP-y0f"/>
+                                                            </connections>
                                                         </tableView>
                                                     </subviews>
-                                                    <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                                    <color key="backgroundColor" name="gridColor" catalog="System" colorSpace="catalog"/>
                                                 </clipView>
                                                 <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="YES" id="TAD-vu-92C">
                                                     <rect key="frame" x="1" y="447" width="144" height="16"/>
@@ -755,17 +775,10 @@
                     </view>
                     <connections>
                         <outlet property="personClusterView" destination="DOQ-zQ-Dh9" id="301-n8-YiF"/>
+                        <outlet property="sharedVMsTableView" destination="d83-Ol-kPp" id="57p-py-Huh"/>
                     </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
-                <arrayController objectClassName="SharedVM" automaticallyPreparesContent="YES" id="Q9A-9D-28J">
-                    <declaredKeys>
-                        <string>vmName</string>
-                    </declaredKeys>
-                    <connections>
-                        <binding destination="XfG-lQ-9wD" name="contentArray" keyPath="sharedVMs" id="Wha-d5-lkD"/>
-                    </connections>
-                </arrayController>
                 <userDefaultsController representsSharedInstance="YES" id="une-ko-tUc"/>
             </objects>
             <point key="canvasLocation" x="152" y="828"/>

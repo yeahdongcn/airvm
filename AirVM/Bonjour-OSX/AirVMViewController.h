@@ -9,9 +9,10 @@
 #import <Cocoa/Cocoa.h>
 
 @class PersonClusterView;
-@interface AirVMViewController : NSViewController
+@interface AirVMViewController : NSViewController <NSTableViewDataSource, NSTableViewDelegate>
 
 @property (weak) IBOutlet PersonClusterView *personClusterView;
+@property (weak) IBOutlet NSTableView *sharedVMsTableView;
 
 @property (nonatomic, strong) NSMutableArray *sharedVMs;
 @end

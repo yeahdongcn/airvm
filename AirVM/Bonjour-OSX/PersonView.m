@@ -10,7 +10,13 @@
 
 @implementation PersonView
 
-
+- (instancetype)initWithFrame:(NSRect)frameRect {
+   self = [super initWithFrame:frameRect];
+   if (self) {
+      [self registerForDraggedTypes:[NSArray arrayWithObjects:NSStringPboardType,NSFilenamesPboardType,nil]];
+   }
+   return self;
+}
 
 - (void)drawRect:(NSRect)dirtyRect {
    [super drawRect:dirtyRect];
@@ -24,14 +30,14 @@
 - (NSDragOperation)draggingEntered:(id<NSDraggingInfo>)sender {
    return NSDragOperationAll;
 }
-//
-//- (BOOL)performDragOperation:(id<NSDraggingInfo>)sender {
-//   return YES;
-//}
-//
-//- (BOOL)prepareForDragOperation:(id<NSDraggingInfo>)sender {
-//   return YES;
-//}
+
+- (BOOL)performDragOperation:(id<NSDraggingInfo>)sender {
+   return YES;
+}
+
+- (BOOL)prepareForDragOperation:(id<NSDraggingInfo>)sender {
+   return YES;
+}
 
 - (void)concludeDragOperation:(id<NSDraggingInfo>)sender {
    NSLog(@"Drop action trigured with sender %@.", sender);
