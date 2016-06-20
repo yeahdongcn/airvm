@@ -15,6 +15,7 @@
 
 @implementation PersonClusterView
 
+
 - (NSArray *)locationOfPersonsWithNumber:(NSInteger)numOfPersons {
    if (numOfPersons <= 0) {
       return nil;
@@ -78,6 +79,8 @@
 
 - (void)drawRect:(NSRect)dirtyRect {
    [super drawRect:dirtyRect];
+   self.wantsLayer = YES;
+   self.layer.backgroundColor = [NSColor whiteColor].CGColor;
    CGPoint centerPoint = CGPointMake(self.bounds.size.width/2, CENTER_POINT_Y);
    [self drawAirDropWithCenter:centerPoint];
    [self drawLayoutRingWithCenter:centerPoint];

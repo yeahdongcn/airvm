@@ -680,20 +680,20 @@
                                         <rect key="frame" x="0.0" y="0.0" width="148" height="480"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <subviews>
-                                            <scrollView autohidesScrollers="YES" horizontalLineScroll="19" horizontalPageScroll="10" verticalLineScroll="19" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r6X-VH-VVp">
+                                            <scrollView borderType="none" autohidesScrollers="YES" horizontalLineScroll="32" horizontalPageScroll="10" verticalLineScroll="32" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r6X-VH-VVp">
                                                 <rect key="frame" x="0.0" y="0.0" width="148" height="480"/>
                                                 <clipView key="contentView" id="KlR-dy-C1l">
-                                                    <rect key="frame" x="1" y="0.0" width="146" height="479"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="148" height="480"/>
                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                     <subviews>
-                                                        <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" columnReordering="NO" columnSelection="YES" multipleSelection="NO" autosaveColumns="NO" rowSizeStyle="automatic" headerView="br5-V6-MGh" viewBased="YES" id="d83-Ol-kPp">
-                                                            <rect key="frame" x="0.0" y="0.0" width="146" height="456"/>
+                                                        <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" columnReordering="NO" columnSelection="YES" multipleSelection="NO" autosaveColumns="NO" rowHeight="30" rowSizeStyle="automatic" headerView="br5-V6-MGh" viewBased="YES" id="d83-Ol-kPp">
+                                                            <rect key="frame" x="0.0" y="0.0" width="148" height="457"/>
                                                             <autoresizingMask key="autoresizingMask"/>
                                                             <size key="intercellSpacing" width="3" height="2"/>
-                                                            <color key="backgroundColor" name="controlHighlightColor" catalog="System" colorSpace="catalog"/>
+                                                            <color key="backgroundColor" red="0.95686274509803926" green="0.95686274509803926" blue="0.95686274509803926" alpha="1" colorSpace="calibratedRGB"/>
                                                             <color key="gridColor" name="gridColor" catalog="System" colorSpace="catalog"/>
                                                             <tableColumns>
-                                                                <tableColumn width="143" minWidth="40" maxWidth="1000" id="sZ1-ue-NZ3">
+                                                                <tableColumn width="145" minWidth="40" maxWidth="1000" id="sZ1-ue-NZ3">
                                                                     <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="left" title="Virtual Machines">
                                                                         <font key="font" metaFont="smallSystem"/>
                                                                         <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
@@ -707,15 +707,15 @@
                                                                     <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
                                                                     <prototypeCellViews>
                                                                         <tableCellView identifier="SHAREDVMTABLECELLVIEW" id="mMG-qu-qR8">
-                                                                            <rect key="frame" x="1" y="1" width="143" height="17"/>
+                                                                            <rect key="frame" x="1" y="1" width="145" height="30"/>
                                                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                                             <subviews>
                                                                                 <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0Rv-4Q-bAa">
-                                                                                    <rect key="frame" x="0.0" y="0.0" width="142" height="17"/>
-                                                                                    <textFieldCell key="cell" sendsActionOnEndEditing="YES" title="Table View Cell" id="hNw-YT-34e">
+                                                                                    <rect key="frame" x="0.0" y="0.0" width="142" height="30"/>
+                                                                                    <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="left" title="Table View Cell" id="hNw-YT-34e">
                                                                                         <font key="font" metaFont="system"/>
                                                                                         <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                                                                        <color key="backgroundColor" name="gridColor" catalog="System" colorSpace="catalog"/>
+                                                                                        <color key="backgroundColor" name="windowBackgroundColor" catalog="System" colorSpace="catalog"/>
                                                                                     </textFieldCell>
                                                                                 </textField>
                                                                             </subviews>
@@ -743,7 +743,7 @@
                                                     <autoresizingMask key="autoresizingMask"/>
                                                 </scroller>
                                                 <tableHeaderView key="headerView" id="br5-V6-MGh">
-                                                    <rect key="frame" x="0.0" y="0.0" width="146" height="23"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="148" height="23"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                 </tableHeaderView>
                                             </scrollView>

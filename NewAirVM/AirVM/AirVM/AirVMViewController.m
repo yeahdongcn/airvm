@@ -89,7 +89,7 @@
       NSValue * location = locations[i];
       NSPoint origin = [location pointValue];
       origin.x -= personView.bounds.size.width/2;
-      origin.y -= personView.bounds.size.height/2;
+      origin.y -= personView.bounds.size.height/2 + 20;
       [personView setFrameOrigin:origin];
       [self.personClusterView addSubview:personView];
    }
