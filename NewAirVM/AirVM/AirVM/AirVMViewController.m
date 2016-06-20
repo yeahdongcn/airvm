@@ -89,7 +89,7 @@
       NSValue * location = locations[i];
       NSPoint origin = [location pointValue];
       origin.x -= personView.bounds.size.width/2;
-      origin.y -= personView.bounds.size.height/2;
+      origin.y -= personView.bounds.size.height/2 + 20;
       [personView setFrameOrigin:origin];
       [self.personClusterView addSubview:personView];
    }
@@ -174,6 +174,10 @@
 #pragma mark Table View Operations
 - (NSInteger)numberOfRowsInTableView:(NSTableView *)tableView {
    return self.sharedVMs.count;
+}
+
+- (CGFloat)tableView:(NSTableView *)tableView heightOfRow:(NSInteger)row {
+   return 30.0;
 }
 
 - (NSView *)tableView:(NSTableView *)tableView
