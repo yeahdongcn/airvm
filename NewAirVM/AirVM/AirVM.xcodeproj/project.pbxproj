@@ -29,6 +29,27 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		E8A109D31D17EA7E00CE02D1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E8A109CE1D17EA7E00CE02D1 /* BonjourSDK.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = DF7D1C9C19EA466300EB0487;
+			remoteInfo = BonjourSDK_OSX;
+		};
+		E8A109D51D17EA7E00CE02D1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E8A109CE1D17EA7E00CE02D1 /* BonjourSDK.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = DFB9F59E19EA4CB4001F8A04;
+			remoteInfo = BonjourSDK_iOS;
+		};
+		E8A109D71D17EA9500CE02D1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E8A109CE1D17EA7E00CE02D1 /* BonjourSDK.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = DF7D1C9B19EA466300EB0487;
+			remoteInfo = BonjourSDK_OSX;
+		};
 		E8DC97921D17E74200F37D55 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = E8DC97731D17E74200F37D55 /* Project object */;
@@ -43,30 +64,10 @@
 			remoteGlobalIDString = E8DC977A1D17E74200F37D55;
 			remoteInfo = AirVM;
 		};
-		E8DC97B31D17E82100F37D55 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = E8DC97AE1D17E82100F37D55 /* BonjourSDK.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = DF7D1C9C19EA466300EB0487;
-			remoteInfo = BonjourSDK_OSX;
-		};
-		E8DC97B51D17E82100F37D55 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = E8DC97AE1D17E82100F37D55 /* BonjourSDK.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = DFB9F59E19EA4CB4001F8A04;
-			remoteInfo = BonjourSDK_iOS;
-		};
-		E8DC97B71D17E87E00F37D55 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = E8DC97AE1D17E82100F37D55 /* BonjourSDK.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = DF7D1C9B19EA466300EB0487;
-			remoteInfo = BonjourSDK_OSX;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E8A109CE1D17EA7E00CE02D1 /* BonjourSDK.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = BonjourSDK.xcodeproj; path = BonjourSDK/BonjourSDK.xcodeproj; sourceTree = "<group>"; };
 		E8DC977B1D17E74200F37D55 /* AirVM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AirVM.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E8DC977E1D17E74200F37D55 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		E8DC977F1D17E74200F37D55 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -81,7 +82,6 @@
 		E8DC979C1D17E74200F37D55 /* AirVMUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AirVMUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E8DC97A01D17E74200F37D55 /* AirVMUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AirVMUITests.m; sourceTree = "<group>"; };
 		E8DC97A21D17E74200F37D55 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E8DC97AE1D17E82100F37D55 /* BonjourSDK.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = BonjourSDK.xcodeproj; path = ../../Fusion/borathon/airvm/AirVM/BonjourSDK/BonjourSDK.xcodeproj; sourceTree = "<group>"; };
 		E8DC97BA1D17E8D200F37D55 /* AirVMViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AirVMViewController.h; sourceTree = "<group>"; };
 		E8DC97BB1D17E8D200F37D55 /* AirVMViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AirVMViewController.m; sourceTree = "<group>"; };
 		E8DC97BC1D17E8D200F37D55 /* BJPublishActionButtonEnableTransformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BJPublishActionButtonEnableTransformer.h; sourceTree = "<group>"; };
@@ -131,14 +131,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E8A109CF1D17EA7E00CE02D1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E8A109D41D17EA7E00CE02D1 /* BonjourSDK.framework */,
+				E8A109D61D17EA7E00CE02D1 /* BonjourSDK.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		E8DC97721D17E74200F37D55 = {
 			isa = PBXGroup;
 			children = (
+				E8A109CE1D17EA7E00CE02D1 /* BonjourSDK.xcodeproj */,
 				E8DC977D1D17E74200F37D55 /* AirVM */,
 				E8DC97941D17E74200F37D55 /* AirVMTests */,
 				E8DC979F1D17E74200F37D55 /* AirVMUITests */,
 				E8DC977C1D17E74200F37D55 /* Products */,
-				E8DC97AE1D17E82100F37D55 /* BonjourSDK.xcodeproj */,
 			);
 			sourceTree = "<group>";
 		};
@@ -214,15 +223,6 @@
 			path = AirVMUITests;
 			sourceTree = "<group>";
 		};
-		E8DC97AF1D17E82100F37D55 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				E8DC97B41D17E82100F37D55 /* BonjourSDK.framework */,
-				E8DC97B61D17E82100F37D55 /* BonjourSDK.framework */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -237,7 +237,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				E8DC97B81D17E87E00F37D55 /* PBXTargetDependency */,
+				E8A109D81D17EA9500CE02D1 /* PBXTargetDependency */,
 			);
 			name = AirVM;
 			productName = AirVM;
@@ -315,8 +315,8 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProductGroup = E8DC97AF1D17E82100F37D55 /* Products */;
-					ProjectRef = E8DC97AE1D17E82100F37D55 /* BonjourSDK.xcodeproj */;
+					ProductGroup = E8A109CF1D17EA7E00CE02D1 /* Products */;
+					ProjectRef = E8A109CE1D17EA7E00CE02D1 /* BonjourSDK.xcodeproj */;
 				},
 			);
 			projectRoot = "";
@@ -329,18 +329,18 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		E8DC97B41D17E82100F37D55 /* BonjourSDK.framework */ = {
+		E8A109D41D17EA7E00CE02D1 /* BonjourSDK.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
 			path = BonjourSDK.framework;
-			remoteRef = E8DC97B31D17E82100F37D55 /* PBXContainerItemProxy */;
+			remoteRef = E8A109D31D17EA7E00CE02D1 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		E8DC97B61D17E82100F37D55 /* BonjourSDK.framework */ = {
+		E8A109D61D17EA7E00CE02D1 /* BonjourSDK.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
 			path = BonjourSDK.framework;
-			remoteRef = E8DC97B51D17E82100F37D55 /* PBXContainerItemProxy */;
+			remoteRef = E8A109D51D17EA7E00CE02D1 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -413,6 +413,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		E8A109D81D17EA9500CE02D1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = BonjourSDK_OSX;
+			targetProxy = E8A109D71D17EA9500CE02D1 /* PBXContainerItemProxy */;
+		};
 		E8DC97931D17E74200F37D55 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = E8DC977A1D17E74200F37D55 /* AirVM */;
@@ -422,11 +427,6 @@
 			isa = PBXTargetDependency;
 			target = E8DC977A1D17E74200F37D55 /* AirVM */;
 			targetProxy = E8DC979D1D17E74200F37D55 /* PBXContainerItemProxy */;
-		};
-		E8DC97B81D17E87E00F37D55 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = BonjourSDK_OSX;
-			targetProxy = E8DC97B71D17E87E00F37D55 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
