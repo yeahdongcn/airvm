@@ -13,5 +13,6 @@
 
 @property (nonatomic, copy) NSString *vmName;
 @property (nonatomic, strong) NSNetService *netService;
+@property (nonatomic, copy) NSString *vncPort;
 
 @end

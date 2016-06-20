@@ -17,11 +17,15 @@
    }
 
    self.vmName = [decoder decodeObjectForKey:@"vmName"];
+   self.netService = [decoder decodeObjectForKey:@"netService"];
+   self.vncPort = [decoder decodeObjectForKey:@"vncPort"];
    return self;
 }
 
 - (void)encodeWithCoder:(NSCoder *)encoder {
    [encoder encodeObject:self.vmName forKey:@"vmName"];
+   [encoder encodeObject:self.netService forKey:@"netService"];
+   [encoder encodeObject:self.vncPort forKey:@"vncPort"];
 }
 
 @end

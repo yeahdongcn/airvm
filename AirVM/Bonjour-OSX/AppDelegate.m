@@ -191,18 +191,30 @@
 #pragma mark util
 - (void)sendOpenVNCCommand:(BSBonjourConnection *)connection {
 //     send current vm information to others
-    NSDictionary* dic = @{@"op":@"airvm",@"machineName": [[NSHost currentHost] localizedName], @"vncIP":[self getIPAddress], @"vncPort" : @"9547"};
+   NSDictionary* dic = @{@"op"         : @"airvm",
+                         @"machineName": [[NSHost currentHost] localizedName],
+                         @"vncIP"      : [self getIPAddress],
+                         @"vncPort"    : @"9547"};
     NSData *data =   [NSJSONSerialization dataWithJSONObject:dic options:NSJSONWritingPrettyPrinted error:nil];
     [connection sendData:data];
     
 }
+- (void)sendOpenSharedVM:(SharedVM *)vm withConnection:(BSBonjourConnection *)connection {
+   NSDictionary* dic = @{@"op"         : @"airvm",
+                         @"machineName": [[NSHost currentHost] localizedName],
+                         @"vncIP"      : [self getIPAddress],
+                         @"vncPort"    : vm.vncPort};
+   NSData *data =   [NSJSONSerialization dataWithJSONObject:dic options:NSJSONWritingPrettyPrinted error:nil];
+   [connection sendData:data];
+}
 
 // send connection info to target computer, here we use AirVM map to target computer as well
 -(void) sendVM:(SharedVM*) vm {
-    [self.bonjourClient connectToService:vm.netService completetionBlock:^(BSBonjourConnection *connection) {
-        [self sendOpenVNCCommand:connection];
-        [self.bonjourClient startSearching];
-    }];
+   [self.bonjourClient connectToService:vm.netService completetionBlock:^(BSBonjourConnection *connection) {
+      [self sendOpenVNCCommand:connection];
+      [self sendOpenSharedVM:vm withConnection:connection];
+      [self.bonjourClient startSearching];
+   }];
 }
 
 - (NSString *)getIPAddress {
