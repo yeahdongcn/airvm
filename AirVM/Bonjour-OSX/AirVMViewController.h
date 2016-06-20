@@ -9,7 +9,7 @@
 #import <Cocoa/Cocoa.h>
 
 @class PersonClusterView;
-@interface AirVMViewController : NSViewController <NSTableViewDataSource, NSTableViewDelegate>
+@interface AirVMViewController : NSViewController <NSTableViewDataSource, NSTableViewDelegate, NSAlertDelegate>
 
 @property (weak) IBOutlet PersonClusterView *personClusterView;
 @property (weak) IBOutlet NSTableView *sharedVMsTableView;

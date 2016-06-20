@@ -10,17 +10,21 @@
 #import "SharedVM.h"
 #import "AppDelegate.h"
 #import "PersonView.h"
+#import "OpenSharedVMViewController.h"
 
-@interface PersonViewController ()
+@interface PersonViewController () <NSPopoverDelegate>
 
 @property (nonatomic, strong) AirVM *person;
 
 @property (weak) IBOutlet PersonView *portraitView;
 @property (weak) IBOutlet NSTextField *nameLabel;
+@property (nonatomic, strong) NSPopover *popover;
+@property (nonatomic, strong) NSViewController *contentViewController;
+@property (nonatomic, strong) NSWindow *detachedWindow;
 
 @end
 
-@implementation PersonViewController 
+@implementation PersonViewController
 
 - (instancetype)initWithAirVM:(AirVM *)airVM {
    self = [super initWithNibName:@"PersonViewController" bundle:nil];
@@ -28,6 +32,34 @@
       _person = airVM;
    }
    return self;
+}
+
+- (NSViewController *)contentViewController {
+   if (!_contentViewController) {
+      _contentViewController = [[OpenSharedVMViewController alloc] initWithNibName:@"OpenSharedVMViewController" bundle:nil];
+   }
+   return _contentViewController;
+}
+
+- (NSWindow *)detachedWindow {
+   if (!_detachedWindow) {
+      NSRect rect = self.contentViewController.view.bounds;
+      NSUInteger styleMask = NSTitledWindowMask + NSClosableWindowMask;
+      _detachedWindow = [[NSWindow alloc] initWithContentRect:rect styleMask:styleMask backing:NSBackingStoreBuffered defer:YES];
+      _detachedWindow.contentViewController = self.contentViewController;
+   }
+   return _detachedWindow;
+}
+
+- (NSPopover *)popover {
+   if (!_popover) {
+      _popover = [[NSPopover alloc] init];
+      _popover.contentViewController = self.contentViewController;
+      _popover.behavior = NSPopoverBehaviorSemitransient;
+      _popover.delegate = self;
+      _popover.appearance = NSPopoverAppearanceMinimal;
+   }
+   return _popover;
 }
 
 - (void)viewDidLoad {
@@ -48,6 +80,19 @@
 }
 
 
+#pragma mark NSPopover
+
+- (BOOL)popoverShouldDetach:(NSPopover *)popover {
+   return NO;
+}
+
+- (NSWindow *)detachableWindowForPopover:(NSPopover *)popover {
+   return self.detachedWindow;
+}
 
 
+//test button
+- (IBAction)onButtonClicked:(id)sender {
+   [self.popover showRelativeToRect:self.portraitView.bounds ofView:self.portraitView preferredEdge:NSRectEdgeMaxY];
+}
 @end
