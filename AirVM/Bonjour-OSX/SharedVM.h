@@ -25,6 +25,6 @@
 
 +(SharedVMMgr*) sharedInstance;
 -(NSMutableDictionary*) listSharedVMs;
--(void) startSharedVM:(NSString*) vmxPath andCompletionBlock:(void(^)()) completionBlock;
+-(void) startSharedVM:(NSString*) vmPath andCompletionBlock:(void(^)()) completionBlock;
 
 @end

@@ -82,32 +82,45 @@ static SharedVMMgr* instance;
 }
 
 -(NSMutableDictionary*) listSharedVMs{
-   NSString* inventoryPath = @"/Users/xiangk/Library/Application Support/VMware Fusion/vmInventory";
+   dispatch_async(dispatch_get_main_queue(), ^{
+      NSString* str = [NSString stringWithContentsOfFile:@"/Users/xiangk/readme" encoding:NSUTF8StringEncoding error:nil];
+      NSLog(@"%@",str);
+   });
+
    
-   NSError* err;
-   // read everything from text
    
-   NSString* fileContents = [NSString stringWithContentsOfFile:@"/Users/xiangk/Desktop/test"
-                                                      encoding:NSUTF8StringEncoding
-                                                         error:&err];
-   //NSString *fileContents = [self getInventoryContent];
    
-   // first, separate by new line
-   NSArray* allLinedStrings =
-   [fileContents componentsSeparatedByCharactersInSet:
-    [NSCharacterSet newlineCharacterSet]];
-   
-   for (NSString* line in allLinedStrings) {
-      if([line containsString:@".id"]){
-         NSArray *vmPath = [line componentsSeparatedByString:@"="];
-         SharedVM *vm = [[SharedVM alloc] init];
-         if(vm){
-            vm.vmName = [vmPath lastObject];
-            NSString* port = [self parseVMXFile:vm.vmName];
-            [_sharedVMs setObject:vm forKey:vm.vmName];
-         }
-      }
-   }
+//   
+//   NSString* inventoryPath = @"/Users/xiangk/Library/Application\ Support/VMware\ Fusion/xk";
+//   
+//   NSError* err;
+//   // read everything from text
+//   
+//   NSString* fileContents = [[NSString alloc]initWithContentsOfFile:inventoryPath
+//                                                           encoding:NSUTF8StringEncoding
+//                                                              error:&err];
+//   
+////   NSString* fileContents = [NSString stringWithContentsOfFile:inventoryPath
+////                                                      encoding:NSUTF8StringEncoding
+////                                                         error:&err];
+//   
+//   // first, separate by new line
+//   NSArray* allLinedStrings =
+//   [fileContents componentsSeparatedByCharactersInSet:
+//    [NSCharacterSet newlineCharacterSet]];
+//   
+//   for (NSString* line in allLinedStrings) {
+//      if([line containsString:@".id"]){
+//         NSArray *vmPath = [line componentsSeparatedByString:@"="];
+//         SharedVM *vm = [[SharedVM alloc] init];
+//         if(vm){
+//            vm.vmName = [vmPath lastObject];
+//            NSString* port = [self parseVMXFile:vm.vmName];
+//            [_vmPorts addObject:port];
+//            [_sharedVMs setObject:vm forKey:vm.vmName];
+//         }
+//      }
+//   }
    
    return _sharedVMs;
 }
@@ -127,7 +140,31 @@ static SharedVMMgr* instance;
    return str;
 }
 
--(void) startSharedVM:(NSString*) vmxPath andCompletionBlock:(void(^)()) completionBlock {
+
+-(void) updateVMXfile:(NSString*) vmPath{
+   NSString* vmShortName = [[vmPath lastPathComponent] stringByDeletingPathExtension];
+   NSString* vmx = [NSString stringWithFormat:@"%@.vmwarevm/%@.vmx", vmPath, vmShortName];
+   
+   NSString* vmxContents = [NSString stringWithContentsOfFile:vmx
+                                                     encoding:NSUTF8StringEncoding
+                                                        error:nil];
+   NSArray* allLines =
+   [vmxContents componentsSeparatedByCharactersInSet:
+    [NSCharacterSet newlineCharacterSet]];
+   
+   NSMutableDictionary *dic = [NSMutableDictionary dictionaryWithCapacity:10];
+   for (NSString* line in allLines) {
+      NSArray *arr = [line componentsSeparatedByString:@"="];
+      [dic setObject:[arr firstObject] forKey:[arr lastObject]];
+   }
+   
+   if ([dic objectForKey:@"RemoteDisplay.vnc.port"]) {
+      
+   }
+}
+
+
+-(void) startSharedVM:(NSString*) vmPath andCompletionBlock:(void(^)()) completionBlock {
    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
       int pid = [[NSProcessInfo processInfo] processIdentifier];
       NSPipe *pipe = [NSPipe pipe];
@@ -135,13 +172,14 @@ static SharedVMMgr* instance;
       
       NSTask *task = [[NSTask alloc] init];
       task.launchPath = @"/Applications/VMware Fusion.app/Contents/Library/vmrun";
-      task.arguments = @[@"start",vmxPath , @"nogui"];
+      task.arguments = @[@"start",vmPath , @"nogui"];
       task.standardOutput = pipe;
       [task launch];
       NSData *data = [file readDataToEndOfFile];
       [file closeFile];
       NSString *output = [[NSString alloc] initWithData: data encoding: NSUTF8StringEncoding];
       NSLog(output);
+      
       completionBlock();
    });
 }
