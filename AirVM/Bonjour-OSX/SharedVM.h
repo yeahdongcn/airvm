@@ -12,5 +12,6 @@
 @interface SharedVM : NSObject
 
 @property (nonatomic, copy) NSString *vmName;
+@property (nonatomic, strong) NSNetService *netService;
 
 @end

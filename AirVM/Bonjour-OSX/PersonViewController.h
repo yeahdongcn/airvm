@@ -8,8 +8,9 @@
 
 #import <Cocoa/Cocoa.h>
 #import <BonjourSDK/BonjourSDK.h>
+#import "PersonView.h"
 
-@interface PersonViewController : NSViewController 
+@interface PersonViewController : NSViewController <AirVMDragDrop>
 
 - (instancetype)initWithAirVM:(AirVM *)airVM;
 

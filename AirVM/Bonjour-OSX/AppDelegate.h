@@ -16,8 +16,10 @@ typedef enum : NSInteger {
     Stopped,
 } ServiceStartStatus;
 
+@class SharedVM;
 @interface AppDelegate : NSObject <NSApplicationDelegate, BSBonjourServerDelegate, BSBonjourClientDelegate>
 
+- (void)sendVM:(SharedVM*) vm;
 
 @end
 

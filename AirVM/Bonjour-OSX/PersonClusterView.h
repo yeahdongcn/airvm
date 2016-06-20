@@ -11,7 +11,6 @@
 @interface PersonClusterView : NSView
 
 @property (nonatomic, assign) CGFloat *radiusInterval;
-
 - (NSArray *)locationOfPersonsWithNumber:(NSInteger)numOfPersons;
 
 @end

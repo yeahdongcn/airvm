@@ -8,6 +8,7 @@
 
 #import "PersonView.h"
 #import "SharedVM.h"
+#import "AppDelegate.h"
 
 @implementation PersonView
 
@@ -17,12 +18,6 @@
       [self registerForDraggedTypes:[NSArray arrayWithObjects:NSStringPboardType,NSFilenamesPboardType,nil]];
    }
    return self;
-}
-
-- (void)drawRect:(NSRect)dirtyRect {
-   [super drawRect:dirtyRect];
-
-   // Drawing code here.
 }
 
 
@@ -42,9 +37,9 @@
 
 - (void)concludeDragOperation:(id<NSDraggingInfo>)sender {
    NSLog(@"Drop action trigured with sender %@.", sender);
-   NSData *data = [[sender draggingPasteboard] dataForType:NSStringPboardType];
-   SharedVM *vm = [NSKeyedUnarchiver unarchiveObjectWithData:data];
-   [self alertToOpenSharedVM:vm];
+   if (self.delegate && [self.delegate respondsToSelector:@selector(concludeDragOperation:)]) {
+      [self.delegate concludeDropOperation:sender];
+   }
 }
 
 // test code

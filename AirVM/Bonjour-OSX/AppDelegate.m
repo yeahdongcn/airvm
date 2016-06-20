@@ -26,6 +26,7 @@
 
 #import "BJPublishActionButtonTransformer.h"
 #import "BJPublishActionButtonEnableTransformer.h"
+#import "SharedVM.h"
 
 #define kServiceName     @"airvm"
 #define kServiceProtocol @"tcp"
@@ -86,7 +87,7 @@
 - (IBAction)toggleSendAction:(id)sender {
     NSLog(@"toggleSendAction");
     
-    [self sendVM:[[AirVMManager sharedInstance] getAllAirVMs][0]];
+    //[self sendVM:[[AirVMManager sharedInstance] getAllAirVMs][0]];
     
 }
 
@@ -197,7 +198,7 @@
 }
 
 // send connection info to target computer, here we use AirVM map to target computer as well
--(void) sendVM:(AirVM*) vm {
+-(void) sendVM:(SharedVM*) vm {
     [self.bonjourClient connectToService:vm.netService completetionBlock:^(BSBonjourConnection *connection) {
         [self sendOpenVNCCommand:connection];
         [self.bonjourClient startSearching];

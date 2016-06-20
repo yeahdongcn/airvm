@@ -8,6 +8,11 @@
 
 #import <Cocoa/Cocoa.h>
 
-@interface PersonView : NSImageView <NSDraggingDestination>
+@class SharedVM;
+@protocol AirVMDragDrop <NSObject>
+- (void)concludeDropOperation:(id<NSDraggingInfo>)sender;
+@end
 
+@interface PersonView : NSImageView <NSDraggingDestination>
+@property(nonatomic, weak) id<AirVMDragDrop> delegate;
 @end

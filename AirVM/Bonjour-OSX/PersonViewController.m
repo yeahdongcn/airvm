@@ -7,6 +7,8 @@
 //
 
 #import "PersonViewController.h"
+#import "SharedVM.h"
+#import "AppDelegate.h"
 
 @interface PersonViewController ()
 
@@ -35,6 +37,13 @@
    self.nameLabel.stringValue = self.person.machineName;
 }
 
+#pragma mark AirVMDrop
+- (void)concludeDropOperation:(id<NSDraggingInfo>)sender {
+   NSData *data = [[sender draggingPasteboard] dataForType:NSStringPboardType];
+   SharedVM *vm = [NSKeyedUnarchiver unarchiveObjectWithData:data];
+   vm.netService = self.person.netService;
+   [(AppDelegate *)([[NSApplication sharedApplication] delegate]) sendVM:vm];
+}
 
 
 
