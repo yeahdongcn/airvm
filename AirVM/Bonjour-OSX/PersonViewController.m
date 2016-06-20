@@ -9,12 +9,13 @@
 #import "PersonViewController.h"
 #import "SharedVM.h"
 #import "AppDelegate.h"
+#import "PersonView.h"
 
 @interface PersonViewController ()
 
 @property (nonatomic, strong) AirVM *person;
 
-@property (weak) IBOutlet NSImageView *portraitView;
+@property (weak) IBOutlet PersonView *portraitView;
 @property (weak) IBOutlet NSTextField *nameLabel;
 
 @end
@@ -35,6 +36,7 @@
    self.portraitView.wantsLayer = YES;
    self.portraitView.layer.cornerRadius = self.portraitView.frame.size.width / 2;
    self.nameLabel.stringValue = self.person.machineName;
+   self.portraitView.delegate = self;
 }
 
 #pragma mark AirVMDrop

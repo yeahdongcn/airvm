@@ -37,7 +37,7 @@
 
 - (void)concludeDragOperation:(id<NSDraggingInfo>)sender {
    NSLog(@"Drop action trigured with sender %@.", sender);
-   if (self.delegate && [self.delegate respondsToSelector:@selector(concludeDragOperation:)]) {
+   if (self.delegate) {
       [self.delegate concludeDropOperation:sender];
    }
 }
