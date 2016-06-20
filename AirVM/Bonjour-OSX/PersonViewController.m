@@ -109,6 +109,17 @@
    [self.popover showRelativeToRect:self.portraitView.bounds ofView:self.portraitView preferredEdge:NSRectEdgeMaxY];
 }
 
+- (void)showPopoverWithOpenAction:(OpenAction)openAction {
+   [self showPopover];
+   if ([self.popover.contentViewController isKindOfClass:[OpenSharedVMViewController class]]) {
+      ((OpenSharedVMViewController *)(self.popover.contentViewController)).openAction = openAction;
+   }
+}
+
+- (void)dismissPopover {
+   [self.popover close];
+}
+
 //test button
 - (IBAction)onButtonClicked:(id)sender {
    [self showPopover];
