@@ -122,7 +122,8 @@
    if (pvc) {
 #pragma warning TODO: construct a SharedVM
       SharedVM *vm = [[SharedVM alloc] init];
-
+      vm.ipAddress = [usrDic valueForKey:@"vncIP"];
+      vm.vncPort = [usrDic valueForKey:@"vncPort"];
       OpenAction openAction = ^(BOOL open) {
          if (open) {
             [self openTheSharedVM:vm];
@@ -137,6 +138,18 @@
 
 - (void)openTheSharedVM:(SharedVM *)vm {
    NSLog(@"%@ opened the shared VM: %@", self, vm);
+   NSPipe *pipe = [NSPipe pipe];
+   NSTask *task = [[NSTask alloc] init];
+   task.launchPath = @"/bin/sh";//@"/usr/bin/open";
+   NSString *password = @"airvm";
+   NSString *ipAddress = @"192.168.0.3";
+   NSString *vncPort = @"5905";
+   NSString *arg1 = @"/Users/zhaokaiy/Desktop/testVNC";//[NSString stringWithFormat:@"vnc://:%@@%@:%@", password, ipAddress, vncPort];
+   task.arguments = @[arg1];
+   task.standardOutput = pipe;
+   NSLog(@"Invoke VNC command: %@ %@", task.launchPath, arg1);
+   [task launch];
+
 }
 
 - (void)ignoreTheSharedVM:(SharedVM *)vm {

@@ -19,6 +19,7 @@
    self.vmName = [decoder decodeObjectForKey:@"vmName"];
    self.netService = [decoder decodeObjectForKey:@"netService"];
    self.vncPort = [decoder decodeObjectForKey:@"vncPort"];
+   self.ipAddress = [decoder decodeObjectForKey:@"ipAddress"];
    return self;
 }
 
@@ -26,6 +27,7 @@
    [encoder encodeObject:self.vmName forKey:@"vmName"];
    [encoder encodeObject:self.netService forKey:@"netService"];
    [encoder encodeObject:self.vncPort forKey:@"vncPort"];
+   [encoder encodeObject:self.ipAddress forKey:@"ipAddress"];
 }
 
 @end
