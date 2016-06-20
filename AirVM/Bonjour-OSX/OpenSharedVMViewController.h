@@ -10,4 +10,6 @@
 
 @interface OpenSharedVMViewController : NSViewController
 
+@property (nonatomic, assign) BOOL didResponse;
+
 @end

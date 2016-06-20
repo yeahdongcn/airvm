@@ -14,9 +14,22 @@
 
 @implementation OpenSharedVMViewController
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    // Do view setup here.
+- (instancetype)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
+   self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+   if (self) {
+      _didResponse = NO;
+   }
+   return self;
+}
+
+- (IBAction)onOpenButtonPressed:(id)sender {
+   NSLog(@"The Open button on the popover is pressed.");
+   self.didResponse = YES;
+}
+
+- (IBAction)onIgnoreButtonPressed:(id)sender {
+   NSLog(@"The Ignore button on the popover is pressed.");
+   self.didResponse = YES;
 }
 
 @end

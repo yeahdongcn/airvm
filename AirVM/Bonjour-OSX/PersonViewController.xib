@@ -33,6 +33,16 @@
                         <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                     </textFieldCell>
                 </textField>
+                <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cmy-RA-g3h">
+                    <rect key="frame" x="12" y="-7" width="81" height="32"/>
+                    <buttonCell key="cell" type="push" title="Button" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="CG5-1B-mcz">
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="system"/>
+                    </buttonCell>
+                    <connections>
+                        <action selector="onButtonClicked:" target="-2" id="kgn-sg-RW5"/>
+                    </connections>
+                </button>
             </subviews>
             <constraints>
                 <constraint firstItem="fpt-L2-PGm" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" id="4x1-HH-ypr"/>
@@ -42,7 +52,7 @@
                 <constraint firstAttribute="trailing" secondItem="fpt-L2-PGm" secondAttribute="trailing" constant="20" id="snO-y7-Im7"/>
                 <constraint firstItem="fpt-L2-PGm" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" constant="20" id="uYz-0r-yHM"/>
             </constraints>
-            <point key="canvasLocation" x="-215" y="300"/>
+            <point key="canvasLocation" x="-70" y="294"/>
         </customView>
     </objects>
 </document>

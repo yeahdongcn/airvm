@@ -13,5 +13,6 @@
 @interface PersonViewController : NSViewController <AirVMDragDrop>
 
 - (instancetype)initWithAirVM:(AirVM *)airVM;
-
+- (NSString *)machineName;
+- (void)showPopover;
 @end

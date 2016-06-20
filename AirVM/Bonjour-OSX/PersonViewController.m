@@ -19,7 +19,7 @@
 @property (weak) IBOutlet PersonView *portraitView;
 @property (weak) IBOutlet NSTextField *nameLabel;
 @property (nonatomic, strong) NSPopover *popover;
-@property (nonatomic, strong) NSViewController *contentViewController;
+@property (nonatomic, strong) OpenSharedVMViewController *contentViewController;
 @property (nonatomic, strong) NSWindow *detachedWindow;
 
 @end
@@ -32,6 +32,10 @@
       _person = airVM;
    }
    return self;
+}
+
+- (NSString *)machineName {
+   return self.person.machineName;
 }
 
 - (NSViewController *)contentViewController {
@@ -90,9 +94,23 @@
    return self.detachedWindow;
 }
 
+- (BOOL)popoverShouldClose:(NSPopover *)popover {
+   if (popover == self.popover) {
+      return self.contentViewController.didResponse;
+   }
+   return YES;
+}
+
+- (void)popoverWillClose:(NSNotification *)notification {
+   NSLog(@"popoverWillClose is called.");
+}
+
+- (void)showPopover {
+   [self.popover showRelativeToRect:self.portraitView.bounds ofView:self.portraitView preferredEdge:NSRectEdgeMaxY];
+}
 
 //test button
 - (IBAction)onButtonClicked:(id)sender {
-   [self.popover showRelativeToRect:self.portraitView.bounds ofView:self.portraitView preferredEdge:NSRectEdgeMaxY];
+   [self showPopover];
 }
 @end
