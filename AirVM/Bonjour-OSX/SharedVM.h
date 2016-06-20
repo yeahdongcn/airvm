@@ -16,3 +16,15 @@
 @property (nonatomic, copy) NSString *vncPort;
 
 @end
+
+
+@interface SharedVMMgr : NSObject
+
+@property (nonatomic) NSMutableDictionary *sharedVMs;
+@property (nonatomic) NSMutableSet *vmPorts;
+
++(SharedVMMgr*) sharedInstance;
+-(NSMutableDictionary*) listSharedVMs;
+-(void) startSharedVM:(NSString*) vmxPath andCompletionBlock:(void(^)()) completionBlock;
+
+@end
