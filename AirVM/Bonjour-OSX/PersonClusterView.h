@@ -12,6 +12,6 @@
 
 @property (nonatomic, assign) CGFloat *radiusInterval;
 
-+ (NSArray *)locationOfPersonsWithNumber:(NSInteger)numOfPersons;
+- (NSArray *)locationOfPersonsWithNumber:(NSInteger)numOfPersons;
 
 @end

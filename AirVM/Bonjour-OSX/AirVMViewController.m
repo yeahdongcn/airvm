@@ -86,7 +86,10 @@
       [self.personViewControllers addObject:personViewController];
       NSView *personView = personViewController.view;
       NSValue * location = locations[i];
-      [personView setFrameOrigin:[location pointValue]];
+      NSPoint origin = [location pointValue];
+      origin.x -= personView.bounds.size.width/2;
+      origin.y -= personView.bounds.size.height/2;
+      [personView setFrameOrigin:origin];
       [self.personClusterView addSubview:personView];
    }
    [self.view setNeedsDisplay:YES];
@@ -116,25 +119,14 @@
 
 
 - (NSArray *)locationsOfPersons:(NSArray *)peopleCluster {
-   NSMutableArray *locations = [[NSMutableArray alloc] init];
-   CGFloat offsetX = 100.0;
-   CGFloat offsetY = 100.0;
-   CGFloat offsetXInterval = 100.0;
-   CGFloat offsetYInterval = 100.0;
-   for (int i=0; i<peopleCluster.count; i++) {
-      CGFloat x = offsetX + i * offsetXInterval;
-      CGFloat y = offsetY + i * offsetYInterval;
-      NSPoint point = NSMakePoint(x, y);
-      [locations addObject:[NSValue valueWithPoint:point]];
-   }
-   return [NSArray arrayWithArray:locations];
+   return [self.personClusterView locationOfPersonsWithNumber:peopleCluster.count];
 }
 
 #pragma mark Data Operations
 - (NSArray *)queryPersonsFromBojour {
-//   Person *testA = [[Person alloc] initWithName:@"Zhaokai"];
-//   Person *testB = [[Person alloc] initWithName:@"Jeff"];
-//   return [NSArray arrayWithObjects:testA, testB, nil];
+//   AirVM *testA = [[AirVM alloc] init]; testA.machineName = @"Zhaokai";
+//   AirVM *testB = [[AirVM alloc] init]; testB.machineName = @"Jeff";
+//   return [NSArray arrayWithObjects:testA,testB, testA, testB,testA, testB, nil];
    return [[AirVMManager sharedInstance] getAllAirVMs];
 }
 
