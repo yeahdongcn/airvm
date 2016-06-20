@@ -11,6 +11,7 @@
 #import "PersonClusterView.h"
 #import "PersonViewController.h"
 #import "SharedVM.h"
+#import "OpenSharedVMViewController.h"
 
 #import <BonjourSDK/BonjourSDK.h>
 
@@ -102,12 +103,7 @@
 }
 
 - (void)alertToOpenSharedVM:(NSNotification*)notification {
-   NSDictionary *usrDic = [notification userInfo];
-   NSString *machineName = [usrDic valueForKey:@"machineName"];
-   PersonViewController *pvc = [self findPersonViewControllerWithMachineName:machineName];
-   if (pvc) {
-      [pvc showPopover];
-   }
+   [self showPopoverwithNotification:notification];
 }
 
 - (PersonViewController *)findPersonViewControllerWithMachineName:(NSString *)machineName {
@@ -119,8 +115,32 @@
    return nil;
 }
 
-- (void)showPopover {
-   
+- (void)showPopoverwithNotification:(NSNotification *)notification {
+   NSDictionary *usrDic = [notification userInfo];
+   NSString *machineName = [usrDic valueForKey:@"machineName"];
+   PersonViewController *pvc = [self findPersonViewControllerWithMachineName:machineName];
+   if (pvc) {
+#pragma warning TODO: construct a SharedVM
+      SharedVM *vm = [[SharedVM alloc] init];
+
+      OpenAction openAction = ^(BOOL open) {
+         if (open) {
+            [self openTheSharedVM:vm];
+         } else {
+            [self ignoreTheSharedVM:vm];
+         }
+         [pvc dismissPopover];
+      };
+      [pvc showPopoverWithOpenAction:openAction];
+   }
+}
+
+- (void)openTheSharedVM:(SharedVM *)vm {
+   NSLog(@"%@ opened the shared VM: %@", self, vm);
+}
+
+- (void)ignoreTheSharedVM:(SharedVM *)vm {
+   NSLog(@"%@ ignored the shared VM: %@", self, vm);
 }
 
 

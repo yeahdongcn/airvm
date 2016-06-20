@@ -9,6 +9,7 @@
 #import "OpenSharedVMViewController.h"
 
 @interface OpenSharedVMViewController ()
+@property (weak) IBOutlet NSTextField *descriptionTextField;
 
 @end
 
@@ -22,14 +23,25 @@
    return self;
 }
 
+- (void)viewDidAppear {
+   [super viewDidAppear];
+   self.didResponse = NO;
+}
+
 - (IBAction)onOpenButtonPressed:(id)sender {
    NSLog(@"The Open button on the popover is pressed.");
    self.didResponse = YES;
+   self.openAction(YES);
 }
 
 - (IBAction)onIgnoreButtonPressed:(id)sender {
    NSLog(@"The Ignore button on the popover is pressed.");
    self.didResponse = YES;
+   self.openAction(NO);
+}
+
+- (void)setDescription:(NSString *)description {
+   self.descriptionTextField.stringValue = description;
 }
 
 @end

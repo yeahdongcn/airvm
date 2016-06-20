@@ -9,10 +9,12 @@
 #import <Cocoa/Cocoa.h>
 #import <BonjourSDK/BonjourSDK.h>
 #import "PersonView.h"
+#import "OpenSharedVMViewController.h"
 
 @interface PersonViewController : NSViewController <AirVMDragDrop>
 
 - (instancetype)initWithAirVM:(AirVM *)airVM;
 - (NSString *)machineName;
-- (void)showPopover;
+- (void)showPopoverWithOpenAction:(OpenAction)openAction;
+- (void)dismissPopover;
 @end
