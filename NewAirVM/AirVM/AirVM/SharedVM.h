@@ -25,7 +25,7 @@
 @property (nonatomic) NSMutableSet *vmPorts;
 
 +(SharedVMMgr*) sharedInstance;
--(NSMutableDictionary*) listSharedVMs;
+-(NSMutableArray*) listSharedVMs;
 -(void) startSharedVM:(NSString*) vmPath andCompletionBlock:(void(^)()) completionBlock;
 
 @end

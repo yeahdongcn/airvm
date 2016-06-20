@@ -46,12 +46,11 @@ static SharedVMMgr* instance;
 }
 
 -(NSString*) parseVMXFile:(NSString*) vmPath{
-   NSString* vmShortName = [[vmPath lastPathComponent] stringByDeletingPathExtension];
-   NSString* vmx = [NSString stringWithFormat:@"%@.vmwarevm/%@.vmx", vmPath, vmShortName];
-   
-   NSString* vmxContents = [NSString stringWithContentsOfFile:vmx
+   NSError *err;
+   NSString* vmxContents = [NSString stringWithContentsOfFile:vmPath
                                                      encoding:NSUTF8StringEncoding
-                                                        error:nil];
+                                                        error:&err];
+   
    NSArray* allLines =
    [vmxContents componentsSeparatedByCharactersInSet:
     [NSCharacterSet newlineCharacterSet]];
@@ -59,72 +58,45 @@ static SharedVMMgr* instance;
    for (NSString* line in allLines) {
       if([line containsString:@"RemoteDisplay.vnc.port"]){
          NSArray *arr = [line componentsSeparatedByString:@"="];
-         return [arr lastObject];
+         NSCharacterSet *set = [NSCharacterSet characterSetWithCharactersInString:@" \""];
+         return [[arr lastObject] stringByTrimmingCharactersInSet:set];
       }
    }
    return nil;
 }
 
--(NSString*) getInventoryContent {
-   
-   NSString* inventoryPath = @"/Users/xiangk/Desktop/test";
-   int pid = [[NSProcessInfo processInfo] processIdentifier];
-   NSPipe *pipe = [NSPipe pipe];
-   NSFileHandle *file = pipe.fileHandleForReading;
-   
-   NSTask *task = [[NSTask alloc] init];
-   task.launchPath = @"/bin/cat";
-   task.arguments = @[inventoryPath];
-   task.standardOutput = pipe;
-   [task launch];
-   NSData *data = [file readDataToEndOfFile];
-   [file closeFile];
-   NSString *output = [[NSString alloc] initWithData: data encoding: NSUTF8StringEncoding];
-   return output;
-}
-
 -(NSMutableDictionary*) listSharedVMs{
-   dispatch_async(dispatch_get_main_queue(), ^{
-      NSString* str = [NSString stringWithContentsOfFile:@"/Users/xiangk/readme" encoding:NSUTF8StringEncoding error:nil];
-      NSLog(@"%@",str);
-   });
-
    
+   NSString* inventoryPath = [NSString stringWithFormat:@"%@//Library/Application Support/VMware Fusion/vmInventory", NSHomeDirectory()];
    
+   NSError* err;
+   // read everything from text
+   NSString* fileContents = [NSString stringWithContentsOfFile:inventoryPath
+                                                      encoding:NSUTF8StringEncoding
+                                                         error:&err];
    
-//   
-//   NSString* inventoryPath = @"/Users/xiangk/Library/Application\ Support/VMware\ Fusion/xk";
-//   
-//   NSError* err;
-//   // read everything from text
-//   
-//   NSString* fileContents = [[NSString alloc]initWithContentsOfFile:inventoryPath
-//                                                           encoding:NSUTF8StringEncoding
-//                                                              error:&err];
-//   
-////   NSString* fileContents = [NSString stringWithContentsOfFile:inventoryPath
-////                                                      encoding:NSUTF8StringEncoding
-////                                                         error:&err];
-//   
-//   // first, separate by new line
-//   NSArray* allLinedStrings =
-//   [fileContents componentsSeparatedByCharactersInSet:
-//    [NSCharacterSet newlineCharacterSet]];
-//   
-//   for (NSString* line in allLinedStrings) {
-//      if([line containsString:@".id"]){
-//         NSArray *vmPath = [line componentsSeparatedByString:@"="];
-//         SharedVM *vm = [[SharedVM alloc] init];
-//         if(vm){
-//            vm.vmName = [vmPath lastObject];
-//            NSString* port = [self parseVMXFile:vm.vmName];
-//            [_vmPorts addObject:port];
-//            [_sharedVMs setObject:vm forKey:vm.vmName];
-//         }
-//      }
-//   }
+   // first, separate by new line
+   NSArray* allLinedStrings =
+   [fileContents componentsSeparatedByCharactersInSet:
+   [NSCharacterSet newlineCharacterSet]];
    
-   return _sharedVMs;
+   for (NSString* line in allLinedStrings) {
+     if([line containsString:@".id"]){
+         NSArray *vmPath = [line componentsSeparatedByString:@"="];
+        SharedVM *vm = [[SharedVM alloc] init];
+        if(vm){
+           NSCharacterSet *set = [NSCharacterSet characterSetWithCharactersInString:@" \""];
+           vm.vmName = [vmPath[1] stringByTrimmingCharactersInSet:set];
+           NSString* port = [self parseVMXFile:vm.vmName];
+           if(port){
+              [_vmPorts addObject:port];
+           }
+           [_sharedVMs setObject:vm forKey:vm.vmName];
+        }
+     }
+   }
+   
+   return [_sharedVMs allKeys];
 }
 
 - (NSString*)_randomNumberBetween:(NSInteger)min maxNumber:(NSInteger)max
@@ -144,10 +116,7 @@ static SharedVMMgr* instance;
 
 
 -(void) updateVMXfile:(NSString*) vmPath{
-   NSString* vmShortName = [[vmPath lastPathComponent] stringByDeletingPathExtension];
-   NSString* vmx = [NSString stringWithFormat:@"%@.vmwarevm/%@.vmx", vmPath, vmShortName];
-   
-   NSString* vmxContents = [NSString stringWithContentsOfFile:vmx
+   NSString* vmxContents = [NSString stringWithContentsOfFile:vmPath
                                                      encoding:NSUTF8StringEncoding
                                                         error:nil];
    NSArray* allLines =
@@ -161,10 +130,17 @@ static SharedVMMgr* instance;
    }
    
    if ([dic objectForKey:@"RemoteDisplay.vnc.port"]) {
-      
+      [dic setObject:@"" forKey:@"RemoteDisplay.vnc.port"];
+   }
+   
+   if ([dic objectForKey:@"RemoteDisplay.vnc.enabled"]) {
+      [dic setObject:@"\"TRUE\"" forKey:@"RemoteDisplay.vnc.enabled"];
+   }
+   
+   if ([dic objectForKey:@"RemoteDisplay.vnc.key"]) {
+      [dic setObject: @"\"GigYABETHiQLKhoJETMBBAwMBBQnPCAxNgUDIgYgEQgHMwgFFQIOFAsYBggJPgAhFBwhBgspJQAUIwAgLiEYFhcDAhEiFQ4GIRMUDCEOACgxOCASHCwjAB4iACgaGRwaGCcaASEVAgApFiAcJCQwISYkASMcDgAKMiEFIB0SFhI=\"" forKey:@"RemoteDisplay.vnc.key"];
    }
 }
-
 
 -(void) startSharedVM:(NSString*) vmPath andCompletionBlock:(void(^)()) completionBlock {
    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
