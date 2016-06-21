@@ -61,7 +61,7 @@
       _popover.contentViewController = self.contentViewController;
       _popover.behavior = NSPopoverBehaviorSemitransient;
       _popover.delegate = self;
-      _popover.appearance = NSPopoverAppearanceMinimal;
+      _popover.appearance = [NSAppearance appearanceNamed:NSAppearanceNameVibrantLight];
    }
    return _popover;
 }
