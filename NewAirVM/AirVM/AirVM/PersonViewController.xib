@@ -8,7 +8,7 @@
         <customObject id="-2" userLabel="File's Owner" customClass="PersonViewController">
             <connections>
                 <outlet property="nameLabel" destination="EfE-A7-fRr" id="2yi-2N-Hsf"/>
-                <outlet property="portraitView" destination="fpt-L2-PGm" id="GCu-zT-6E7"/>
+                <outlet property="portraitView" destination="fpt-L2-PGm" id="F07-4w-pJ4"/>
                 <outlet property="view" destination="Hz6-mo-xeY" id="0bl-1N-x8E"/>
             </connections>
         </customObject>
@@ -36,11 +36,10 @@
             </subviews>
             <constraints>
                 <constraint firstItem="fpt-L2-PGm" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" id="4x1-HH-ypr"/>
+                <constraint firstItem="fpt-L2-PGm" firstAttribute="centerX" secondItem="Hz6-mo-xeY" secondAttribute="centerX" id="DS7-HU-Tny"/>
                 <constraint firstAttribute="trailing" secondItem="EfE-A7-fRr" secondAttribute="trailing" id="WTU-Zb-KgA"/>
                 <constraint firstItem="EfE-A7-fRr" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" id="e2H-fK-dCD"/>
                 <constraint firstItem="EfE-A7-fRr" firstAttribute="top" secondItem="fpt-L2-PGm" secondAttribute="bottom" constant="3" id="gcf-jM-VMt"/>
-                <constraint firstAttribute="trailing" secondItem="fpt-L2-PGm" secondAttribute="trailing" constant="20" id="snO-y7-Im7"/>
-                <constraint firstItem="fpt-L2-PGm" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" constant="20" id="uYz-0r-yHM"/>
             </constraints>
             <point key="canvasLocation" x="-70" y="294"/>
         </customView>

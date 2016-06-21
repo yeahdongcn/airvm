@@ -12,6 +12,10 @@
 #define CENTER_POINT_Y 100
 #define RADIUS 75
 
+@interface PersonClusterView () <NSAnimationDelegate>
+
+@end
+
 
 @implementation PersonClusterView
 

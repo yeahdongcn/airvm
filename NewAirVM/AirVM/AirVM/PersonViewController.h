@@ -17,4 +17,5 @@
 - (NSString *)machineName;
 - (void)showPopoverWithOpenAction:(OpenAction)openAction;
 - (void)dismissPopover;
+@property (weak) IBOutlet PersonView *portraitView;
 @end

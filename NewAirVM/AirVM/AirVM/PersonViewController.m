@@ -12,12 +12,13 @@
 #import "PersonView.h"
 #import "OpenSharedVMViewController.h"
 
-
 @interface PersonViewController () <NSPopoverDelegate>
 
 @property (nonatomic, strong) AirVM *person;
 
-@property (weak) IBOutlet PersonView *portraitView;
+
+
+
 @property (weak) IBOutlet NSTextField *nameLabel;
 @property (nonatomic, strong) NSPopover *popover;
 @property (nonatomic, strong) OpenSharedVMViewController *contentViewController;

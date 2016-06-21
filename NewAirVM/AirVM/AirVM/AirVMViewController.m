@@ -88,9 +88,27 @@
       origin.y -= personView.bounds.size.height/2 + 20;
       [personView setFrameOrigin:origin];
       [self.personClusterView addSubview:personView];
+
+      [NSAnimationContext runAnimationGroup:^(NSAnimationContext * _Nonnull context) {
+         [context setDuration:0.3];
+         [self scaleAnimationWithView:personViewController.portraitView scaling:0.8];
+         personViewController.portraitView.animator.alphaValue = 0;
+      } completionHandler:^{
+         personViewController.portraitView.alphaValue = 1;
+         NSLog(@"Animation Done");
+      }];
    }
-   [self.view setNeedsDisplay:YES];
+   //[self.view setNeedsDisplay:YES];
 };
+
+- (void)scaleAnimationWithView:(NSView *)view scaling:(CGFloat)scaling {
+   NSRect startFrame = [view frame];
+   CGFloat ratio = scaling;
+   CGFloat shiftX = startFrame.size.width*(1-ratio)/2;
+   CGFloat shiftY = startFrame.size.height*(1-ratio)/2;
+   NSRect endFrame = NSMakeRect(startFrame.origin.x+shiftX, startFrame.origin.y+shiftY, startFrame.size.width*ratio, startFrame.size.height*ratio);
+   [[view animator] setFrame:endFrame];
+}
 
 - (void)updatePersonCluster {
    [self clearPersonCluster];
