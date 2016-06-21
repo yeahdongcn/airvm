@@ -3,61 +3,60 @@
     {
       "size" : "16x16",
       "idiom" : "mac",
-      "filename" : "AirVM_16-1.png",
+      "filename" : "airvm16.png",
       "scale" : "1x"
     },
     {
       "size" : "16x16",
       "idiom" : "mac",
-      "filename" : "AirVM_16.png",
+      "filename" : "airvm16-2.png",
       "scale" : "2x"
     },
     {
       "size" : "32x32",
       "idiom" : "mac",
-      "filename" : "AirVM_32-1.png",
+      "filename" : "airvm32.png",
       "scale" : "1x"
     },
     {
       "size" : "32x32",
       "idiom" : "mac",
-      "filename" : "AirVM_32.png",
+      "filename" : "airvm32-2.png",
       "scale" : "2x"
     },
     {
       "size" : "128x128",
       "idiom" : "mac",
-      "filename" : "AirVM_128-1.png",
+      "filename" : "airvm128.png",
       "scale" : "1x"
     },
     {
       "size" : "128x128",
       "idiom" : "mac",
-      "filename" : "AirVM_128.png",
+      "filename" : "airvm128-2.png",
       "scale" : "2x"
     },
     {
       "size" : "256x256",
       "idiom" : "mac",
-      "filename" : "AirVM_256-1.png",
+      "filename" : "airvm256.png",
       "scale" : "1x"
     },
     {
       "size" : "256x256",
       "idiom" : "mac",
-      "filename" : "AirVM_256.png",
+      "filename" : "airvm256-2.png",
       "scale" : "2x"
     },
     {
       "size" : "512x512",
       "idiom" : "mac",
-      "filename" : "AirVM_512-1.png",
+      "filename" : "airvm512.png",
       "scale" : "1x"
     },
     {
-      "size" : "512x512",
       "idiom" : "mac",
-      "filename" : "AirVM_512.png",
+      "size" : "512x512",
       "scale" : "2x"
     }
   ],

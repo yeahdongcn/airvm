@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="10117"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="9532"/>
     </dependencies>
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="OpenSharedVMViewController">
@@ -17,7 +17,7 @@
             <rect key="frame" x="0.0" y="0.0" width="353" height="75"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
             <subviews>
-                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gm5-w8-6hl">
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="gm5-w8-6hl">
                     <rect key="frame" x="74" y="48" width="201" height="17"/>
                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Click Open to access shared VM" id="gBW-fB-6cI">
                         <font key="font" metaFont="system"/>
@@ -51,22 +51,29 @@
                         <action selector="onOpenButtonPressed:" target="-2" id="a6F-7V-MDM"/>
                     </connections>
                 </button>
-                <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bGn-YJ-7UI">
+                <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bGn-YJ-7UI">
                     <rect key="frame" x="20" y="13" width="48" height="48"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="48" id="jng-Yg-IYv"/>
+                        <constraint firstAttribute="height" constant="48" id="lbf-eZ-9uA"/>
+                    </constraints>
                     <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="person" id="UgN-cl-qU2"/>
                 </imageView>
             </subviews>
             <constraints>
                 <constraint firstAttribute="bottom" secondItem="XN3-Kl-MjU" secondAttribute="bottom" constant="9" id="0gG-oV-REL"/>
                 <constraint firstItem="gm5-w8-6hl" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" constant="10" id="3Zd-08-U3J"/>
+                <constraint firstItem="bGn-YJ-7UI" firstAttribute="centerY" secondItem="Hz6-mo-xeY" secondAttribute="centerY" id="9ak-cd-iNU"/>
                 <constraint firstAttribute="trailing" secondItem="XN3-Kl-MjU" secondAttribute="trailing" constant="10" id="CIC-9p-QNB"/>
                 <constraint firstAttribute="bottom" secondItem="mlD-ga-0oO" secondAttribute="bottom" constant="9" id="FmR-rY-Yzi"/>
                 <constraint firstItem="XN3-Kl-MjU" firstAttribute="leading" secondItem="mlD-ga-0oO" secondAttribute="trailing" constant="12" id="Pnp-ru-VeK"/>
+                <constraint firstItem="gm5-w8-6hl" firstAttribute="leading" secondItem="bGn-YJ-7UI" secondAttribute="trailing" constant="8" id="bcR-d0-FTi"/>
+                <constraint firstItem="bGn-YJ-7UI" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" constant="20" id="uPN-Sj-Bpx"/>
             </constraints>
             <point key="canvasLocation" x="353.5" y="162.5"/>
         </customView>
     </objects>
     <resources>
-        <image name="person" width="128" height="128"/>
+        <image name="person" width="512" height="512"/>
     </resources>
 </document>
