@@ -181,13 +181,16 @@
                   row:(NSInteger)row {
    NSTableCellView *cell = [tableView makeViewWithIdentifier:@"SHAREDVMTABLECELLVIEW" owner:nil];
    SharedVM *vm = self.sharedVMs[row];
-   cell.textField.stringValue = vm.vmName;
+   NSString *displayName = [[vm.vmName lastPathComponent] stringByDeletingPathExtension];
+   cell.textField.stringValue = displayName;
    return cell;
 }
 
 - (BOOL)tableView:(NSTableView *)aTableView writeRowsWithIndexes:(NSIndexSet *)rowIndexes toPasteboard:(NSPasteboard*)pboard {
    if (rowIndexes.count == 1) {
-      NSData *data = [NSKeyedArchiver archivedDataWithRootObject:self.sharedVMs[rowIndexes.firstIndex]];
+      //NSData *data = [NSKeyedArchiver archivedDataWithRootObject:self.sharedVMs[rowIndexes.firstIndex]];
+      SharedVM *currentVM = self.sharedVMs[rowIndexes.firstIndex];
+      NSData *data = [NSKeyedArchiver archivedDataWithRootObject:currentVM.vmName];
       [pboard declareTypes:[NSArray arrayWithObject:NSStringPboardType] owner:self];
       [pboard setData:data forType:NSStringPboardType];
       return YES;

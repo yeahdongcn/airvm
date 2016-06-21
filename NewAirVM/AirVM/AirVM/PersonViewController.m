@@ -12,6 +12,7 @@
 #import "PersonView.h"
 #import "OpenSharedVMViewController.h"
 
+
 @interface PersonViewController () <NSPopoverDelegate>
 
 @property (nonatomic, strong) AirVM *person;
@@ -61,7 +62,7 @@
       _popover.contentViewController = self.contentViewController;
       _popover.behavior = NSPopoverBehaviorSemitransient;
       _popover.delegate = self;
-      _popover.appearance = NSPopoverAppearanceMinimal;
+      _popover.appearance = [NSAppearance appearanceNamed:NSAppearanceNameVibrantLight];
    }
    return _popover;
 }
@@ -78,9 +79,9 @@
 #pragma mark AirVMDrop
 - (void)concludeDropOperation:(id<NSDraggingInfo>)sender {
    NSData *data = [[sender draggingPasteboard] dataForType:NSStringPboardType];
-   SharedVM *vm = [NSKeyedUnarchiver unarchiveObjectWithData:data];
-   vm.netService = self.person.netService;
-   [(AppDelegate *)([[NSApplication sharedApplication] delegate]) sendVM:vm];
+   NSString *vmName = [NSKeyedUnarchiver unarchiveObjectWithData:data];
+   //vm.netService = self.person.netService;
+   //[(AppDelegate *)([[NSApplication sharedApplication] delegate]) sendVM:vm];
 }
 
 
