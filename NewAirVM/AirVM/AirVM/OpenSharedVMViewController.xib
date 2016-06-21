@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="9532"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="10117"/>
     </dependencies>
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="OpenSharedVMViewController">
@@ -17,21 +17,14 @@
             <rect key="frame" x="0.0" y="0.0" width="353" height="75"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
             <subviews>
-                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="gm5-w8-6hl">
-                    <rect key="frame" x="74" y="48" width="105" height="17"/>
-                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="description label" id="gBW-fB-6cI">
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gm5-w8-6hl">
+                    <rect key="frame" x="74" y="48" width="201" height="17"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Click Open to access shared VM" id="gBW-fB-6cI">
                         <font key="font" metaFont="system"/>
                         <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                     </textFieldCell>
                 </textField>
-                <customView translatesAutoresizingMaskIntoConstraints="NO" id="6CB-WE-Cgq" userLabel="PersonView" customClass="PersonView">
-                    <rect key="frame" x="4" y="6" width="64" height="64"/>
-                    <constraints>
-                        <constraint firstAttribute="width" constant="64" id="fhN-lS-0h1"/>
-                        <constraint firstAttribute="height" constant="64" id="hju-pN-NhL"/>
-                    </constraints>
-                </customView>
                 <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="mlD-ga-0oO">
                     <rect key="frame" x="187" y="2" width="80" height="32"/>
                     <constraints>
@@ -58,6 +51,10 @@
                         <action selector="onOpenButtonPressed:" target="-2" id="a6F-7V-MDM"/>
                     </connections>
                 </button>
+                <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bGn-YJ-7UI">
+                    <rect key="frame" x="20" y="13" width="48" height="48"/>
+                    <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="person" id="UgN-cl-qU2"/>
+                </imageView>
             </subviews>
             <constraints>
                 <constraint firstAttribute="bottom" secondItem="XN3-Kl-MjU" secondAttribute="bottom" constant="9" id="0gG-oV-REL"/>
@@ -65,11 +62,11 @@
                 <constraint firstAttribute="trailing" secondItem="XN3-Kl-MjU" secondAttribute="trailing" constant="10" id="CIC-9p-QNB"/>
                 <constraint firstAttribute="bottom" secondItem="mlD-ga-0oO" secondAttribute="bottom" constant="9" id="FmR-rY-Yzi"/>
                 <constraint firstItem="XN3-Kl-MjU" firstAttribute="leading" secondItem="mlD-ga-0oO" secondAttribute="trailing" constant="12" id="Pnp-ru-VeK"/>
-                <constraint firstItem="6CB-WE-Cgq" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" constant="4" id="Wjx-vj-JJU"/>
-                <constraint firstItem="gm5-w8-6hl" firstAttribute="leading" secondItem="6CB-WE-Cgq" secondAttribute="trailing" constant="8" id="YwU-La-5pK"/>
-                <constraint firstItem="6CB-WE-Cgq" firstAttribute="centerY" secondItem="Hz6-mo-xeY" secondAttribute="centerY" id="ZTg-hj-tpf"/>
             </constraints>
             <point key="canvasLocation" x="353.5" y="162.5"/>
         </customView>
     </objects>
+    <resources>
+        <image name="person" width="128" height="128"/>
+    </resources>
 </document>

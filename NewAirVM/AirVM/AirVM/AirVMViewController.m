@@ -86,19 +86,43 @@
       NSPoint origin = [location pointValue];
       origin.x -= personView.bounds.size.width/2;
       origin.y -= personView.bounds.size.height/2 + 20;
+
       [personView setFrameOrigin:origin];
       [self.personClusterView addSubview:personView];
+       
+       CGRect originalRect = personViewController.portraitView.frame;
+    
+       personViewController.portraitView.frame = originalRect;
+       
+       float bump = 4;
+       CGRect newRectHuge = CGRectMake(originalRect.origin.x - bump/2, originalRect.origin.y + bump/2, CGRectGetWidth(originalRect) + bump, CGRectGetHeight(originalRect) + bump);
+       bump = 2;
+       CGRect newRectBig = CGRectMake(originalRect.origin.x - bump/2, originalRect.origin.y + bump/2, CGRectGetWidth(originalRect) + bump, CGRectGetHeight(originalRect) + bump);
+       
+       [NSAnimationContext runAnimationGroup:^(NSAnimationContext *context){
+           [context setDuration:0.1];
+           [[personViewController.portraitView animator] setFrame:newRectHuge];
+       } completionHandler:^{
+           [NSAnimationContext runAnimationGroup:^(NSAnimationContext *context){
+               [context setDuration:0.06];
+               [[personViewController.portraitView animator] setFrame:originalRect];
+           } completionHandler:^{
+               [NSAnimationContext runAnimationGroup:^(NSAnimationContext *context){
+                   [context setDuration:0.1];
+                   [[personViewController.portraitView animator] setFrame:newRectBig];
+               } completionHandler:^{
+                   [NSAnimationContext runAnimationGroup:^(NSAnimationContext *context){
+                       [context setDuration:0.2];
+                       [[personViewController.portraitView animator] setFrame:originalRect];
+                   } completionHandler:^{
+                       
+                   }];
+               }];
 
-      [NSAnimationContext runAnimationGroup:^(NSAnimationContext * _Nonnull context) {
-         [context setDuration:0.3];
-         [self scaleAnimationWithView:personViewController.portraitView scaling:0.8];
-         personViewController.portraitView.animator.alphaValue = 0;
-      } completionHandler:^{
-         personViewController.portraitView.alphaValue = 1;
-         NSLog(@"Animation Done");
-      }];
+           }];
+       }];
    }
-   //[self.view setNeedsDisplay:YES];
+
 };
 
 - (void)scaleAnimationWithView:(NSView *)view scaling:(CGFloat)scaling {
