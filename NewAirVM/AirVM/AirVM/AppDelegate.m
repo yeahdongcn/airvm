@@ -113,6 +113,10 @@
     [self.bonjourServer unpublish];
 }
 
+- (void)refreshService {
+   [self.bonjourClient startSearching];
+}
+
 #pragma mark -
 #pragma mark BSBonjourServerDelegate
 - (void)published:(NSString *)name {
@@ -214,7 +218,7 @@
 -(void) sendVM:(SharedVM*) vm {
    [self.bonjourClient connectToService:vm.netService completetionBlock:^(BSBonjourConnection *connection) {
       [self sendOpenSharedVM:vm withConnection:connection];
-      [self.bonjourClient startSearching];
+      [self refreshService];
    }];
 }
 

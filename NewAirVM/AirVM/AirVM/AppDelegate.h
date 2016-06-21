@@ -20,6 +20,6 @@ typedef enum : NSInteger {
 @interface AppDelegate : NSObject <NSApplicationDelegate, BSBonjourServerDelegate, BSBonjourClientDelegate>
 
 - (void)sendVM:(SharedVM*) vm;
-
+- (void)refreshService;
 @end
 
