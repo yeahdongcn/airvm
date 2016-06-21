@@ -96,7 +96,7 @@ static SharedVMMgr* instance;
      }
    }
    
-   return [_sharedVMs allKeys];
+   return [_sharedVMs allValues];
 }
 
 - (NSString*)_randomNumberBetween:(NSInteger)min maxNumber:(NSInteger)max

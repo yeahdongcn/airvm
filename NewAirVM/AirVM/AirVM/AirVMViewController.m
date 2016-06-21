@@ -39,11 +39,7 @@
 // test code
 - (NSMutableArray *)sharedVMs {
    if (!_sharedVMs) {
-      SharedVM * testVM1 = [[SharedVM alloc] init];
-      testVM1.vmName = @"Windows 10 x64bit";
-      SharedVM * testVM2 = [[SharedVM alloc] init];
-      testVM2.vmName = @"macOS 10.12";
-      _sharedVMs = [[NSMutableArray alloc] initWithObjects:testVM1, testVM2, nil];
+      _sharedVMs = [[SharedVMMgr sharedInstance] listSharedVMs];
    }
    return _sharedVMs;
 }
