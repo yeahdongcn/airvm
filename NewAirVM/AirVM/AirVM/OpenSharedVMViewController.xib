@@ -57,7 +57,7 @@
                         <constraint firstAttribute="width" constant="48" id="jng-Yg-IYv"/>
                         <constraint firstAttribute="height" constant="48" id="lbf-eZ-9uA"/>
                     </constraints>
-                    <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="person" id="UgN-cl-qU2"/>
+                    <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="user" id="UgN-cl-qU2"/>
                 </imageView>
             </subviews>
             <constraints>
@@ -74,6 +74,6 @@
         </customView>
     </objects>
     <resources>
-        <image name="person" width="512" height="512"/>
+        <image name="user" width="512" height="512"/>
     </resources>
 </document>
