@@ -46,10 +46,9 @@ static SharedVMMgr* instance;
 }
 
 -(NSString*) getPortFromVMX:(NSString*) vmPath{
-   NSError *err;
    NSString* vmxContents = [NSString stringWithContentsOfFile:vmPath
                                                      encoding:NSUTF8StringEncoding
-                                                        error:&err];
+                                                        error:nil];
    
    NSArray* allLines =
    [vmxContents componentsSeparatedByCharactersInSet:
@@ -68,12 +67,11 @@ static SharedVMMgr* instance;
 -(NSMutableDictionary*) listSharedVMs{
    
    NSString* inventoryPath = [NSString stringWithFormat:@"%@//Library/Application Support/VMware Fusion/vmInventory", NSHomeDirectory()];
-   
-   NSError* err;
+
    // read everything from text
    NSString* fileContents = [NSString stringWithContentsOfFile:inventoryPath
                                                       encoding:NSUTF8StringEncoding
-                                                         error:&err];
+                                                         error:nil];
    
    // first, separate by new line
    NSArray* allLinedStrings =
@@ -82,17 +80,15 @@ static SharedVMMgr* instance;
    
    for (NSString* line in allLinedStrings) {
      if([line containsString:@".id"]){
-         NSArray *vmPath = [line componentsSeparatedByString:@"="];
+        NSArray *vmPath = [line componentsSeparatedByString:@"="];
+        NSCharacterSet *set = [NSCharacterSet characterSetWithCharactersInString:@" \""];
         SharedVM *vm = [[SharedVM alloc] init];
-        if(vm){
-           NSCharacterSet *set = [NSCharacterSet characterSetWithCharactersInString:@" \""];
-           vm.vmName = [vmPath[1] stringByTrimmingCharactersInSet:set];
-           NSString* port = [self getPortFromVMX:vm.vmName];
-           if(port){
-              [_vmPorts addObject:port];
-           }
-           [_sharedVMs setObject:vm forKey:vm.vmName];
+        vm.vmName = [vmPath[1] stringByTrimmingCharactersInSet:set];
+        NSString* port = [self getPortFromVMX:vm.vmName];
+        if(port){
+           [_vmPorts addObject:port];
         }
+        [_sharedVMs setObject:vm forKey:vm.vmName];
      }
    }
    
@@ -130,6 +126,11 @@ static SharedVMMgr* instance;
       NSString *key = [[arr firstObject] stringByTrimmingCharactersInSet:set];
       NSString *val = [[arr lastObject] stringByTrimmingCharactersInSet:set];
       [dic setObject:val forKey:key];
+   }
+   
+   if ([dic objectForKey:@"encryption.keySafe"]) {
+      NSLog(@"encryption vmx... do nothing");
+      return;
    }
    
    if (![dic objectForKey:@"RemoteDisplay.vnc.port"]) {
