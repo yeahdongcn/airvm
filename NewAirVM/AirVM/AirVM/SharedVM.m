@@ -159,11 +159,11 @@ static SharedVMMgr* instance;
 }
 
 -(void) startSharedVM:(NSString*) vmPath andCompletionBlock:(void(^)(SharedVM* vm)) completionBlock {
-   dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+    
+   dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0 * NSEC_PER_SEC)), dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0), ^{
       
       SharedVM* vm = [_sharedVMs objectForKey:vmPath];
       [self updateVMX:vm];
-      
       int pid = [[NSProcessInfo processInfo] processIdentifier];
       NSPipe *pipe = [NSPipe pipe];
       NSFileHandle *file = pipe.fileHandleForReading;
