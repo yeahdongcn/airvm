@@ -712,7 +712,7 @@
                                                                             <subviews>
                                                                                 <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="0Rv-4Q-bAa">
                                                                                     <rect key="frame" x="0.0" y="7" width="142" height="17"/>
-                                                                                    <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="left" title="Table View Cell" id="hNw-YT-34e">
+                                                                                    <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="left" title="Table View Cell" usesSingleLineMode="YES" id="hNw-YT-34e">
                                                                                         <font key="font" metaFont="system"/>
                                                                                         <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                                                                         <color key="backgroundColor" name="windowBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -760,9 +760,23 @@
                                             <constraint firstAttribute="bottom" secondItem="r6X-VH-VVp" secondAttribute="bottom" id="htb-vJ-qEW"/>
                                         </constraints>
                                     </customView>
-                                    <customView fixedFrame="YES" id="DOQ-zQ-Dh9" customClass="PersonClusterView">
+                                    <customView id="DOQ-zQ-Dh9" customClass="PersonClusterView">
                                         <rect key="frame" x="149" y="0.0" width="485" height="480"/>
                                         <autoresizingMask key="autoresizingMask"/>
+                                        <subviews>
+                                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="iNS-UH-Kqk">
+                                                <rect key="frame" x="68" y="40" width="349" height="14"/>
+                                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="AirVM lets you share virtual machine instantly with people nearby." id="4nM-l5-mR2">
+                                                    <font key="font" metaFont="system" size="11"/>
+                                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                                </textFieldCell>
+                                            </textField>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="iNS-UH-Kqk" firstAttribute="centerX" secondItem="DOQ-zQ-Dh9" secondAttribute="centerX" id="OcU-8O-RYc"/>
+                                            <constraint firstAttribute="bottom" secondItem="iNS-UH-Kqk" secondAttribute="bottom" constant="40" id="s9P-Pp-vgg"/>
+                                        </constraints>
                                     </customView>
                                 </subviews>
                                 <holdingPriorities>

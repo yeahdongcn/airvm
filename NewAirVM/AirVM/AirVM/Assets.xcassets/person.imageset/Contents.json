@@ -2,16 +2,17 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "3d6b070b1c71d7d5cb7cc48c98b7d83c.jpg",
+      "filename" : "person.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "filename" : "3d6b070b1c71d7d5cb7cc48c98b7d83c-1.jpg",
+      "filename" : "person-1.png",
       "scale" : "2x"
     },
     {
       "idiom" : "universal",
+      "filename" : "person-2.png",
       "scale" : "3x"
     }
   ],
