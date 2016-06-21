@@ -70,6 +70,7 @@
          ret = nil;
          break;
    }
+
    return ret;
 }
 
@@ -82,8 +83,23 @@
    self.wantsLayer = YES;
    self.layer.backgroundColor = [NSColor whiteColor].CGColor;
    CGPoint centerPoint = CGPointMake(self.bounds.size.width/2, CENTER_POINT_Y);
+   NSLog(@"center point x: %f, y: %f", centerPoint.x, centerPoint.y);
    [self drawAirDropWithCenter:centerPoint];
    [self drawLayoutRingWithCenter:centerPoint];
+
+   [self reLayoutSubviews];
+}
+
+- (void)reLayoutSubviews {
+   NSArray *subviews = self.subviews;
+   int numberOfViews = subviews.count;
+   NSArray *locations = [self locationOfPersonsWithNumber:numberOfViews];
+   for (int i=0; i<numberOfViews; i++) {
+      NSView *subview = subviews[i];
+      NSValue *value = locations[i];
+      NSPoint point = [value pointValue];
+      subview.frame = NSMakeRect(point.x-subview.bounds.size.width/2, point.y-subview.bounds.size.height/2-20, subview.bounds.size.width, subview.bounds.size.height);
+   }
 }
 
 - (void)drawAirDropWithCenter:(CGPoint)centerPoint {
