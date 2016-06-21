@@ -137,7 +137,7 @@
    NSPipe *pipe = [NSPipe pipe];
    NSTask *task = [[NSTask alloc] init];
    task.launchPath = @"/usr/bin/open";
-   NSString *password = @"arivm";
+   NSString *password = @"airvm";
    NSString *ipAddress = vm.ipAddress;
    NSString *vncPort = vm.vncPort;
    NSString *arg1 = [NSString stringWithFormat:@"vnc://:%@@%@:%@", password, ipAddress, vncPort];
@@ -145,7 +145,6 @@
    task.standardOutput = pipe;
    NSLog(@"Invoke VNC command: %@ %@", task.launchPath, arg1);
    [task launch];
-
 }
 
 - (void)ignoreTheSharedVM:(SharedVM *)vm {
