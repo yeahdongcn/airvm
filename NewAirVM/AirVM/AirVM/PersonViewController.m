@@ -83,12 +83,12 @@
 - (void)concludeDropOperation:(id<NSDraggingInfo>)sender {
    NSData *data = [[sender draggingPasteboard] dataForType:NSStringPboardType];
    NSString *vmName = [NSKeyedUnarchiver unarchiveObjectWithData:data];
+
    
-   void (^simpleBlock)(SharedVM* vm) = ^(SharedVM* vm){};
-   
-   [[SharedVMMgr sharedInstance] startSharedVM:vmName andCompletionBlock:simpleBlock];
-   //vm.netService = self.person.netService;
-   //[(AppDelegate *)([[NSApplication sharedApplication] delegate]) sendVM:vm];
+   [[SharedVMMgr sharedInstance] startSharedVM:vmName andCompletionBlock:^(SharedVM *vm) {
+      vm.netService = self.person.netService;
+      [(AppDelegate *)([[NSApplication sharedApplication] delegate]) sendVM:vm];
+   }];
 }
 
 

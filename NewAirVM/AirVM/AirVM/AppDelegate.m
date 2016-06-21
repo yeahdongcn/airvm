@@ -204,8 +204,8 @@
    NSDictionary* dic = @{@"op"         : @"airvm",
                          @"machineName": [[NSHost currentHost] localizedName],
                          @"vncIP"      : [self getIPAddress],
-                         //@"vncPort"    : vm.vncPort};
-                         @"vncPort"    : @"1111"};
+                         @"vncPort"    : vm.vncPort};
+   NSLog(@"%@", dic);
    NSData *data =   [NSJSONSerialization dataWithJSONObject:dic options:NSJSONWritingPrettyPrinted error:nil];
    [connection sendData:data];
 }
@@ -213,7 +213,6 @@
 // send connection info to target computer, here we use AirVM map to target computer as well
 -(void) sendVM:(SharedVM*) vm {
    [self.bonjourClient connectToService:vm.netService completetionBlock:^(BSBonjourConnection *connection) {
-      //[self sendOpenVNCCommand:connection];
       [self sendOpenSharedVM:vm withConnection:connection];
       [self.bonjourClient startSearching];
    }];
