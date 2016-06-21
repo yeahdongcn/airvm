@@ -142,7 +142,7 @@ static SharedVMMgr* instance;
    }
 }
 
--(void) startSharedVM:(NSString*) vmPath andCompletionBlock:(void(^)()) completionBlock {
+-(void) startSharedVM:(NSString*) vmPath andCompletionBlock:(void(^)(SharedVM* vm)) completionBlock {
    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
       int pid = [[NSProcessInfo processInfo] processIdentifier];
       NSPipe *pipe = [NSPipe pipe];
@@ -150,7 +150,7 @@ static SharedVMMgr* instance;
       
       NSTask *task = [[NSTask alloc] init];
       task.launchPath = @"/Applications/VMware Fusion.app/Contents/Library/vmrun";
-      task.arguments = @[@"start",vmPath , @"nogui"];
+      task.arguments = @[@"start", vmPath , @"nogui"];
       task.standardOutput = pipe;
       [task launch];
       NSData *data = [file readDataToEndOfFile];
@@ -158,7 +158,8 @@ static SharedVMMgr* instance;
       NSString *output = [[NSString alloc] initWithData: data encoding: NSUTF8StringEncoding];
       NSLog(output);
       
-      completionBlock();
+      
+      completionBlock([_sharedVMs objectForKey:vmPath]);
    });
 }
 
