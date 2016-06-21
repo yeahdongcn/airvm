@@ -140,6 +140,7 @@
    NSString *password = @"airvm";
    NSString *ipAddress = vm.ipAddress;
    NSString *vncPort = vm.vncPort;
+   vncPort = [vncPort stringByTrimmingCharactersInSet:[NSCharacterSet characterSetWithCharactersInString:@"\""]];
    NSString *arg1 = [NSString stringWithFormat:@"vnc://:%@@%@:%@", password, ipAddress, vncPort];
    task.arguments = @[arg1];
    task.standardOutput = pipe;
