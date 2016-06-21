@@ -677,7 +677,7 @@
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="iNS-UH-Kqk">
-                                <rect key="frame" x="217" y="30" width="349" height="14"/>
+                                <rect key="frame" x="233" y="30" width="349" height="14"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="AirVM lets you share virtual machine instantly with people nearby." id="4nM-l5-mR2">
                                     <font key="font" metaFont="smallSystem"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -688,23 +688,23 @@
                                 <rect key="frame" x="0.0" y="0.0" width="634" height="480"/>
                                 <subviews>
                                     <customView id="4ng-M9-wdf" userLabel="Shared VM View">
-                                        <rect key="frame" x="0.0" y="0.0" width="148" height="480"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="179" height="480"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <subviews>
                                             <scrollView borderType="none" autohidesScrollers="YES" horizontalLineScroll="32" horizontalPageScroll="10" verticalLineScroll="32" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r6X-VH-VVp">
-                                                <rect key="frame" x="0.0" y="0.0" width="148" height="480"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="179" height="480"/>
                                                 <clipView key="contentView" id="KlR-dy-C1l">
-                                                    <rect key="frame" x="0.0" y="0.0" width="148" height="480"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="179" height="480"/>
                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                     <subviews>
                                                         <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" columnReordering="NO" columnSelection="YES" multipleSelection="NO" autosaveColumns="NO" rowHeight="30" rowSizeStyle="automatic" headerView="br5-V6-MGh" viewBased="YES" id="d83-Ol-kPp">
-                                                            <rect key="frame" x="0.0" y="0.0" width="148" height="457"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="179" height="457"/>
                                                             <autoresizingMask key="autoresizingMask"/>
                                                             <size key="intercellSpacing" width="3" height="2"/>
                                                             <color key="backgroundColor" red="0.95686274509803926" green="0.95686274509803926" blue="0.95686274509803926" alpha="1" colorSpace="calibratedRGB"/>
                                                             <color key="gridColor" name="gridColor" catalog="System" colorSpace="catalog"/>
                                                             <tableColumns>
-                                                                <tableColumn width="145" minWidth="40" maxWidth="1000" id="sZ1-ue-NZ3">
+                                                                <tableColumn width="176" minWidth="40" maxWidth="1000" id="sZ1-ue-NZ3">
                                                                     <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="left" title="Virtual Machines">
                                                                         <font key="font" metaFont="smallSystem"/>
                                                                         <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
@@ -718,11 +718,19 @@
                                                                     <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
                                                                     <prototypeCellViews>
                                                                         <tableCellView identifier="SHAREDVMTABLECELLVIEW" id="mMG-qu-qR8">
-                                                                            <rect key="frame" x="1" y="1" width="145" height="30"/>
+                                                                            <rect key="frame" x="1" y="1" width="176" height="30"/>
                                                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                                             <subviews>
+                                                                                <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="vsU-NX-D53">
+                                                                                    <rect key="frame" x="16" y="9" width="12" height="12"/>
+                                                                                    <constraints>
+                                                                                        <constraint firstAttribute="width" constant="12" id="6eD-Ge-xoE"/>
+                                                                                        <constraint firstAttribute="height" constant="12" id="bHr-6R-8lA"/>
+                                                                                    </constraints>
+                                                                                    <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="vm" id="nsb-TT-a4f"/>
+                                                                                </imageView>
                                                                                 <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="0Rv-4Q-bAa">
-                                                                                    <rect key="frame" x="14" y="7" width="133" height="17"/>
+                                                                                    <rect key="frame" x="30" y="7" width="148" height="17"/>
                                                                                     <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="left" title="Table View Cell" usesSingleLineMode="YES" id="hNw-YT-34e">
                                                                                         <font key="font" metaFont="system"/>
                                                                                         <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
@@ -731,8 +739,10 @@
                                                                                 </textField>
                                                                             </subviews>
                                                                             <constraints>
-                                                                                <constraint firstItem="0Rv-4Q-bAa" firstAttribute="leading" secondItem="mMG-qu-qR8" secondAttribute="leading" constant="16" id="99U-n6-tlZ"/>
+                                                                                <constraint firstItem="vsU-NX-D53" firstAttribute="centerY" secondItem="mMG-qu-qR8" secondAttribute="centerY" id="8YO-If-3GZ"/>
                                                                                 <constraint firstAttribute="trailing" secondItem="0Rv-4Q-bAa" secondAttribute="trailing" id="OMR-8X-2by"/>
+                                                                                <constraint firstItem="0Rv-4Q-bAa" firstAttribute="leading" secondItem="vsU-NX-D53" secondAttribute="trailing" constant="4" id="iq1-iI-nbc"/>
+                                                                                <constraint firstItem="vsU-NX-D53" firstAttribute="leading" secondItem="mMG-qu-qR8" secondAttribute="leading" constant="16" id="jbg-ws-7SW"/>
                                                                                 <constraint firstItem="0Rv-4Q-bAa" firstAttribute="centerY" secondItem="mMG-qu-qR8" secondAttribute="centerY" id="qUv-UQ-r1x"/>
                                                                             </constraints>
                                                                             <connections>
@@ -759,7 +769,7 @@
                                                     <autoresizingMask key="autoresizingMask"/>
                                                 </scroller>
                                                 <tableHeaderView key="headerView" id="br5-V6-MGh">
-                                                    <rect key="frame" x="0.0" y="0.0" width="148" height="23"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="179" height="23"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                 </tableHeaderView>
                                             </scrollView>
@@ -772,7 +782,7 @@
                                         </constraints>
                                     </customView>
                                     <customView id="DOQ-zQ-Dh9" customClass="PersonClusterView">
-                                        <rect key="frame" x="149" y="0.0" width="485" height="480"/>
+                                        <rect key="frame" x="180" y="0.0" width="454" height="480"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                     </customView>
                                 </subviews>
@@ -802,4 +812,7 @@
             <point key="canvasLocation" x="152" y="828"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="vm" width="384" height="384"/>
+    </resources>
 </document>
