@@ -71,8 +71,8 @@
 - (void)viewDidLoad {
    [super viewDidLoad];
    self.portraitView.image = [NSImage imageNamed:@"person"];
-   self.portraitView.wantsLayer = YES;
-   self.portraitView.layer.cornerRadius = self.portraitView.frame.size.width / 2;
+//   self.portraitView.wantsLayer = YES;
+//   self.portraitView.layer.cornerRadius = self.portraitView.frame.size.width / 2;
    self.nameLabel.stringValue = self.person.machineName;
    self.portraitView.delegate = self;
 }
