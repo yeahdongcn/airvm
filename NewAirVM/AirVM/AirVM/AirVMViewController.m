@@ -181,7 +181,8 @@
                   row:(NSInteger)row {
    NSTableCellView *cell = [tableView makeViewWithIdentifier:@"SHAREDVMTABLECELLVIEW" owner:nil];
    SharedVM *vm = self.sharedVMs[row];
-   cell.textField.stringValue = vm.vmName;
+   NSString *displayName = [[vm.vmName lastPathComponent] stringByDeletingPathExtension];
+   cell.textField.stringValue = displayName;
    return cell;
 }
 
