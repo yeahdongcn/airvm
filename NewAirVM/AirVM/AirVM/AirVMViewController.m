@@ -188,7 +188,9 @@
 
 - (BOOL)tableView:(NSTableView *)aTableView writeRowsWithIndexes:(NSIndexSet *)rowIndexes toPasteboard:(NSPasteboard*)pboard {
    if (rowIndexes.count == 1) {
-      NSData *data = [NSKeyedArchiver archivedDataWithRootObject:self.sharedVMs[rowIndexes.firstIndex]];
+      //NSData *data = [NSKeyedArchiver archivedDataWithRootObject:self.sharedVMs[rowIndexes.firstIndex]];
+      SharedVM *currentVM = self.sharedVMs[rowIndexes.firstIndex];
+      NSData *data = [NSKeyedArchiver archivedDataWithRootObject:currentVM.vmName];
       [pboard declareTypes:[NSArray arrayWithObject:NSStringPboardType] owner:self];
       [pboard setData:data forType:NSStringPboardType];
       return YES;
