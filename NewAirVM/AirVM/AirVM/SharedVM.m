@@ -41,6 +41,7 @@ static SharedVMMgr* instance;
    dispatch_once(&onceToken, ^{
       instance = [[SharedVMMgr alloc] init];
       instance.sharedVMs = [[NSMutableDictionary alloc] init];
+      instance.vmPorts = [[NSMutableSet alloc] init];
    });
    return instance;
 }
@@ -86,13 +87,13 @@ static SharedVMMgr* instance;
         vm.vmName = [vmPath[1] stringByTrimmingCharactersInSet:set];
         NSString* port = [self getPortFromVMX:vm.vmName];
         if(port){
-           [_vmPorts addObject:port];
+           [self.vmPorts addObject:port];
         }
-        [_sharedVMs setObject:vm forKey:vm.vmName];
+        [self.sharedVMs setObject:vm forKey:vm.vmName];
      }
    }
-   
-   return [_sharedVMs allValues];
+   NSLog(@"%@", self.vmPorts);
+   return [self.sharedVMs allValues];
 }
 
 - (NSString*)_randomNumberBetween:(NSInteger)min maxNumber:(NSInteger)max
@@ -134,7 +135,7 @@ static SharedVMMgr* instance;
    }
    
    if (![dic objectForKey:@"RemoteDisplay.vnc.port"]) {
-      NSString *port = [self generatePortWithBlackList:self.vmPorts];
+      NSString *port = [self generatePortWithBlackList:[self.vmPorts allObjects]];
       [self.vmPorts addObject:port];
       [dic setObject:[NSString stringWithFormat:@"\"%@\"",port] forKey:@"RemoteDisplay.vnc.port"];
       vm.vncPort = port;
