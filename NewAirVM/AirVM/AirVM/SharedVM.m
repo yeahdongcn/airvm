@@ -45,7 +45,7 @@ static SharedVMMgr* instance;
    return instance;
 }
 
--(NSString*) parseVMXFile:(NSString*) vmPath{
+-(NSString*) getPortFromVMX:(NSString*) vmPath{
    NSError *err;
    NSString* vmxContents = [NSString stringWithContentsOfFile:vmPath
                                                      encoding:NSUTF8StringEncoding
@@ -87,7 +87,7 @@ static SharedVMMgr* instance;
         if(vm){
            NSCharacterSet *set = [NSCharacterSet characterSetWithCharactersInString:@" \""];
            vm.vmName = [vmPath[1] stringByTrimmingCharactersInSet:set];
-           NSString* port = [self parseVMXFile:vm.vmName];
+           NSString* port = [self getPortFromVMX:vm.vmName];
            if(port){
               [_vmPorts addObject:port];
            }
@@ -114,36 +114,53 @@ static SharedVMMgr* instance;
    return str;
 }
 
-
--(void) updateVMXfile:(NSString*) vmPath{
+-(void) updateVMX:(SharedVM* ) vm{
+   NSString* vmPath = vm.vmName;
    NSString* vmxContents = [NSString stringWithContentsOfFile:vmPath
                                                      encoding:NSUTF8StringEncoding
                                                         error:nil];
-   NSArray* allLines =
-   [vmxContents componentsSeparatedByCharactersInSet:
-    [NSCharacterSet newlineCharacterSet]];
+   
+   NSArray* allLines =[vmxContents componentsSeparatedByCharactersInSet:[NSCharacterSet newlineCharacterSet]];
    
    NSMutableDictionary *dic = [NSMutableDictionary dictionaryWithCapacity:10];
    for (NSString* line in allLines) {
       NSArray *arr = [line componentsSeparatedByString:@"="];
-      [dic setObject:[arr firstObject] forKey:[arr lastObject]];
+      
+      NSCharacterSet *set = [NSCharacterSet characterSetWithCharactersInString:@" "];
+      NSString *key = [[arr firstObject] stringByTrimmingCharactersInSet:set];
+      NSString *val = [[arr lastObject] stringByTrimmingCharactersInSet:set];
+      [dic setObject:val forKey:key];
    }
    
-   if ([dic objectForKey:@"RemoteDisplay.vnc.port"]) {
-      [dic setObject:@"" forKey:@"RemoteDisplay.vnc.port"];
+   if (![dic objectForKey:@"RemoteDisplay.vnc.port"]) {
+      NSString *port = [self generatePortWithBlackList:self.vmPorts];
+      [self.vmPorts addObject:port];
+      [dic setObject:port forKey:@"RemoteDisplay.vnc.port"];
+      vm.vncPort = port;
+   }
+   else{
+      vm.vncPort = [dic objectForKey:@"RemoteDisplay.vnc.port"];
    }
    
-   if ([dic objectForKey:@"RemoteDisplay.vnc.enabled"]) {
-      [dic setObject:@"\"TRUE\"" forKey:@"RemoteDisplay.vnc.enabled"];
+   [dic setObject:@"\"TRUE\"" forKey:@"RemoteDisplay.vnc.enabled"];
+   [dic setObject: @"\"GigYABETHiQLKhoJETMBBAwMBBQnPCAxNgUDIgYgEQgHMwgFFQIOFAsYBggJPgAhFBwhBgspJQAUIwAgLiEYFhcDAhEiFQ4GIRMUDCEOACgxOCASHCwjAB4iACgaGRwaGCcaASEVAgApFiAcJCQwISYkASMcDgAKMiEFIB0SFhI=\""
+            forKey:@"RemoteDisplay.vnc.key"];
+
+   NSMutableString* str = [[NSMutableString alloc] init];
+   for (NSString* key in [dic allKeys]) {
+      if ([key length] > 0) {
+         [str appendFormat:@"%@ = %@\n", key, [dic objectForKey:key]];
+      }
    }
-   
-   if ([dic objectForKey:@"RemoteDisplay.vnc.key"]) {
-      [dic setObject: @"\"GigYABETHiQLKhoJETMBBAwMBBQnPCAxNgUDIgYgEQgHMwgFFQIOFAsYBggJPgAhFBwhBgspJQAUIwAgLiEYFhcDAhEiFQ4GIRMUDCEOACgxOCASHCwjAB4iACgaGRwaGCcaASEVAgApFiAcJCQwISYkASMcDgAKMiEFIB0SFhI=\"" forKey:@"RemoteDisplay.vnc.key"];
-   }
+   [str writeToFile:vmPath atomically:YES encoding:NSUTF8StringEncoding error:nil];
 }
 
 -(void) startSharedVM:(NSString*) vmPath andCompletionBlock:(void(^)(SharedVM* vm)) completionBlock {
    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+      
+      SharedVM* vm = [_sharedVMs objectForKey:vmPath];
+      [self updateVMX:vm];
+      
       int pid = [[NSProcessInfo processInfo] processIdentifier];
       NSPipe *pipe = [NSPipe pipe];
       NSFileHandle *file = pipe.fileHandleForReading;
@@ -158,8 +175,7 @@ static SharedVMMgr* instance;
       NSString *output = [[NSString alloc] initWithData: data encoding: NSUTF8StringEncoding];
       NSLog(output);
       
-      
-      completionBlock([_sharedVMs objectForKey:vmPath]);
+      completionBlock(vm);
    });
 }
 
