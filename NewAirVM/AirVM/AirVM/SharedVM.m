@@ -139,7 +139,8 @@ static SharedVMMgr* instance;
       vm.vncPort = port;
    }
    else{
-      vm.vncPort = [dic objectForKey:@"RemoteDisplay.vnc.port"];
+      NSCharacterSet *set = [NSCharacterSet characterSetWithCharactersInString:@"\""];
+      vm.vncPort = [[dic objectForKey:@"RemoteDisplay.vnc.port"] stringByTrimmingCharactersInSet:set];
    }
    
    [dic setObject:@"\"TRUE\"" forKey:@"RemoteDisplay.vnc.enabled"];
