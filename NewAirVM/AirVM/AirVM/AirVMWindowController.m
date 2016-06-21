@@ -18,7 +18,9 @@
 - (void)windowDidLoad {
     [super windowDidLoad];
    WAYAppStoreWindow * window = self.window;
-   window.titleBarHeight = 100;
+   window.titleBarHeight = 70;
+   window.centerTrafficLightButtons = NO;
+   window.verticallyCenterTitle = YES;
 }
 
 @end
