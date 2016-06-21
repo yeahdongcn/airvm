@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9C31F5251D19264F002E1737 /* AirVMWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C31F5241D19264F002E1737 /* AirVMWindowController.m */; };
+		9C31F52E1D19267D002E1737 /* Extensions in Resources */ = {isa = PBXBuildFile; fileRef = 9C31F5281D19267D002E1737 /* Extensions */; };
+		9C31F52F1D19267D002E1737 /* INAppStoreWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C31F52A1D19267D002E1737 /* INAppStoreWindow.m */; };
+		9C31F5301D19267D002E1737 /* INWindowButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C31F52D1D19267D002E1737 /* INWindowButton.m */; };
+		9C31F5331D1928B3002E1737 /* WAYAppStoreWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C31F5321D1928B3002E1737 /* WAYAppStoreWindow.m */; };
+		9C31F5361D1928F3002E1737 /* WAYWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C31F5351D1928F3002E1737 /* WAYWindow.m */; };
 		E8DC97801D17E74200F37D55 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E8DC977F1D17E74200F37D55 /* AppDelegate.m */; };
 		E8DC97831D17E74200F37D55 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E8DC97821D17E74200F37D55 /* main.m */; };
 		E8DC97861D17E74200F37D55 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E8DC97851D17E74200F37D55 /* ViewController.m */; };
@@ -67,6 +73,18 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9C31F5231D19264F002E1737 /* AirVMWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AirVMWindowController.h; sourceTree = "<group>"; };
+		9C31F5241D19264F002E1737 /* AirVMWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AirVMWindowController.m; sourceTree = "<group>"; };
+		9C31F5281D19267D002E1737 /* Extensions */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Extensions; sourceTree = "<group>"; };
+		9C31F5291D19267D002E1737 /* INAppStoreWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = INAppStoreWindow.h; sourceTree = "<group>"; };
+		9C31F52A1D19267D002E1737 /* INAppStoreWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = INAppStoreWindow.m; sourceTree = "<group>"; };
+		9C31F52B1D19267D002E1737 /* INAppStoreWindowCompatibility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = INAppStoreWindowCompatibility.h; sourceTree = "<group>"; };
+		9C31F52C1D19267D002E1737 /* INWindowButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = INWindowButton.h; sourceTree = "<group>"; };
+		9C31F52D1D19267D002E1737 /* INWindowButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = INWindowButton.m; sourceTree = "<group>"; };
+		9C31F5311D1928B3002E1737 /* WAYAppStoreWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WAYAppStoreWindow.h; sourceTree = "<group>"; };
+		9C31F5321D1928B3002E1737 /* WAYAppStoreWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WAYAppStoreWindow.m; sourceTree = "<group>"; };
+		9C31F5341D1928F3002E1737 /* WAYWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WAYWindow.h; sourceTree = "<group>"; };
+		9C31F5351D1928F3002E1737 /* WAYWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WAYWindow.m; sourceTree = "<group>"; };
 		E8A109CE1D17EA7E00CE02D1 /* BonjourSDK.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = BonjourSDK.xcodeproj; path = BonjourSDK/BonjourSDK.xcodeproj; sourceTree = "<group>"; };
 		E8DC977B1D17E74200F37D55 /* AirVM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AirVM.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E8DC977E1D17E74200F37D55 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -131,6 +149,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9C31F5271D192665002E1737 /* INAppStoreWindow */ = {
+			isa = PBXGroup;
+			children = (
+				9C31F5311D1928B3002E1737 /* WAYAppStoreWindow.h */,
+				9C31F5321D1928B3002E1737 /* WAYAppStoreWindow.m */,
+				9C31F5341D1928F3002E1737 /* WAYWindow.h */,
+				9C31F5351D1928F3002E1737 /* WAYWindow.m */,
+				9C31F5281D19267D002E1737 /* Extensions */,
+				9C31F5291D19267D002E1737 /* INAppStoreWindow.h */,
+				9C31F52A1D19267D002E1737 /* INAppStoreWindow.m */,
+				9C31F52B1D19267D002E1737 /* INAppStoreWindowCompatibility.h */,
+				9C31F52C1D19267D002E1737 /* INWindowButton.h */,
+				9C31F52D1D19267D002E1737 /* INWindowButton.m */,
+			);
+			name = INAppStoreWindow;
+			sourceTree = "<group>";
+		};
 		E8A109CF1D17EA7E00CE02D1 /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -164,8 +199,11 @@
 		E8DC977D1D17E74200F37D55 /* AirVM */ = {
 			isa = PBXGroup;
 			children = (
+				9C31F5271D192665002E1737 /* INAppStoreWindow */,
 				E8DC97BA1D17E8D200F37D55 /* AirVMViewController.h */,
 				E8DC97BB1D17E8D200F37D55 /* AirVMViewController.m */,
+				9C31F5231D19264F002E1737 /* AirVMWindowController.h */,
+				9C31F5241D19264F002E1737 /* AirVMWindowController.m */,
 				E8DC97BC1D17E8D200F37D55 /* BJPublishActionButtonEnableTransformer.h */,
 				E8DC97BD1D17E8D200F37D55 /* BJPublishActionButtonEnableTransformer.m */,
 				E8DC97BE1D17E8D200F37D55 /* BJPublishActionButtonTransformer.h */,
@@ -350,6 +388,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9C31F52E1D19267D002E1737 /* Extensions in Resources */,
 				E8DC97881D17E74200F37D55 /* Assets.xcassets in Resources */,
 				E8DC97D31D17E8D200F37D55 /* Bonjour-OSX.entitlements in Resources */,
 				E8DC97DB1D17E8D200F37D55 /* PersonViewController.xib in Resources */,
@@ -384,13 +423,18 @@
 				E8DC97D91D17E8D200F37D55 /* PersonView.m in Sources */,
 				E8DC97D81D17E8D200F37D55 /* PersonClusterView.m in Sources */,
 				E8DC97D51D17E8D200F37D55 /* OpenSharedVMViewController.m in Sources */,
+				9C31F5331D1928B3002E1737 /* WAYAppStoreWindow.m in Sources */,
 				E8DC97D71D17E8D200F37D55 /* Person.m in Sources */,
 				E8DC97861D17E74200F37D55 /* ViewController.m in Sources */,
+				9C31F5361D1928F3002E1737 /* WAYWindow.m in Sources */,
 				E8DC97831D17E74200F37D55 /* main.m in Sources */,
 				E8DC97D21D17E8D200F37D55 /* BJPublishActionButtonTransformer.m in Sources */,
 				E8DC97D01D17E8D200F37D55 /* AirVMViewController.m in Sources */,
 				E8DC97801D17E74200F37D55 /* AppDelegate.m in Sources */,
 				E8DC97DC1D17E8D200F37D55 /* SharedVM.m in Sources */,
+				9C31F5301D19267D002E1737 /* INWindowButton.m in Sources */,
+				9C31F52F1D19267D002E1737 /* INAppStoreWindow.m in Sources */,
+				9C31F5251D19264F002E1737 /* AirVMWindowController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

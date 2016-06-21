@@ -36,7 +36,7 @@
     NSNumber      *_bytesRead;
 }
 
-@property (weak) IBOutlet NSWindow *window;
+//@property (weak) IBOutlet NSWindow *window;
 @property (unsafe_unretained) IBOutlet NSTextView *editor;
 
 @property (nonatomic, strong) BSBonjourServer *bonjourServer;
@@ -125,13 +125,13 @@
 {
     self.status = Stopped;
     NSAlert *alert = [NSAlert alertWithError:error];
-    [alert beginSheetModalForWindow:self.window completionHandler:nil];
+    //[alert beginSheetModalForWindow:self.window completionHandler:nil];
 }
 
 - (void)publishFailed:(NSError *)error {
     self.status = Stopped;
     NSAlert *alert = [NSAlert alertWithError:error];
-    [alert beginSheetModalForWindow:self.window completionHandler:nil];
+    //[alert beginSheetModalForWindow:self.window completionHandler:nil];
 }
 
 - (void)serviceStopped:(NSString *)name {
