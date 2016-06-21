@@ -135,7 +135,7 @@ static SharedVMMgr* instance;
    if (![dic objectForKey:@"RemoteDisplay.vnc.port"]) {
       NSString *port = [self generatePortWithBlackList:self.vmPorts];
       [self.vmPorts addObject:port];
-      [dic setObject:port forKey:@"RemoteDisplay.vnc.port"];
+      [dic setObject:[NSString stringWithFormat:@"\"%@\"",port] forKey:@"RemoteDisplay.vnc.port"];
       vm.vncPort = port;
    }
    else{
