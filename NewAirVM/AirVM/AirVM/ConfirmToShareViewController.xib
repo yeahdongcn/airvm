@@ -7,7 +7,9 @@
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="ConfirmToShareViewController">
             <connections>
+                <outlet property="cancelButton" destination="8eh-oP-abc" id="DXi-iH-lhg"/>
                 <outlet property="progressIndicator" destination="HFt-5c-IsR" id="0j6-y3-fhm"/>
+                <outlet property="shareButton" destination="tvK-4p-CCR" id="mks-7d-nfs"/>
                 <outlet property="shareMessageTextField" destination="oIB-5M-tiJ" id="VTC-uu-EZy"/>
                 <outlet property="view" destination="Hz6-mo-xeY" id="0bl-1N-x8E"/>
             </connections>

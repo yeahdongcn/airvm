@@ -118,6 +118,9 @@
    if (popover == self.openSharedVMPopover) {
       return self.openSharedVMViewController.didResponse;
    }
+//   if (popover == self.confirmToSharePopover) {
+//      return NO;
+//   }
    return YES;
 }
 
