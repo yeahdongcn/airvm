@@ -26,7 +26,9 @@
 - (void)viewDidAppear {
    [super viewDidAppear];
    self.didResponse = NO;
-   [self setDescription:self.message];
+   if (self.descriptionTextField && self.message) {
+      self.descriptionTextField.stringValue = self.message;
+   }
 }
 
 - (IBAction)onOpenButtonPressed:(id)sender {
@@ -42,7 +44,8 @@
 }
 
 - (void)setDescription:(NSString *)description {
-   self.descriptionTextField.stringValue = description;
+   self.message = description;
+   self.descriptionTextField.stringValue = self.message;
 }
 
 @end
