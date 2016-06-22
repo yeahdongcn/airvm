@@ -45,6 +45,7 @@
 @property (nonatomic, assign) ServiceStartStatus status;
 @property (nonatomic, assign) Boolean connectOthers;
 @property (nonatomic, strong) NSString *         statusText;
+@property (nonatomic) int         batchCount;
 
 @property (nonatomic, strong, readwrite) NSNetService *     netService;
 
@@ -223,6 +224,23 @@
       [self sendOpenSharedVM:vm withConnection:connection];
       [self refreshService];
    }];
+}
+
+-(void) sendVMs:(NSArray*) vms {
+    _batchCount = 0;
+    void(^checkBatchCount)(NSUInteger) = ^(NSUInteger total) {
+        if (_batchCount == total) {
+            NSLog(@"batch send vms done");
+            [self refreshService];
+        }
+    };
+    for (SharedVM* vm in vms) {
+        [self.bonjourClient connectToService:vm.netService completetionBlock:^(BSBonjourConnection *connection) {
+            [self sendOpenSharedVM:vm withConnection:connection];
+            _batchCount++;
+            checkBatchCount(vms.count);
+        }];
+    }
 }
 
 - (NSString *)getIPAddress {
