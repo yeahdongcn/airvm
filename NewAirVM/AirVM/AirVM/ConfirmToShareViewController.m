@@ -19,6 +19,7 @@
 - (void)viewDidLoad {
    [super viewDidLoad];
    self.progressIndicator.hidden = YES;
+   self.shareMessageTextField.stringValue = @"Click Open to access the shared VM.";
 }
 - (IBAction)onShareButtonPressed:(id)sender {
    if (self.shareAction) {

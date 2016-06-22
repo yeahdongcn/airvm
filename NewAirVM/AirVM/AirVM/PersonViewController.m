@@ -154,12 +154,14 @@
 }
 
 - (void)showPopoverWithOpenAction:(OpenAction)openAction message:(NSString *)message{
-   [self showOpenSharedVMPopover];
+
    if ([self.openSharedVMPopover.contentViewController isKindOfClass:[OpenSharedVMViewController class]]) {
       OpenSharedVMViewController *osvvc = ((OpenSharedVMViewController *)(self.openSharedVMPopover.contentViewController));
       osvvc.openAction = openAction;
       osvvc.message = message;
    }
+
+   [self showOpenSharedVMPopover];
 }
 
 - (void)dismissOpenSharedVMPopover {
