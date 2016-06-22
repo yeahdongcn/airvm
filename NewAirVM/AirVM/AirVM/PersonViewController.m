@@ -138,13 +138,18 @@
          [[SharedVMMgr sharedInstance] startSharedVM:vmName andCompletionBlock:^(SharedVM *vm) {
             vm.netService = weakSelf.person.netService;
             [(AppDelegate *)([[NSApplication sharedApplication] delegate]) sendVM:vm];
+
             dispatch_async(dispatch_get_main_queue(), ^{
                [weakSelf.confirmToSharePopover close];
             });
+
          }];
       } else {
-
+         dispatch_async(dispatch_get_main_queue(), ^{
+            [weakSelf.confirmToSharePopover close];
+         });
       }
+
    };
 }
 
