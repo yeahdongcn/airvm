@@ -809,7 +809,7 @@
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
                 <userDefaultsController representsSharedInstance="YES" id="une-ko-tUc"/>
             </objects>
-            <point key="canvasLocation" x="152" y="828"/>
+            <point key="canvasLocation" x="100" y="829"/>
         </scene>
     </scenes>
     <resources>

@@ -22,8 +22,8 @@
    //window.titleBarView
    window.titleBarHeight = 70;
    window.centerTrafficLightButtons = NO;
-   window.verticallyCenterTitle = YES;
-   window.bottomBarHeight = 24;
+   //window.verticallyCenterTitle = YES;
+   //window.bottomBarHeight = 24;
 
    self.airVMTBVC = [[AirVMTitleBarViewController alloc] initWithNibName:@"AirVMTitleBarViewController" bundle:nil];
    NSView * titleView = self.airVMTBVC.view;

@@ -11,6 +11,7 @@
 #import "AppDelegate.h"
 #import "PersonView.h"
 #import "OpenSharedVMViewController.h"
+#import "ConfirmToShareViewController.h"
 
 @interface PersonViewController () <NSPopoverDelegate>
 
@@ -20,8 +21,10 @@
 
 
 @property (weak) IBOutlet NSTextField *nameLabel;
-@property (nonatomic, strong) NSPopover *popover;
-@property (nonatomic, strong) OpenSharedVMViewController *contentViewController;
+@property (nonatomic, strong) NSPopover *openSharedVMPopover;
+@property (nonatomic, strong) NSPopover *confirmToSharePopover;
+@property (nonatomic, strong) OpenSharedVMViewController *openSharedVMViewController;
+@property (nonatomic, strong) ConfirmToShareViewController * confirmToShareViewController;
 @property (nonatomic, strong) NSWindow *detachedWindow;
 
 @end
@@ -40,56 +43,64 @@
    return self.person.machineName;
 }
 
-- (NSViewController *)contentViewController {
-   if (!_contentViewController) {
-      _contentViewController = [[OpenSharedVMViewController alloc] initWithNibName:@"OpenSharedVMViewController" bundle:nil];
+- (NSViewController *)openSharedVMViewController {
+   if (!_openSharedVMViewController) {
+      _openSharedVMViewController = [[OpenSharedVMViewController alloc] initWithNibName:@"OpenSharedVMViewController" bundle:nil];
    }
-   return _contentViewController;
+   return _openSharedVMViewController;
+}
+- (NSViewController *)confirmToShareViewController {
+   if (!_confirmToShareViewController) {
+      _confirmToShareViewController = [[ConfirmToShareViewController alloc] initWithNibName:@"ConfirmToShareViewController" bundle:nil];
+   }
+   return _confirmToShareViewController;
 }
 
 - (NSWindow *)detachedWindow {
    if (!_detachedWindow) {
-      NSRect rect = self.contentViewController.view.bounds;
+      NSRect rect = self.openSharedVMViewController.view.bounds;
       NSUInteger styleMask = NSTitledWindowMask + NSClosableWindowMask;
       _detachedWindow = [[NSWindow alloc] initWithContentRect:rect styleMask:styleMask backing:NSBackingStoreBuffered defer:YES];
-      _detachedWindow.contentViewController = self.contentViewController;
+      _detachedWindow.contentViewController = self.openSharedVMViewController;
    }
    return _detachedWindow;
 }
 
-- (NSPopover *)popover {
-   if (!_popover) {
-      _popover = [[NSPopover alloc] init];
-      _popover.contentViewController = self.contentViewController;
-      _popover.behavior = NSPopoverBehaviorSemitransient;
-      _popover.delegate = self;
-      _popover.appearance = [NSAppearance appearanceNamed:NSAppearanceNameVibrantLight];
+- (NSPopover *)openSharedVMPopover {
+   if (!_openSharedVMPopover) {
+      _openSharedVMPopover = [[NSPopover alloc] init];
+      _openSharedVMPopover.contentViewController = self.openSharedVMViewController;
+      _openSharedVMPopover.behavior = NSPopoverBehaviorSemitransient;
+      _openSharedVMPopover.delegate = self;
+      _openSharedVMPopover.appearance = [NSAppearance appearanceNamed:NSAppearanceNameVibrantLight];
    }
-   return _popover;
+   return _openSharedVMPopover;
+}
+
+- (NSPopover *)confirmToSharePopover {
+   if (!_confirmToSharePopover) {
+      _confirmToSharePopover = [[NSPopover alloc] init];
+      _confirmToSharePopover.contentViewController = self.confirmToShareViewController;
+      _confirmToSharePopover.behavior = NSPopoverBehaviorSemitransient;
+      _confirmToSharePopover.delegate = self;
+      _confirmToSharePopover.appearance = [NSAppearance appearanceNamed:NSAppearanceNameVibrantLight];
+   }
+   return _confirmToSharePopover;
 }
 
 - (void)viewDidLoad {
    [super viewDidLoad];
    self.portraitView.image = [NSImage imageNamed:@"person"];
-//   self.portraitView.wantsLayer = YES;
-//   self.portraitView.layer.cornerRadius = self.portraitView.frame.size.width / 2;
    self.nameLabel.stringValue = self.person.machineName;
    self.portraitView.delegate = self;
 }
 
 #pragma mark AirVMDrop
 
-
-
 - (void)concludeDropOperation:(id<NSDraggingInfo>)sender {
    NSData *data = [[sender draggingPasteboard] dataForType:NSStringPboardType];
    NSString *vmName = [NSKeyedUnarchiver unarchiveObjectWithData:data];
-
-   
-   [[SharedVMMgr sharedInstance] startSharedVM:vmName andCompletionBlock:^(SharedVM *vm) {
-      vm.netService = self.person.netService;
-      [(AppDelegate *)([[NSApplication sharedApplication] delegate]) sendVM:vm];
-   }];
+   [self showConfirmToShareVMPopoverWithName:vmName];
 }
 
 
@@ -104,8 +115,8 @@
 }
 
 - (BOOL)popoverShouldClose:(NSPopover *)popover {
-   if (popover == self.popover) {
-      return self.contentViewController.didResponse;
+   if (popover == self.openSharedVMPopover) {
+      return self.openSharedVMViewController.didResponse;
    }
    return YES;
 }
@@ -114,23 +125,40 @@
    NSLog(@"popoverWillClose is called.");
 }
 
-- (void)showPopover {
-   [self.popover showRelativeToRect:self.portraitView.bounds ofView:self.portraitView preferredEdge:NSRectEdgeMaxY];
+- (void)showOpenSharedVMPopover {
+   [self.openSharedVMPopover showRelativeToRect:self.portraitView.bounds ofView:self.portraitView preferredEdge:NSRectEdgeMaxY];
+}
+
+- (void)showConfirmToShareVMPopoverWithName:(NSString *)vmName {
+   [self.confirmToSharePopover showRelativeToRect:self.portraitView.bounds ofView:self.portraitView preferredEdge:NSRectEdgeMinX];
+
+   __weak PersonViewController *weakSelf = self;
+   self.confirmToShareViewController.shareAction = ^(BOOL share) {
+      if (share) {
+         [[SharedVMMgr sharedInstance] startSharedVM:vmName andCompletionBlock:^(SharedVM *vm) {
+            vm.netService = weakSelf.person.netService;
+            [(AppDelegate *)([[NSApplication sharedApplication] delegate]) sendVM:vm];
+            [weakSelf.confirmToSharePopover close];
+         }];
+      } else {
+
+      }
+   };
 }
 
 - (void)showPopoverWithOpenAction:(OpenAction)openAction {
-   [self showPopover];
-   if ([self.popover.contentViewController isKindOfClass:[OpenSharedVMViewController class]]) {
-      ((OpenSharedVMViewController *)(self.popover.contentViewController)).openAction = openAction;
+   [self showOpenSharedVMPopover];
+   if ([self.openSharedVMPopover.contentViewController isKindOfClass:[OpenSharedVMViewController class]]) {
+      ((OpenSharedVMViewController *)(self.openSharedVMPopover.contentViewController)).openAction = openAction;
    }
 }
 
-- (void)dismissPopover {
-   [self.popover close];
+- (void)dismissOpenSharedVMPopover {
+   [self.openSharedVMPopover close];
 }
 
 //test button
 - (IBAction)onButtonClicked:(id)sender {
-   [self showPopover];
+   [self showOpenSharedVMPopover];
 }
 @end

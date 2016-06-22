@@ -125,15 +125,6 @@
 
 };
 
-- (void)scaleAnimationWithView:(NSView *)view scaling:(CGFloat)scaling {
-   NSRect startFrame = [view frame];
-   CGFloat ratio = scaling;
-   CGFloat shiftX = startFrame.size.width*(1-ratio)/2;
-   CGFloat shiftY = startFrame.size.height*(1-ratio)/2;
-   NSRect endFrame = NSMakeRect(startFrame.origin.x+shiftX, startFrame.origin.y+shiftY, startFrame.size.width*ratio, startFrame.size.height*ratio);
-   [[view animator] setFrame:endFrame];
-}
-
 - (void)updatePersonCluster {
    [self clearPersonCluster];
    self.persons = [self queryPersonsFromBojour];
@@ -168,7 +159,7 @@
          } else {
             [self ignoreTheSharedVM:vm];
          }
-         [pvc dismissPopover];
+         [pvc dismissOpenSharedVMPopover];
       };
       [pvc showPopoverWithOpenAction:openAction];
    }
@@ -241,7 +232,7 @@
 }
 
 - (NSDragOperation)tableView:(NSTableView*)tv validateDrop:(id )info proposedRow:(NSInteger)row proposedDropOperation:(NSTableViewDropOperation)op {
-   return NSDragOperationAll;
+   return NSDragOperationEvery;
 }
 
 - (BOOL)tableView:(NSTableView*)tv acceptDrop:(id)info row:(NSInteger)row dropOperation:(NSTableViewDropOperation)op {
