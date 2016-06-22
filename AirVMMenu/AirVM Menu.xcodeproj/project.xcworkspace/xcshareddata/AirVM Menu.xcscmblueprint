@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "AA76251BFAB5E58D8DA657B5ECE82D728190A767",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "AA76251BFAB5E58D8DA657B5ECE82D728190A767" : 0,
+    "1B0B3C7FF0A3414D12F9C4445E96902F55746211" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "33305B0E-0D9B-4CD3-92F5-CDE792E5BE2B",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "AA76251BFAB5E58D8DA657B5ECE82D728190A767" : "MenuBarController\/",
+    "1B0B3C7FF0A3414D12F9C4445E96902F55746211" : "..\/..\/Fusion\/borathon\/airvm"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "AirVM Menu",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "AirVM Menu.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/JeffWuBJ\/airvm.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "1B0B3C7FF0A3414D12F9C4445E96902F55746211"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/nikolaeu\/MenuBarController.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "AA76251BFAB5E58D8DA657B5ECE82D728190A767"
+    }
+  ]
+}
