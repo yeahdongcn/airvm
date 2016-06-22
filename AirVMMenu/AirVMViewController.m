@@ -56,6 +56,8 @@
                                               object:nil];
    [self updatePersonCluster];
    [self.sharedVMsTableView reloadData];
+   self.sharedVMsTableView.backgroundColor = [NSColor clearColor];
+   //self.sharedVMsTableView.layer.backgroundColor = [NSColor clearColor].CGColor;
 }
 
 - (void)viewWillDisappear {
@@ -217,6 +219,7 @@
    SharedVM *vm = self.sharedVMs[row];
    NSString *displayName = [[vm.vmName lastPathComponent] stringByDeletingPathExtension];
    cell.textField.stringValue = displayName;
+   
    return cell;
 }
 
