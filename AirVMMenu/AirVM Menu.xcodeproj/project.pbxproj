@@ -7,97 +7,46 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		329F6C1019FE633600439723 /* MenuBarController.h in Headers */ = {isa = PBXBuildFile; fileRef = 329F6C0F19FE633600439723 /* MenuBarController.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		329F6C2719FE661600439723 /* MenuBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 329F6C2619FE661600439723 /* MenuBarController.m */; };
 		32A2834B1A6CE57500D51798 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 32A2834A1A6CE57500D51798 /* AppDelegate.m */; };
 		32A2834D1A6CE57500D51798 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 32A2834C1A6CE57500D51798 /* main.m */; };
 		32A2834F1A6CE57500D51798 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 32A2834E1A6CE57500D51798 /* Images.xcassets */; };
 		32A283521A6CE57500D51798 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 32A283501A6CE57500D51798 /* MainMenu.xib */; };
-		32A283671A6CE5E000D51798 /* AirVM Menu.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 329F6C0A19FE633600439723 /* AirVM Menu.framework */; };
-		32A283681A6CE5E600D51798 /* AirVM Menu.framework in Resources */ = {isa = PBXBuildFile; fileRef = 329F6C0A19FE633600439723 /* AirVM Menu.framework */; };
 		32A2836B1A6CE61A00D51798 /* MyViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 32A2836A1A6CE61A00D51798 /* MyViewController.xib */; };
 		32A2836E1A6CE62300D51798 /* MyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 32A2836D1A6CE62300D51798 /* MyViewController.m */; };
-		32A283731A6CF4DD00D51798 /* StatusItemButton.h in Headers */ = {isa = PBXBuildFile; fileRef = 32A283711A6CF4DD00D51798 /* StatusItemButton.h */; };
-		32A283741A6CF4DD00D51798 /* StatusItemButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 32A283721A6CF4DD00D51798 /* StatusItemButton.m */; };
 		E866D7751D1A76E100F4365A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E8D1AED51D1A756D00B8CB25 /* Main.storyboard */; };
-		E866D7781D1A79D900F4365A /* airvm32@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E866D7771D1A79D900F4365A /* airvm32@2x.png */; };
 		E866D7791D1A79F700F4365A /* airvm32@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E866D7771D1A79D900F4365A /* airvm32@2x.png */; };
-		E866D77B1D1A7A0800F4365A /* airvm16.png in Resources */ = {isa = PBXBuildFile; fileRef = E866D77A1D1A7A0800F4365A /* airvm16.png */; };
 		E866D77C1D1A7A0C00F4365A /* airvm16.png in Resources */ = {isa = PBXBuildFile; fileRef = E866D77A1D1A7A0800F4365A /* airvm16.png */; };
-		E866D7A71D1A807000F4365A /* AirVMTitleBarViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = E866D77D1D1A807000F4365A /* AirVMTitleBarViewController.h */; };
-		E866D7A81D1A807000F4365A /* AirVMTitleBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E866D77E1D1A807000F4365A /* AirVMTitleBarViewController.m */; };
-		E866D7A91D1A807000F4365A /* AirVMTitleBarViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E866D77F1D1A807000F4365A /* AirVMTitleBarViewController.xib */; };
-		E866D7AA1D1A807000F4365A /* AirVMViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = E866D7801D1A807000F4365A /* AirVMViewController.h */; };
-		E866D7AB1D1A807000F4365A /* AirVMViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E866D7811D1A807000F4365A /* AirVMViewController.m */; };
-		E866D7AC1D1A807000F4365A /* AirVMWindowController.h in Headers */ = {isa = PBXBuildFile; fileRef = E866D7821D1A807000F4365A /* AirVMWindowController.h */; };
-		E866D7AD1D1A807000F4365A /* AirVMWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = E866D7831D1A807000F4365A /* AirVMWindowController.m */; };
-		E866D7AE1D1A807000F4365A /* BJPublishActionButtonEnableTransformer.h in Headers */ = {isa = PBXBuildFile; fileRef = E866D7841D1A807000F4365A /* BJPublishActionButtonEnableTransformer.h */; };
-		E866D7AF1D1A807000F4365A /* BJPublishActionButtonEnableTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = E866D7851D1A807000F4365A /* BJPublishActionButtonEnableTransformer.m */; };
-		E866D7B01D1A807000F4365A /* BJPublishActionButtonTransformer.h in Headers */ = {isa = PBXBuildFile; fileRef = E866D7861D1A807000F4365A /* BJPublishActionButtonTransformer.h */; };
-		E866D7B11D1A807000F4365A /* BJPublishActionButtonTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = E866D7871D1A807000F4365A /* BJPublishActionButtonTransformer.m */; };
-		E866D7B21D1A807000F4365A /* ConfirmToShareViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = E866D7881D1A807000F4365A /* ConfirmToShareViewController.h */; };
-		E866D7B31D1A807000F4365A /* ConfirmToShareViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E866D7891D1A807000F4365A /* ConfirmToShareViewController.m */; };
-		E866D7B41D1A807000F4365A /* ConfirmToShareViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E866D78A1D1A807000F4365A /* ConfirmToShareViewController.xib */; };
-		E866D7B51D1A807000F4365A /* INAppStoreWindow.h in Headers */ = {isa = PBXBuildFile; fileRef = E866D78B1D1A807000F4365A /* INAppStoreWindow.h */; };
-		E866D7B61D1A807000F4365A /* INAppStoreWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = E866D78C1D1A807000F4365A /* INAppStoreWindow.m */; };
-		E866D7B71D1A807000F4365A /* INAppStoreWindowCompatibility.h in Headers */ = {isa = PBXBuildFile; fileRef = E866D78D1D1A807000F4365A /* INAppStoreWindowCompatibility.h */; };
-		E866D7B81D1A807000F4365A /* INWindowButton.h in Headers */ = {isa = PBXBuildFile; fileRef = E866D78E1D1A807000F4365A /* INWindowButton.h */; };
-		E866D7B91D1A807000F4365A /* INWindowButton.m in Sources */ = {isa = PBXBuildFile; fileRef = E866D78F1D1A807000F4365A /* INWindowButton.m */; };
-		E866D7BA1D1A807000F4365A /* OpenSharedVMViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = E866D7901D1A807000F4365A /* OpenSharedVMViewController.h */; };
-		E866D7BB1D1A807000F4365A /* OpenSharedVMViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E866D7911D1A807000F4365A /* OpenSharedVMViewController.m */; };
-		E866D7BC1D1A807000F4365A /* OpenSharedVMViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E866D7921D1A807000F4365A /* OpenSharedVMViewController.xib */; };
-		E866D7BD1D1A807000F4365A /* Person.h in Headers */ = {isa = PBXBuildFile; fileRef = E866D7931D1A807000F4365A /* Person.h */; };
-		E866D7BE1D1A807000F4365A /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = E866D7941D1A807000F4365A /* Person.m */; };
-		E866D7BF1D1A807000F4365A /* PersonClusterView.h in Headers */ = {isa = PBXBuildFile; fileRef = E866D7951D1A807000F4365A /* PersonClusterView.h */; };
-		E866D7C01D1A807000F4365A /* PersonClusterView.m in Sources */ = {isa = PBXBuildFile; fileRef = E866D7961D1A807000F4365A /* PersonClusterView.m */; };
-		E866D7C11D1A807000F4365A /* PersonView.h in Headers */ = {isa = PBXBuildFile; fileRef = E866D7971D1A807000F4365A /* PersonView.h */; };
-		E866D7C21D1A807000F4365A /* PersonView.m in Sources */ = {isa = PBXBuildFile; fileRef = E866D7981D1A807000F4365A /* PersonView.m */; };
-		E866D7C31D1A807000F4365A /* PersonViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = E866D7991D1A807000F4365A /* PersonViewController.h */; };
-		E866D7C41D1A807000F4365A /* PersonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E866D79A1D1A807000F4365A /* PersonViewController.m */; };
-		E866D7C51D1A807000F4365A /* PersonViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E866D79B1D1A807000F4365A /* PersonViewController.xib */; };
-		E866D7C61D1A807000F4365A /* refresh.png in Resources */ = {isa = PBXBuildFile; fileRef = E866D79C1D1A807000F4365A /* refresh.png */; };
-		E866D7C71D1A807000F4365A /* service_off.png in Resources */ = {isa = PBXBuildFile; fileRef = E866D79D1D1A807000F4365A /* service_off.png */; };
-		E866D7C81D1A807000F4365A /* service_on.png in Resources */ = {isa = PBXBuildFile; fileRef = E866D79E1D1A807000F4365A /* service_on.png */; };
-		E866D7C91D1A807000F4365A /* SharedVM.h in Headers */ = {isa = PBXBuildFile; fileRef = E866D79F1D1A807000F4365A /* SharedVM.h */; };
-		E866D7CA1D1A807000F4365A /* SharedVM.m in Sources */ = {isa = PBXBuildFile; fileRef = E866D7A01D1A807000F4365A /* SharedVM.m */; };
-		E866D7CB1D1A807000F4365A /* ViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = E866D7A11D1A807000F4365A /* ViewController.h */; };
-		E866D7CC1D1A807000F4365A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E866D7A21D1A807000F4365A /* ViewController.m */; };
-		E866D7CD1D1A807000F4365A /* WAYAppStoreWindow.h in Headers */ = {isa = PBXBuildFile; fileRef = E866D7A31D1A807000F4365A /* WAYAppStoreWindow.h */; };
-		E866D7CE1D1A807000F4365A /* WAYAppStoreWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = E866D7A41D1A807000F4365A /* WAYAppStoreWindow.m */; };
-		E866D7CF1D1A807000F4365A /* WAYWindow.h in Headers */ = {isa = PBXBuildFile; fileRef = E866D7A51D1A807000F4365A /* WAYWindow.h */; };
-		E866D7D01D1A807000F4365A /* WAYWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = E866D7A61D1A807000F4365A /* WAYWindow.m */; };
 		E866D7D11D1A821D00F4365A /* AirVMTitleBarViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E866D77F1D1A807000F4365A /* AirVMTitleBarViewController.xib */; };
 		E866D7D21D1A821D00F4365A /* ConfirmToShareViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E866D78A1D1A807000F4365A /* ConfirmToShareViewController.xib */; };
 		E866D7D31D1A821D00F4365A /* OpenSharedVMViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E866D7921D1A807000F4365A /* OpenSharedVMViewController.xib */; };
 		E866D7D41D1A821D00F4365A /* PersonViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E866D79B1D1A807000F4365A /* PersonViewController.xib */; };
-		E8D1AE1A1D1A6E6B00B8CB25 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E8D1AE191D1A6E6B00B8CB25 /* Assets.xcassets */; };
+		E8C27A341D1A9FC300C23F48 /* AirVMTitleBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E866D77E1D1A807000F4365A /* AirVMTitleBarViewController.m */; };
+		E8C27A351D1A9FC300C23F48 /* AirVMViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E866D7811D1A807000F4365A /* AirVMViewController.m */; };
+		E8C27A361D1A9FC300C23F48 /* AirVMWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = E866D7831D1A807000F4365A /* AirVMWindowController.m */; };
+		E8C27A371D1A9FC300C23F48 /* BJPublishActionButtonEnableTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = E866D7851D1A807000F4365A /* BJPublishActionButtonEnableTransformer.m */; };
+		E8C27A381D1A9FC300C23F48 /* BJPublishActionButtonTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = E866D7871D1A807000F4365A /* BJPublishActionButtonTransformer.m */; };
+		E8C27A391D1A9FC300C23F48 /* ConfirmToShareViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E866D7891D1A807000F4365A /* ConfirmToShareViewController.m */; };
+		E8C27A3A1D1A9FC300C23F48 /* INAppStoreWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = E866D78C1D1A807000F4365A /* INAppStoreWindow.m */; };
+		E8C27A3B1D1A9FC300C23F48 /* INWindowButton.m in Sources */ = {isa = PBXBuildFile; fileRef = E866D78F1D1A807000F4365A /* INWindowButton.m */; };
+		E8C27A3C1D1A9FC300C23F48 /* OpenSharedVMViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E866D7911D1A807000F4365A /* OpenSharedVMViewController.m */; };
+		E8C27A3D1D1A9FC300C23F48 /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = E866D7941D1A807000F4365A /* Person.m */; };
+		E8C27A3E1D1A9FC300C23F48 /* PersonClusterView.m in Sources */ = {isa = PBXBuildFile; fileRef = E866D7961D1A807000F4365A /* PersonClusterView.m */; };
+		E8C27A3F1D1A9FC300C23F48 /* PersonView.m in Sources */ = {isa = PBXBuildFile; fileRef = E866D7981D1A807000F4365A /* PersonView.m */; };
+		E8C27A401D1A9FC300C23F48 /* PersonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E866D79A1D1A807000F4365A /* PersonViewController.m */; };
+		E8C27A411D1A9FC300C23F48 /* SharedVM.m in Sources */ = {isa = PBXBuildFile; fileRef = E866D7A01D1A807000F4365A /* SharedVM.m */; };
+		E8C27A421D1A9FC300C23F48 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E866D7A21D1A807000F4365A /* ViewController.m */; };
+		E8C27A431D1A9FC300C23F48 /* WAYAppStoreWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = E866D7A41D1A807000F4365A /* WAYAppStoreWindow.m */; };
+		E8C27A441D1A9FC300C23F48 /* WAYWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = E866D7A61D1A807000F4365A /* WAYWindow.m */; };
+		E8C27A451D1A9FC300C23F48 /* AirVMManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E8D1AE681D1A72A900B8CB25 /* AirVMManager.m */; };
+		E8C27A461D1A9FC300C23F48 /* BSBonjourClient.m in Sources */ = {isa = PBXBuildFile; fileRef = E8D1AE6B1D1A72A900B8CB25 /* BSBonjourClient.m */; };
+		E8C27A471D1A9FC300C23F48 /* BSBonjourConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = E8D1AE6D1D1A72A900B8CB25 /* BSBonjourConnection.m */; };
+		E8C27A481D1A9FC300C23F48 /* BSBonjourServer.m in Sources */ = {isa = PBXBuildFile; fileRef = E8D1AE6F1D1A72A900B8CB25 /* BSBonjourServer.m */; };
+		E8C27A491D1A9FC300C23F48 /* MenuBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 329F6C2619FE661600439723 /* MenuBarController.m */; };
+		E8C27A4A1D1A9FC300C23F48 /* StatusItemButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 32A283721A6CF4DD00D51798 /* StatusItemButton.m */; };
 		E8D1AE1B1D1A6E7500B8CB25 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E8D1AE191D1A6E6B00B8CB25 /* Assets.xcassets */; };
-		E8D1AE711D1A72A900B8CB25 /* AirVMManager.h in Headers */ = {isa = PBXBuildFile; fileRef = E8D1AE671D1A72A900B8CB25 /* AirVMManager.h */; };
-		E8D1AE721D1A72A900B8CB25 /* AirVMManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E8D1AE681D1A72A900B8CB25 /* AirVMManager.m */; };
-		E8D1AE731D1A72A900B8CB25 /* BonjourSDK.h in Headers */ = {isa = PBXBuildFile; fileRef = E8D1AE691D1A72A900B8CB25 /* BonjourSDK.h */; };
-		E8D1AE741D1A72A900B8CB25 /* BSBonjourClient.h in Headers */ = {isa = PBXBuildFile; fileRef = E8D1AE6A1D1A72A900B8CB25 /* BSBonjourClient.h */; };
-		E8D1AE751D1A72A900B8CB25 /* BSBonjourClient.m in Sources */ = {isa = PBXBuildFile; fileRef = E8D1AE6B1D1A72A900B8CB25 /* BSBonjourClient.m */; };
-		E8D1AE761D1A72A900B8CB25 /* BSBonjourConnection.h in Headers */ = {isa = PBXBuildFile; fileRef = E8D1AE6C1D1A72A900B8CB25 /* BSBonjourConnection.h */; };
-		E8D1AE771D1A72A900B8CB25 /* BSBonjourConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = E8D1AE6D1D1A72A900B8CB25 /* BSBonjourConnection.m */; };
-		E8D1AE781D1A72A900B8CB25 /* BSBonjourServer.h in Headers */ = {isa = PBXBuildFile; fileRef = E8D1AE6E1D1A72A900B8CB25 /* BSBonjourServer.h */; };
-		E8D1AE791D1A72A900B8CB25 /* BSBonjourServer.m in Sources */ = {isa = PBXBuildFile; fileRef = E8D1AE6F1D1A72A900B8CB25 /* BSBonjourServer.m */; };
-		E8D1AE7A1D1A72A900B8CB25 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E8D1AE701D1A72A900B8CB25 /* Info.plist */; };
-		E8D1AED21D1A733600B8CB25 /* MyViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 32A2836A1A6CE61A00D51798 /* MyViewController.xib */; };
-		E8D1AED61D1A756D00B8CB25 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E8D1AED51D1A756D00B8CB25 /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		32A283651A6CE5DB00D51798 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 329F6C0119FE633600439723 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 329F6C0919FE633600439723;
-			remoteInfo = MenuBarController;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
-		329F6C0A19FE633600439723 /* AirVM Menu.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "AirVM Menu.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		329F6C0E19FE633600439723 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		329F6C0F19FE633600439723 /* MenuBarController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MenuBarController.h; sourceTree = "<group>"; };
 		329F6C2619FE661600439723 /* MenuBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuBarController.m; sourceTree = "<group>"; };
@@ -158,6 +107,7 @@
 		E866D7A41D1A807000F4365A /* WAYAppStoreWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WAYAppStoreWindow.m; sourceTree = "<group>"; };
 		E866D7A51D1A807000F4365A /* WAYWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WAYWindow.h; sourceTree = "<group>"; };
 		E866D7A61D1A807000F4365A /* WAYWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WAYWindow.m; sourceTree = "<group>"; };
+		E8C27A311D1A9EAA00C23F48 /* AirVM Menu copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "AirVM Menu copy-Info.plist"; path = "/Users/wujeff/Documents/Fusion/borathon/git/airvm/AirVMMenu/AirVM Menu copy-Info.plist"; sourceTree = "<absolute>"; };
 		E8D1AE191D1A6E6B00B8CB25 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E8D1AE671D1A72A900B8CB25 /* AirVMManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AirVMManager.h; sourceTree = "<group>"; };
 		E8D1AE681D1A72A900B8CB25 /* AirVMManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AirVMManager.m; sourceTree = "<group>"; };
@@ -173,18 +123,10 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		329F6C0619FE633600439723 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		32A283421A6CE57500D51798 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				32A283671A6CE5E000D51798 /* AirVM Menu.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -201,13 +143,13 @@
 				329F6C0C19FE633600439723 /* MenuBarController */,
 				32A283461A6CE57500D51798 /* MenuBarControllerSample */,
 				329F6C0B19FE633600439723 /* Products */,
+				E8C27A311D1A9EAA00C23F48 /* AirVM Menu copy-Info.plist */,
 			);
 			sourceTree = "<group>";
 		};
 		329F6C0B19FE633600439723 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				329F6C0A19FE633600439723 /* AirVM Menu.framework */,
 				32A283451A6CE57500D51798 /* AirVM Menu.app */,
 			);
 			name = Products;
@@ -328,60 +270,7 @@
 		};
 /* End PBXGroup section */
 
-/* Begin PBXHeadersBuildPhase section */
-		329F6C0719FE633600439723 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				E866D7CD1D1A807000F4365A /* WAYAppStoreWindow.h in Headers */,
-				E866D7A71D1A807000F4365A /* AirVMTitleBarViewController.h in Headers */,
-				E866D7B81D1A807000F4365A /* INWindowButton.h in Headers */,
-				329F6C1019FE633600439723 /* MenuBarController.h in Headers */,
-				E866D7AA1D1A807000F4365A /* AirVMViewController.h in Headers */,
-				E8D1AE741D1A72A900B8CB25 /* BSBonjourClient.h in Headers */,
-				E8D1AE711D1A72A900B8CB25 /* AirVMManager.h in Headers */,
-				32A283731A6CF4DD00D51798 /* StatusItemButton.h in Headers */,
-				E866D7AC1D1A807000F4365A /* AirVMWindowController.h in Headers */,
-				E8D1AE731D1A72A900B8CB25 /* BonjourSDK.h in Headers */,
-				E866D7B21D1A807000F4365A /* ConfirmToShareViewController.h in Headers */,
-				E866D7B51D1A807000F4365A /* INAppStoreWindow.h in Headers */,
-				E866D7B01D1A807000F4365A /* BJPublishActionButtonTransformer.h in Headers */,
-				E866D7BA1D1A807000F4365A /* OpenSharedVMViewController.h in Headers */,
-				E866D7CF1D1A807000F4365A /* WAYWindow.h in Headers */,
-				E866D7BF1D1A807000F4365A /* PersonClusterView.h in Headers */,
-				E866D7C91D1A807000F4365A /* SharedVM.h in Headers */,
-				E866D7B71D1A807000F4365A /* INAppStoreWindowCompatibility.h in Headers */,
-				E866D7CB1D1A807000F4365A /* ViewController.h in Headers */,
-				E8D1AE781D1A72A900B8CB25 /* BSBonjourServer.h in Headers */,
-				E866D7C31D1A807000F4365A /* PersonViewController.h in Headers */,
-				E866D7C11D1A807000F4365A /* PersonView.h in Headers */,
-				E866D7AE1D1A807000F4365A /* BJPublishActionButtonEnableTransformer.h in Headers */,
-				E8D1AE761D1A72A900B8CB25 /* BSBonjourConnection.h in Headers */,
-				E866D7BD1D1A807000F4365A /* Person.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXHeadersBuildPhase section */
-
 /* Begin PBXNativeTarget section */
-		329F6C0919FE633600439723 /* AirVM Menu */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 329F6C2019FE633600439723 /* Build configuration list for PBXNativeTarget "AirVM Menu" */;
-			buildPhases = (
-				329F6C0519FE633600439723 /* Sources */,
-				329F6C0619FE633600439723 /* Frameworks */,
-				329F6C0719FE633600439723 /* Headers */,
-				329F6C0819FE633600439723 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "AirVM Menu";
-			productName = MenuBarController;
-			productReference = 329F6C0A19FE633600439723 /* AirVM Menu.framework */;
-			productType = "com.apple.product-type.framework";
-		};
 		32A283441A6CE57500D51798 /* AirVM MenuSample */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 32A283631A6CE57500D51798 /* Build configuration list for PBXNativeTarget "AirVM MenuSample" */;
@@ -393,7 +282,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				32A283661A6CE5DB00D51798 /* PBXTargetDependency */,
 			);
 			name = "AirVM MenuSample";
 			productName = MenuBarControllerSample;
@@ -409,9 +297,6 @@
 				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = "Dmitry Nikolaev";
 				TargetAttributes = {
-					329F6C0919FE633600439723 = {
-						CreatedOnToolsVersion = 6.1;
-					};
 					32A283441A6CE57500D51798 = {
 						CreatedOnToolsVersion = 6.1.1;
 					};
@@ -430,33 +315,12 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				329F6C0919FE633600439723 /* AirVM Menu */,
 				32A283441A6CE57500D51798 /* AirVM MenuSample */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		329F6C0819FE633600439723 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				E866D7C61D1A807000F4365A /* refresh.png in Resources */,
-				E866D7B41D1A807000F4365A /* ConfirmToShareViewController.xib in Resources */,
-				E866D7C51D1A807000F4365A /* PersonViewController.xib in Resources */,
-				E8D1AED21D1A733600B8CB25 /* MyViewController.xib in Resources */,
-				E866D77B1D1A7A0800F4365A /* airvm16.png in Resources */,
-				E866D7BC1D1A807000F4365A /* OpenSharedVMViewController.xib in Resources */,
-				E8D1AED61D1A756D00B8CB25 /* Main.storyboard in Resources */,
-				E866D7781D1A79D900F4365A /* airvm32@2x.png in Resources */,
-				E8D1AE7A1D1A72A900B8CB25 /* Info.plist in Resources */,
-				E866D7C71D1A807000F4365A /* service_off.png in Resources */,
-				E866D7C81D1A807000F4365A /* service_on.png in Resources */,
-				E866D7A91D1A807000F4365A /* AirVMTitleBarViewController.xib in Resources */,
-				E8D1AE1A1D1A6E6B00B8CB25 /* Assets.xcassets in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		32A283431A6CE57500D51798 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -469,7 +333,6 @@
 				E866D7791D1A79F700F4365A /* airvm32@2x.png in Resources */,
 				E866D7751D1A76E100F4365A /* Main.storyboard in Resources */,
 				E8D1AE1B1D1A6E7500B8CB25 /* Assets.xcassets in Resources */,
-				32A283681A6CE5E600D51798 /* AirVM Menu.framework in Resources */,
 				32A2834F1A6CE57500D51798 /* Images.xcassets in Resources */,
 				32A2836B1A6CE61A00D51798 /* MyViewController.xib in Resources */,
 				32A283521A6CE57500D51798 /* MainMenu.xib in Resources */,
@@ -479,40 +342,33 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		329F6C0519FE633600439723 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				E866D7CC1D1A807000F4365A /* ViewController.m in Sources */,
-				E866D7AF1D1A807000F4365A /* BJPublishActionButtonEnableTransformer.m in Sources */,
-				32A283741A6CF4DD00D51798 /* StatusItemButton.m in Sources */,
-				E8D1AE771D1A72A900B8CB25 /* BSBonjourConnection.m in Sources */,
-				329F6C2719FE661600439723 /* MenuBarController.m in Sources */,
-				E866D7C41D1A807000F4365A /* PersonViewController.m in Sources */,
-				E866D7B31D1A807000F4365A /* ConfirmToShareViewController.m in Sources */,
-				E8D1AE791D1A72A900B8CB25 /* BSBonjourServer.m in Sources */,
-				E8D1AE721D1A72A900B8CB25 /* AirVMManager.m in Sources */,
-				E8D1AE751D1A72A900B8CB25 /* BSBonjourClient.m in Sources */,
-				E866D7AB1D1A807000F4365A /* AirVMViewController.m in Sources */,
-				E866D7C01D1A807000F4365A /* PersonClusterView.m in Sources */,
-				E866D7A81D1A807000F4365A /* AirVMTitleBarViewController.m in Sources */,
-				E866D7CE1D1A807000F4365A /* WAYAppStoreWindow.m in Sources */,
-				E866D7BE1D1A807000F4365A /* Person.m in Sources */,
-				E866D7BB1D1A807000F4365A /* OpenSharedVMViewController.m in Sources */,
-				E866D7B91D1A807000F4365A /* INWindowButton.m in Sources */,
-				E866D7B11D1A807000F4365A /* BJPublishActionButtonTransformer.m in Sources */,
-				E866D7C21D1A807000F4365A /* PersonView.m in Sources */,
-				E866D7D01D1A807000F4365A /* WAYWindow.m in Sources */,
-				E866D7AD1D1A807000F4365A /* AirVMWindowController.m in Sources */,
-				E866D7B61D1A807000F4365A /* INAppStoreWindow.m in Sources */,
-				E866D7CA1D1A807000F4365A /* SharedVM.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		32A283411A6CE57500D51798 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E8C27A341D1A9FC300C23F48 /* AirVMTitleBarViewController.m in Sources */,
+				E8C27A351D1A9FC300C23F48 /* AirVMViewController.m in Sources */,
+				E8C27A361D1A9FC300C23F48 /* AirVMWindowController.m in Sources */,
+				E8C27A371D1A9FC300C23F48 /* BJPublishActionButtonEnableTransformer.m in Sources */,
+				E8C27A381D1A9FC300C23F48 /* BJPublishActionButtonTransformer.m in Sources */,
+				E8C27A391D1A9FC300C23F48 /* ConfirmToShareViewController.m in Sources */,
+				E8C27A3A1D1A9FC300C23F48 /* INAppStoreWindow.m in Sources */,
+				E8C27A3B1D1A9FC300C23F48 /* INWindowButton.m in Sources */,
+				E8C27A3C1D1A9FC300C23F48 /* OpenSharedVMViewController.m in Sources */,
+				E8C27A3D1D1A9FC300C23F48 /* Person.m in Sources */,
+				E8C27A3E1D1A9FC300C23F48 /* PersonClusterView.m in Sources */,
+				E8C27A3F1D1A9FC300C23F48 /* PersonView.m in Sources */,
+				E8C27A401D1A9FC300C23F48 /* PersonViewController.m in Sources */,
+				E8C27A411D1A9FC300C23F48 /* SharedVM.m in Sources */,
+				E8C27A421D1A9FC300C23F48 /* ViewController.m in Sources */,
+				E8C27A431D1A9FC300C23F48 /* WAYAppStoreWindow.m in Sources */,
+				E8C27A441D1A9FC300C23F48 /* WAYWindow.m in Sources */,
+				E8C27A451D1A9FC300C23F48 /* AirVMManager.m in Sources */,
+				E8C27A461D1A9FC300C23F48 /* BSBonjourClient.m in Sources */,
+				E8C27A471D1A9FC300C23F48 /* BSBonjourConnection.m in Sources */,
+				E8C27A481D1A9FC300C23F48 /* BSBonjourServer.m in Sources */,
+				E8C27A491D1A9FC300C23F48 /* MenuBarController.m in Sources */,
+				E8C27A4A1D1A9FC300C23F48 /* StatusItemButton.m in Sources */,
 				32A2836E1A6CE62300D51798 /* MyViewController.m in Sources */,
 				32A2834D1A6CE57500D51798 /* main.m in Sources */,
 				32A2834B1A6CE57500D51798 /* AppDelegate.m in Sources */,
@@ -520,14 +376,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		32A283661A6CE5DB00D51798 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 329F6C0919FE633600439723 /* AirVM Menu */;
-			targetProxy = 32A283651A6CE5DB00D51798 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		32A283501A6CE57500D51798 /* MainMenu.xib */ = {
@@ -622,44 +470,6 @@
 			};
 			name = Release;
 		};
-		329F6C2119FE633600439723 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				COPY_PHASE_STRIP = NO;
-				DEFINES_MODULE = NO;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_VERSION = A;
-				INFOPLIST_FILE = MenuBarController/Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.dmitrynikolaev.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = "AirVM Menu";
-				SKIP_INSTALL = YES;
-			};
-			name = Debug;
-		};
-		329F6C2219FE633600439723 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				COPY_PHASE_STRIP = NO;
-				DEFINES_MODULE = NO;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_VERSION = A;
-				INFOPLIST_FILE = MenuBarController/Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.dmitrynikolaev.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = "AirVM Menu";
-				SKIP_INSTALL = YES;
-			};
-			name = Release;
-		};
 		32A2835F1A6CE57500D51798 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -700,15 +510,6 @@
 			buildConfigurations = (
 				329F6C1E19FE633600439723 /* Debug */,
 				329F6C1F19FE633600439723 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		329F6C2019FE633600439723 /* Build configuration list for PBXNativeTarget "AirVM Menu" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				329F6C2119FE633600439723 /* Debug */,
-				329F6C2219FE633600439723 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

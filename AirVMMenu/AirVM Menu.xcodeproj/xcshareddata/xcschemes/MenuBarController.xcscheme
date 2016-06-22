@@ -16,7 +16,7 @@
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "329F6C0919FE633600439723"
                BuildableName = "AirVM Menu.framework"
-               BlueprintName = "AirVM Menu"
+               BlueprintName = "AirVM Menu2"
                ReferencedContainer = "container:AirVM Menu.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -58,7 +58,7 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "329F6C0919FE633600439723"
             BuildableName = "AirVM Menu.framework"
-            BlueprintName = "AirVM Menu"
+            BlueprintName = "AirVM Menu2"
             ReferencedContainer = "container:AirVM Menu.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -80,7 +80,7 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "329F6C0919FE633600439723"
             BuildableName = "AirVM Menu.framework"
-            BlueprintName = "AirVM Menu"
+            BlueprintName = "AirVM Menu2"
             ReferencedContainer = "container:AirVM Menu.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -98,7 +98,7 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "329F6C0919FE633600439723"
             BuildableName = "AirVM Menu.framework"
-            BlueprintName = "AirVM Menu"
+            BlueprintName = "AirVM Menu2"
             ReferencedContainer = "container:AirVM Menu.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
