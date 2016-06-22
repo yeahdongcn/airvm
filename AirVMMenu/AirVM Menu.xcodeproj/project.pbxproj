@@ -24,6 +24,10 @@
 		E866D7731D1A76D900F4365A /* OpenSharedVMViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E8D1AE921D1A72F900B8CB25 /* OpenSharedVMViewController.xib */; };
 		E866D7741D1A76D900F4365A /* PersonViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E8D1AE9B1D1A72F900B8CB25 /* PersonViewController.xib */; };
 		E866D7751D1A76E100F4365A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E8D1AED51D1A756D00B8CB25 /* Main.storyboard */; };
+		E866D7781D1A79D900F4365A /* airvm32@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E866D7771D1A79D900F4365A /* airvm32@2x.png */; };
+		E866D7791D1A79F700F4365A /* airvm32@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E866D7771D1A79D900F4365A /* airvm32@2x.png */; };
+		E866D77B1D1A7A0800F4365A /* airvm16.png in Resources */ = {isa = PBXBuildFile; fileRef = E866D77A1D1A7A0800F4365A /* airvm16.png */; };
+		E866D77C1D1A7A0C00F4365A /* airvm16.png in Resources */ = {isa = PBXBuildFile; fileRef = E866D77A1D1A7A0800F4365A /* airvm16.png */; };
 		E8D1AE1A1D1A6E6B00B8CB25 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E8D1AE191D1A6E6B00B8CB25 /* Assets.xcassets */; };
 		E8D1AE1B1D1A6E7500B8CB25 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E8D1AE191D1A6E6B00B8CB25 /* Assets.xcassets */; };
 		E8D1AE711D1A72A900B8CB25 /* AirVMManager.h in Headers */ = {isa = PBXBuildFile; fileRef = E8D1AE671D1A72A900B8CB25 /* AirVMManager.h */; };
@@ -110,6 +114,8 @@
 		32A283711A6CF4DD00D51798 /* StatusItemButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StatusItemButton.h; sourceTree = "<group>"; };
 		32A283721A6CF4DD00D51798 /* StatusItemButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StatusItemButton.m; sourceTree = "<group>"; };
 		32E73D111ABDAB5A00186370 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		E866D7771D1A79D900F4365A /* airvm32@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "airvm32@2x.png"; path = "Assets.xcassets/AppIcon.appiconset/airvm32@2x.png"; sourceTree = "<group>"; };
+		E866D77A1D1A7A0800F4365A /* airvm16.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = airvm16.png; path = Assets.xcassets/AppIcon.appiconset/airvm16.png; sourceTree = "<group>"; };
 		E8D1AE191D1A6E6B00B8CB25 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E8D1AE671D1A72A900B8CB25 /* AirVMManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AirVMManager.h; sourceTree = "<group>"; };
 		E8D1AE681D1A72A900B8CB25 /* AirVMManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AirVMManager.m; sourceTree = "<group>"; };
@@ -272,6 +278,8 @@
 		E8D1AE7B1D1A72F000B8CB25 /* AirVM */ = {
 			isa = PBXGroup;
 			children = (
+				E866D77A1D1A7A0800F4365A /* airvm16.png */,
+				E866D7771D1A79D900F4365A /* airvm32@2x.png */,
 				E8D1AE7C1D1A72F900B8CB25 /* AirVMTitleBarViewController.h */,
 				E8D1AE7D1D1A72F900B8CB25 /* AirVMTitleBarViewController.m */,
 				E8D1AE7E1D1A72F900B8CB25 /* AirVMTitleBarViewController.xib */,
@@ -438,8 +446,10 @@
 				E8D1AEBD1D1A72F900B8CB25 /* OpenSharedVMViewController.xib in Resources */,
 				E8D1AEB41D1A72F900B8CB25 /* ConfirmToShareViewController.xib in Resources */,
 				E8D1AEA91D1A72F900B8CB25 /* AirVMTitleBarViewController.xib in Resources */,
+				E866D77B1D1A7A0800F4365A /* airvm16.png in Resources */,
 				E8D1AED61D1A756D00B8CB25 /* Main.storyboard in Resources */,
 				E8D1AEC61D1A72F900B8CB25 /* PersonViewController.xib in Resources */,
+				E866D7781D1A79D900F4365A /* airvm32@2x.png in Resources */,
 				E8D1AEC71D1A72F900B8CB25 /* refresh.png in Resources */,
 				E8D1AEC81D1A72F900B8CB25 /* service_off.png in Resources */,
 				E8D1AE7A1D1A72A900B8CB25 /* Info.plist in Resources */,
@@ -451,6 +461,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E866D77C1D1A7A0C00F4365A /* airvm16.png in Resources */,
+				E866D7791D1A79F700F4365A /* airvm32@2x.png in Resources */,
 				E866D7751D1A76E100F4365A /* Main.storyboard in Resources */,
 				E866D7711D1A76D900F4365A /* AirVMTitleBarViewController.xib in Resources */,
 				E866D7721D1A76D900F4365A /* ConfirmToShareViewController.xib in Resources */,

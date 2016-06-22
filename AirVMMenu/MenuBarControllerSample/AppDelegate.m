@@ -162,7 +162,11 @@
     NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil];
     if ([[dic objectForKey:@"op"] isEqualToString:@"airvm"]) { // register other air vm for management
         NSLog(@"open vnc at %@ !!!!!!!!!!!!!!",[dic objectForKey:@"vncIP"]);
-        [[NSNotificationCenter defaultCenter] postNotificationName:KNotificationShareVMArrived object:nil userInfo:dic];
+        
+        [self menuBarControllerStatusChanged:YES];
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.8 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            [[NSNotificationCenter defaultCenter] postNotificationName:KNotificationShareVMArrived object:nil userInfo:dic];
+        });
     }
     self.editor.string = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
 }
@@ -269,10 +273,8 @@
     return address;
 }
 
-
-
 - (void) createMenuBarController {
-    NSImage *image = [NSImage imageNamed:NSImageNameAddTemplate];
+    NSImage *image = [NSImage imageNamed:@"airvm32"];
 
     NSMenu *menu = [[NSMenu alloc] initWithTitle:@"Menu"];
     NSMenuItem *item = [menu addItemWithTitle:NSLocalizedString(@"Quit",@"") action:nil keyEquivalent:@""];
@@ -290,7 +292,7 @@
 //    self.popover.contentViewController = [[MyViewController alloc] init];
     AirVMViewController *viewController = [[NSStoryboard storyboardWithName:@"Main" bundle:nil] instantiateControllerWithIdentifier:@"AirVMViewControllerID"];
     self.popover.contentViewController = viewController;
-    self.popover.behavior = NSPopoverBehaviorApplicationDefined;
+    self.popover.behavior = NSPopoverBehaviorTransient;
 }
 
 - (void) menuBarControllerStatusChanged: (BOOL) active {
