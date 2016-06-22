@@ -93,7 +93,7 @@
 - (void)drawRect:(NSRect)dirtyRect {
    [super drawRect:dirtyRect];
    self.wantsLayer = YES;
-   self.layer.backgroundColor = [NSColor whiteColor].CGColor;
+   self.layer.backgroundColor = [NSColor clearColor].CGColor;
    CGPoint centerPoint = CGPointMake(self.bounds.size.width/2, CENTER_POINT_Y);
    //NSLog(@"center point x: %f, y: %f", centerPoint.x, centerPoint.y);
    [self drawAirDropWithCenter:centerPoint];
