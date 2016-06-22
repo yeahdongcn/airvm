@@ -27,11 +27,13 @@
 #import "BJPublishActionButtonTransformer.h"
 #import "BJPublishActionButtonEnableTransformer.h"
 #import "SharedVM.h"
+#import "MenuBarController.h"
+#import "MyViewController.h"
 
 #define kServiceName     @"airvm"
 #define kServiceProtocol @"tcp"
 
-@interface AppDelegate () {
+@interface AppDelegate () <MenuBarControllerDelegate> {
     NSMutableData *_readInData;
     NSNumber      *_bytesRead;
 }
@@ -48,6 +50,9 @@
 @property (nonatomic) int         batchCount;
 
 @property (nonatomic, strong, readwrite) NSNetService *     netService;
+
+@property (strong) MenuBarController *menuBarController;
+@property (strong) NSPopover *popover;
 
 @end
 
@@ -75,6 +80,28 @@
    self.bonjourClient = [[BSBonjourClient alloc] initWithServiceType:kServiceName transportProtocol:kServiceProtocol delegate:self];
    [self startServer];
 }
+
+
+- (void) createMenuBarController {
+    NSImage *image = [NSImage imageNamed:NSImageNameAddTemplate];
+    
+    NSMenu *menu = [[NSMenu alloc] initWithTitle:@"Menu"];
+    NSMenuItem *item = [menu addItemWithTitle:NSLocalizedString(@"Quit",@"") action:nil keyEquivalent:@""];
+    item.target = self;
+    item.action = @selector(quit:);
+    
+    self.menuBarController = [[MenuBarController alloc] initWithImage:image menu:menu];
+    self.menuBarController.delegate = self;
+    
+    [self.menuBarController showStatusItem];
+}
+
+- (void) createPopover {
+    self.popover = [[NSPopover alloc] init];
+    self.popover.contentViewController = [[MyViewController alloc] init];
+    self.popover.behavior = NSPopoverBehaviorApplicationDefined;
+}
+
 
 - (void)applicationWillTerminate:(NSNotification *)aNotification {
     if (self.status == Started) {

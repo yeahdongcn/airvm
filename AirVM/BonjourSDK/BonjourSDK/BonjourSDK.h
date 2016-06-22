@@ -6,7 +6,7 @@
 //  Copyright (c) 2014年 Peng Sun. All rights reserved.
 //
 
-#import <BonjourSDK/BSBonjourConnection.h>
-#import <BonjourSDK/BSBonjourServer.h>
-#import <BonjourSDK/BSBonjourClient.h>
-#import <BonjourSDK/AirVMManager.h>
+#import "BSBonjourConnection.h"
+#import "BSBonjourServer.h"
+#import "BSBonjourClient.h"
+#import "AirVMManager.h"
