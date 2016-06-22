@@ -24,6 +24,16 @@
    [self setUIState:YES];
 }
 
+- (void)refreshUI {
+   self.progressIndicator.hidden = YES;
+   [self setUIState:YES];
+}
+
+- (void)viewDidAppear {
+   [super viewDidAppear];
+   [self refreshUI];
+}
+
 - (void)setUIState:(BOOL)state {
    self.shareMessageTextField.enabled = state;
    self.cancelButton.enabled = state;

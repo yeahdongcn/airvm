@@ -45,7 +45,7 @@
 @property (nonatomic, assign) ServiceStartStatus status;
 @property (nonatomic, assign) Boolean connectOthers;
 @property (nonatomic, strong) NSString *         statusText;
-@property (nonatomic) int         batchCount;
+@property (atomic) int         batchCount;
 
 @property (nonatomic, strong, readwrite) NSNetService *     netService;
 

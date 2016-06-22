@@ -791,8 +791,7 @@
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
-                            <customView translatesAutoresizingMaskIntoConstraints="NO" id="kRb-cG-Z8L" userLabel="All Persons View" customClass="AllPersonsView">
-                                <rect key="frame" x="375" y="70" width="64" height="64"/>
+                            <customView misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kRb-cG-Z8L" userLabel="All Persons View" customClass="AllPersonsView">
                                 <constraints>
                                     <constraint firstAttribute="height" constant="64" id="jID-vE-9oi"/>
                                     <constraint firstAttribute="width" constant="64" id="oR3-SG-cYB"/>

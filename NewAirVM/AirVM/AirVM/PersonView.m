@@ -42,14 +42,14 @@
    }
 }
 
-// test code
-- (void)alertToOpenSharedVM:(SharedVM *)vm {
-   NSAlert *alert = [[NSAlert alloc] init];
-   [alert addButtonWithTitle:@"Share"];
-   [alert addButtonWithTitle:@"Cancel"];
-   [alert setMessageText:@"To share your virtual machine?"];
-   [alert setInformativeText:[NSString stringWithFormat:@"Share the %@ virtual machine to %@", vm, self]];
-   [alert setAlertStyle:NSInformationalAlertStyle];
-   [alert runModal];
-}
+//// test code
+//- (void)alertToOpenSharedVM:(SharedVM *)vm {
+//   NSAlert *alert = [[NSAlert alloc] init];
+//   [alert addButtonWithTitle:@"Share"];
+//   [alert addButtonWithTitle:@"Cancel"];
+//   [alert setMessageText:@"To share your virtual machine?"];
+//   [alert setInformativeText:[NSString stringWithFormat:@"Share the %@ virtual machine to %@", vm, self]];
+//   [alert setAlertStyle:NSInformationalAlertStyle];
+//   [alert runModal];
+//}
 @end

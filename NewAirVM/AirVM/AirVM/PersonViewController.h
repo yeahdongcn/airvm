@@ -12,7 +12,7 @@
 #import "OpenSharedVMViewController.h"
 
 @interface PersonViewController : NSViewController <AirVMDragDrop>
-
+@property (nonatomic, strong) AirVM *person;
 - (instancetype)initWithAirVM:(AirVM *)airVM;
 - (NSString *)machineName;
 - (void)showPopoverWithOpenAction:(OpenAction)openAction message:(NSString *)message;

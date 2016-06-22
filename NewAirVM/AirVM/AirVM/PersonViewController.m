@@ -15,10 +15,6 @@
 
 @interface PersonViewController () <NSPopoverDelegate>
 
-@property (nonatomic, strong) AirVM *person;
-
-
-
 
 @property (weak) IBOutlet NSTextField *nameLabel;
 @property (nonatomic, strong) NSPopover *openSharedVMPopover;
