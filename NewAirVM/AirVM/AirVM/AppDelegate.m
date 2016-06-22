@@ -114,6 +114,7 @@
 {
     NSLog(@"stop servic");
     [self.bonjourClient stopSearching];
+    [self.bonjourClient.foundServices removeAllObjects];
     [[AirVMManager sharedInstance] resetAirVMs];
     [self.bonjourServer unpublish];
     [[NSNotificationCenter defaultCenter] postNotificationName:KNotificationShareVMRefreshed object:nil userInfo:nil];
