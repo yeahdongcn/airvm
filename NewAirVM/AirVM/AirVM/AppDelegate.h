@@ -21,5 +21,7 @@ typedef enum : NSInteger {
 
 - (void)sendVM:(SharedVM*) vm;
 - (void)refreshService;
+- (void)startServer;
+- (void)stopServer;
 @end
 

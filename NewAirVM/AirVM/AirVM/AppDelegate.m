@@ -74,8 +74,8 @@
     self.status = Stopped;
     self.statusText = @"Not Published";
     self.bonjourClient = [[BSBonjourClient alloc] initWithServiceType:kServiceName transportProtocol:kServiceProtocol delegate:self];
-    [self startServer];
-    [self.bonjourClient startSearching];
+    //[self startServer];
+    //[self.bonjourClient startSearching];
 }
 
 - (void)applicationWillTerminate:(NSNotification *)aNotification {
@@ -105,12 +105,18 @@
 
 - (void)startServer
 {
+    NSLog(@"start servic");
+    [self.bonjourClient startSearching];
     [self.bonjourServer publish];
 }
 
 - (void)stopServer
 {
+    NSLog(@"stop servic");
+    [self.bonjourClient stopSearching];
+    [[AirVMManager sharedInstance] resetAirVMs];
     [self.bonjourServer unpublish];
+    [[NSNotificationCenter defaultCenter] postNotificationName:KNotificationShareVMRefreshed object:nil userInfo:nil];
 }
 
 - (void)refreshService {

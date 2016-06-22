@@ -9,6 +9,7 @@
 #import "AirVMTitleBarViewController.h"
 #import "AppDelegate.h"
 @interface AirVMTitleBarViewController ()
+@property (weak) IBOutlet NSButton *refreshButton;
 
 @end
 
@@ -16,6 +17,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.refreshButton.enabled = NO;
     // Do view setup here.
 }
 - (IBAction)onRefreshButtonPressed:(id)sender {
@@ -23,11 +25,15 @@
 }
 - (IBAction)onServiceButtonPressed:(NSButton *)sender {
    NSLog(@"Service button pressed with %d", sender.state);
-//   if (sender.state == NSOnState) {
+   if (sender.state == NSOnState) {
+       [[[NSApplication sharedApplication] delegate] startServer];
+       self.refreshButton.enabled = YES;
 //      [sender setState:NSOffState];
-//   } else {
+   } else {
+       self.refreshButton.enabled = NO;
+       [[[NSApplication sharedApplication] delegate] stopServer];
 //      [sender setState:NSOnState];
-//   }
+   }
 }
 
 @end
