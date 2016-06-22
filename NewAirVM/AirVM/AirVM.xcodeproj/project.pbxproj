@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9C014F141D1A5D1E0012EC47 /* AllPersonsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C014F131D1A5D1E0012EC47 /* AllPersonsView.m */; };
+		9C014F171D1A64030012EC47 /* AllPersonsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C014F161D1A64030012EC47 /* AllPersonsViewController.m */; };
+		9C014F1A1D1A64BB0012EC47 /* DragDestinationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C014F191D1A64BB0012EC47 /* DragDestinationViewController.m */; };
 		9C14D59D1D1A359900D5446C /* AirVMManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C14D5921D1A359900D5446C /* AirVMManager.m */; };
 		9C14D59E1D1A359900D5446C /* BSBonjourConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C14D5951D1A359900D5446C /* BSBonjourConnection.m */; };
 		9C14D59F1D1A359900D5446C /* BSBonjourServer.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C14D5971D1A359900D5446C /* BSBonjourServer.m */; };
@@ -64,6 +67,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9C014F121D1A5D1E0012EC47 /* AllPersonsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AllPersonsView.h; sourceTree = "<group>"; };
+		9C014F131D1A5D1E0012EC47 /* AllPersonsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AllPersonsView.m; sourceTree = "<group>"; };
+		9C014F151D1A64030012EC47 /* AllPersonsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AllPersonsViewController.h; sourceTree = "<group>"; };
+		9C014F161D1A64030012EC47 /* AllPersonsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AllPersonsViewController.m; sourceTree = "<group>"; };
+		9C014F181D1A64BB0012EC47 /* DragDestinationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DragDestinationViewController.h; sourceTree = "<group>"; };
+		9C014F191D1A64BB0012EC47 /* DragDestinationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DragDestinationViewController.m; sourceTree = "<group>"; };
 		9C14D5911D1A359900D5446C /* AirVMManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AirVMManager.h; sourceTree = "<group>"; };
 		9C14D5921D1A359900D5446C /* AirVMManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AirVMManager.m; sourceTree = "<group>"; };
 		9C14D5931D1A359900D5446C /* BonjourSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BonjourSDK.h; sourceTree = "<group>"; };
@@ -208,6 +217,8 @@
 				E8DC97C81D17E8D200F37D55 /* PersonClusterView.m */,
 				E8DC97C91D17E8D200F37D55 /* PersonView.h */,
 				E8DC97CA1D17E8D200F37D55 /* PersonView.m */,
+				9C014F121D1A5D1E0012EC47 /* AllPersonsView.h */,
+				9C014F131D1A5D1E0012EC47 /* AllPersonsView.m */,
 				9C31F5391D1934E7002E1737 /* AirVMTitleBarViewController.xib */,
 				E8DC97C41D17E8D200F37D55 /* OpenSharedVMViewController.xib */,
 				9C31F5531D1A0F98002E1737 /* ConfirmToShareViewController.xib */,
@@ -245,10 +256,14 @@
 				E8DC97C31D17E8D200F37D55 /* OpenSharedVMViewController.m */,
 				9C31F5511D1A0F98002E1737 /* ConfirmToShareViewController.h */,
 				9C31F5521D1A0F98002E1737 /* ConfirmToShareViewController.m */,
+				9C014F181D1A64BB0012EC47 /* DragDestinationViewController.h */,
+				9C014F191D1A64BB0012EC47 /* DragDestinationViewController.m */,
 				E8DC97CB1D17E8D200F37D55 /* PersonViewController.h */,
 				E8DC97CC1D17E8D200F37D55 /* PersonViewController.m */,
 				E8DC97841D17E74200F37D55 /* ViewController.h */,
 				E8DC97851D17E74200F37D55 /* ViewController.m */,
+				9C014F151D1A64030012EC47 /* AllPersonsViewController.h */,
+				9C014F161D1A64030012EC47 /* AllPersonsViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -480,10 +495,13 @@
 				E8DC97D71D17E8D200F37D55 /* Person.m in Sources */,
 				E8DC97861D17E74200F37D55 /* ViewController.m in Sources */,
 				9C31F5361D1928F3002E1737 /* WAYWindow.m in Sources */,
+				9C014F1A1D1A64BB0012EC47 /* DragDestinationViewController.m in Sources */,
+				9C014F171D1A64030012EC47 /* AllPersonsViewController.m in Sources */,
 				9C31F53A1D1934E7002E1737 /* AirVMTitleBarViewController.m in Sources */,
 				9C14D59D1D1A359900D5446C /* AirVMManager.m in Sources */,
 				E8DC97831D17E74200F37D55 /* main.m in Sources */,
 				E8DC97D21D17E8D200F37D55 /* BJPublishActionButtonTransformer.m in Sources */,
+				9C014F141D1A5D1E0012EC47 /* AllPersonsView.m in Sources */,
 				E8DC97D01D17E8D200F37D55 /* AirVMViewController.m in Sources */,
 				E8DC97801D17E74200F37D55 /* AppDelegate.m in Sources */,
 				E8DC97DC1D17E8D200F37D55 /* SharedVM.m in Sources */,

@@ -21,6 +21,7 @@
    [super viewDidLoad];
    self.progressIndicator.hidden = YES;
    self.shareMessageTextField.stringValue = @"Click Open to access the shared VM.";
+   [self setUIState:YES];
 }
 
 - (void)setUIState:(BOOL)state {
@@ -33,6 +34,7 @@
    [self setUIState:NO];
    if (self.shareAction) {
       self.progressIndicator.hidden = NO;
+      [self.progressIndicator startAnimation:nil];
       self.shareAction(YES, self.shareMessageTextField.stringValue);
    }
 }

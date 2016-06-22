@@ -12,21 +12,24 @@
 #import "PersonViewController.h"
 #import "SharedVM.h"
 #import "OpenSharedVMViewController.h"
+#import "AllPersonsView.h"
+#import "AllPersonsViewController.h"
 
 #import "BonjourSDK.h"
 
 @interface AirVMViewController ()
-@property (nonatomic, strong) NSMutableArray * personViewControllers; // of PersonViewController
+@property (nonatomic, strong) AllPersonsViewController *allPersonsViewController;
+
 @property (nonatomic, strong) NSArray *persons; // of AirVM
 @end
 
 @implementation AirVMViewController
 
-- (NSMutableArray *)personViewControllers {
-   if (!_personViewControllers) {
-      _personViewControllers = [[NSMutableArray alloc] init];
+- (AllPersonsViewController *)allPersonsViewController {
+   if (!_allPersonsViewController) {
+      _allPersonsViewController = [[AllPersonsViewController alloc] init];
    }
-   return _personViewControllers;
+   return _allPersonsViewController;
 }
 
 - (NSArray *)persons {
@@ -56,6 +59,8 @@
                                               object:nil];
    [self updatePersonCluster];
    [self.sharedVMsTableView reloadData];
+   self.allPersonsView.delegate = self.allPersonsViewController;
+   self.allPersonsViewController.view = self.allPersonsView;
 }
 
 - (void)viewWillDisappear {
@@ -65,22 +70,22 @@
 
 #pragma mark Layout Operations
 - (void)clearPersonCluster {
-   for (int i=0; i<self.personViewControllers.count; i++) {
-      if (self.personViewControllers[i]) {
-         if ([self.personViewControllers[i] isKindOfClass:[PersonViewController class]]) {
-            PersonViewController *pvc = self.personViewControllers[i];
+   for (int i=0; i<self.allPersonsViewController.personViewControllers.count; i++) {
+      if (self.allPersonsViewController.personViewControllers[i]) {
+         if ([self.allPersonsViewController.personViewControllers[i] isKindOfClass:[PersonViewController class]]) {
+            PersonViewController *pvc = self.allPersonsViewController.personViewControllers[i];
             [pvc.view removeFromSuperview];
          }
       }
    }
-   [self.personViewControllers removeAllObjects];
+   [self.allPersonsViewController.personViewControllers removeAllObjects];
 }
 
 - (void)drawPersonCluster {
    NSArray *locations = [self locationsOfPersons:self.persons];
    for (int i=0; i<self.persons.count; i++) {
       PersonViewController *personViewController = [[PersonViewController alloc] initWithAirVM:self.persons[i]];
-      [self.personViewControllers addObject:personViewController];
+      [self.allPersonsViewController.personViewControllers addObject:personViewController];
       NSView *personView = personViewController.view;
       NSValue * location = locations[i];
       NSPoint origin = [location pointValue];
@@ -136,7 +141,7 @@
 }
 
 - (PersonViewController *)findPersonViewControllerWithMachineName:(NSString *)machineName {
-   for (PersonViewController *pvc in self.personViewControllers) {
+   for (PersonViewController *pvc in self.allPersonsViewController.personViewControllers) {
       if ([machineName isEqualToString:pvc.machineName]) {
          return pvc;
       }

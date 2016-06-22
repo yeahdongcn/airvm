@@ -8,11 +8,12 @@
 
 #import <Cocoa/Cocoa.h>
 
-@class PersonClusterView;
+@class PersonClusterView, AllPersonsView;
 @interface AirVMViewController : NSViewController <NSTableViewDataSource, NSTableViewDelegate, NSAlertDelegate>
 
 @property (weak) IBOutlet PersonClusterView *personClusterView;
 @property (weak) IBOutlet NSTableView *sharedVMsTableView;
+@property (weak) IBOutlet AllPersonsView *allPersonsView;
 
 @property (nonatomic, strong) NSMutableArray *sharedVMs;
 @end

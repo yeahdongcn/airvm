@@ -676,14 +676,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="634" height="480"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="iNS-UH-Kqk">
-                                <rect key="frame" x="233" y="30" width="349" height="14"/>
-                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="AirVM lets you share virtual machine instantly with people nearby." id="4nM-l5-mR2">
-                                    <font key="font" metaFont="smallSystem"/>
-                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                                </textFieldCell>
-                            </textField>
                             <splitView arrangesAllSubviews="NO" dividerStyle="thin" vertical="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mEf-oq-37Q">
                                 <rect key="frame" x="0.0" y="0.0" width="634" height="480"/>
                                 <subviews>
@@ -791,6 +783,21 @@
                                     <real value="250"/>
                                 </holdingPriorities>
                             </splitView>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="iNS-UH-Kqk">
+                                <rect key="frame" x="233" y="30" width="349" height="14"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="AirVM lets you share virtual machine instantly with people nearby." id="4nM-l5-mR2">
+                                    <font key="font" metaFont="smallSystem"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <customView translatesAutoresizingMaskIntoConstraints="NO" id="kRb-cG-Z8L" userLabel="All Persons View" customClass="AllPersonsView">
+                                <rect key="frame" x="375" y="70" width="64" height="64"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="64" id="jID-vE-9oi"/>
+                                    <constraint firstAttribute="width" constant="64" id="oR3-SG-cYB"/>
+                                </constraints>
+                            </customView>
                         </subviews>
                         <constraints>
                             <constraint firstItem="mEf-oq-37Q" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" id="6xF-cL-shJ"/>
@@ -798,10 +805,13 @@
                             <constraint firstItem="mEf-oq-37Q" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" id="IB7-jl-4Mo"/>
                             <constraint firstItem="iNS-UH-Kqk" firstAttribute="bottom" secondItem="DOQ-zQ-Dh9" secondAttribute="bottom" constant="-30" id="P72-xb-zm7"/>
                             <constraint firstAttribute="trailing" secondItem="mEf-oq-37Q" secondAttribute="trailing" id="X3h-cg-oXf"/>
+                            <constraint firstAttribute="bottom" secondItem="kRb-cG-Z8L" secondAttribute="bottom" constant="70" id="eEw-HL-MVh"/>
+                            <constraint firstItem="kRb-cG-Z8L" firstAttribute="centerX" secondItem="DOQ-zQ-Dh9" secondAttribute="centerX" id="v94-vT-VS0"/>
                             <constraint firstAttribute="bottom" secondItem="mEf-oq-37Q" secondAttribute="bottom" id="v9G-Vt-Lla"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="allPersonsView" destination="kRb-cG-Z8L" id="8LC-Fr-4sD"/>
                         <outlet property="personClusterView" destination="DOQ-zQ-Dh9" id="301-n8-YiF"/>
                         <outlet property="sharedVMsTableView" destination="d83-Ol-kPp" id="57p-py-Huh"/>
                     </connections>
