@@ -66,6 +66,10 @@
 		E866D7CE1D1A807000F4365A /* WAYAppStoreWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = E866D7A41D1A807000F4365A /* WAYAppStoreWindow.m */; };
 		E866D7CF1D1A807000F4365A /* WAYWindow.h in Headers */ = {isa = PBXBuildFile; fileRef = E866D7A51D1A807000F4365A /* WAYWindow.h */; };
 		E866D7D01D1A807000F4365A /* WAYWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = E866D7A61D1A807000F4365A /* WAYWindow.m */; };
+		E866D7D11D1A821D00F4365A /* AirVMTitleBarViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E866D77F1D1A807000F4365A /* AirVMTitleBarViewController.xib */; };
+		E866D7D21D1A821D00F4365A /* ConfirmToShareViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E866D78A1D1A807000F4365A /* ConfirmToShareViewController.xib */; };
+		E866D7D31D1A821D00F4365A /* OpenSharedVMViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E866D7921D1A807000F4365A /* OpenSharedVMViewController.xib */; };
+		E866D7D41D1A821D00F4365A /* PersonViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E866D79B1D1A807000F4365A /* PersonViewController.xib */; };
 		E8D1AE1A1D1A6E6B00B8CB25 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E8D1AE191D1A6E6B00B8CB25 /* Assets.xcassets */; };
 		E8D1AE1B1D1A6E7500B8CB25 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E8D1AE191D1A6E6B00B8CB25 /* Assets.xcassets */; };
 		E8D1AE711D1A72A900B8CB25 /* AirVMManager.h in Headers */ = {isa = PBXBuildFile; fileRef = E8D1AE671D1A72A900B8CB25 /* AirVMManager.h */; };
@@ -457,6 +461,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E866D7D11D1A821D00F4365A /* AirVMTitleBarViewController.xib in Resources */,
+				E866D7D21D1A821D00F4365A /* ConfirmToShareViewController.xib in Resources */,
+				E866D7D31D1A821D00F4365A /* OpenSharedVMViewController.xib in Resources */,
+				E866D7D41D1A821D00F4365A /* PersonViewController.xib in Resources */,
 				E866D77C1D1A7A0C00F4365A /* airvm16.png in Resources */,
 				E866D7791D1A79F700F4365A /* airvm32@2x.png in Resources */,
 				E866D7751D1A76E100F4365A /* Main.storyboard in Resources */,

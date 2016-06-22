@@ -164,7 +164,7 @@
         NSLog(@"open vnc at %@ !!!!!!!!!!!!!!",[dic objectForKey:@"vncIP"]);
         
         [self menuBarControllerStatusChanged:YES];
-        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
             [[NSNotificationCenter defaultCenter] postNotificationName:KNotificationShareVMArrived object:nil userInfo:dic];
         });
     }
@@ -289,7 +289,6 @@
 
 - (void) createPopover {
     self.popover = [[NSPopover alloc] init];
-//    self.popover.contentViewController = [[MyViewController alloc] init];
     AirVMViewController *viewController = [[NSStoryboard storyboardWithName:@"Main" bundle:nil] instantiateControllerWithIdentifier:@"AirVMViewControllerID"];
     self.popover.contentViewController = viewController;
     self.popover.behavior = NSPopoverBehaviorTransient;
@@ -297,6 +296,7 @@
 
 - (void) menuBarControllerStatusChanged: (BOOL) active {
     if (active) {
+        [self createPopover];
         [self.popover showRelativeToRect:NSZeroRect ofView:[self.menuBarController statusItemView] preferredEdge:NSRectEdgeMinY];
     } else {
         [self.popover close];
