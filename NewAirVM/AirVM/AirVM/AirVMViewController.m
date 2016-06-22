@@ -13,7 +13,7 @@
 #import "SharedVM.h"
 #import "OpenSharedVMViewController.h"
 
-#import <BonjourSDK/BonjourSDK.h>
+#import "BonjourSDK.h"
 
 @interface AirVMViewController ()
 @property (nonatomic, strong) NSMutableArray * personViewControllers; // of PersonViewController
