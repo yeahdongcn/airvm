@@ -14,7 +14,8 @@ typedef void (^OpenAction)(BOOL open);
 
 @property (nonatomic, assign) BOOL didResponse;
 @property (nonatomic, strong) OpenAction openAction;
+@property (nonatomic, copy) NSString *message;
+
 
 - (instancetype)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil;
-- (void)setDescription:(NSString *)description;
 @end

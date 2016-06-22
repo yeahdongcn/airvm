@@ -205,10 +205,15 @@
     
 }
 - (void)sendOpenSharedVM:(SharedVM *)vm withConnection:(BSBonjourConnection *)connection {
+   NSString *message = vm.message;
+   if (!message) {
+      message = @"";
+   }
    NSDictionary* dic = @{@"op"         : @"airvm",
                          @"machineName": [[NSHost currentHost] localizedName],
                          @"vncIP"      : [self getIPAddress],
-                         @"vncPort"    : vm.vncPort};
+                         @"vncPort"    : vm.vncPort,
+                         @"message"    : message };
    NSLog(@"%@", dic);
    NSData *data =   [NSJSONSerialization dataWithJSONObject:dic options:NSJSONWritingPrettyPrinted error:nil];
    [connection sendData:data];

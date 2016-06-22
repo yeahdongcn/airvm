@@ -147,6 +147,7 @@
 - (void)showPopoverwithNotification:(NSNotification *)notification {
    NSDictionary *usrDic = [notification userInfo];
    NSString *machineName = [usrDic valueForKey:@"machineName"];
+   NSString *message = [usrDic valueForKey:@"message"];
    PersonViewController *pvc = [self findPersonViewControllerWithMachineName:machineName];
    if (pvc) {
 #pragma warning TODO: construct a SharedVM
@@ -161,7 +162,7 @@
          }
          [pvc dismissOpenSharedVMPopover];
       };
-      [pvc showPopoverWithOpenAction:openAction];
+      [pvc showPopoverWithOpenAction:openAction message:message];
    }
 }
 

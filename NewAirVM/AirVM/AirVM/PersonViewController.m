@@ -133,12 +133,12 @@
    [self.confirmToSharePopover showRelativeToRect:self.portraitView.bounds ofView:self.portraitView preferredEdge:NSRectEdgeMinX];
 
    __weak PersonViewController *weakSelf = self;
-   self.confirmToShareViewController.shareAction = ^(BOOL share) {
+   self.confirmToShareViewController.shareAction = ^(BOOL share, NSString *message) {
       if (share) {
          [[SharedVMMgr sharedInstance] startSharedVM:vmName andCompletionBlock:^(SharedVM *vm) {
             vm.netService = weakSelf.person.netService;
+            vm.message = message;
             [(AppDelegate *)([[NSApplication sharedApplication] delegate]) sendVM:vm];
-
             dispatch_async(dispatch_get_main_queue(), ^{
                [weakSelf.confirmToSharePopover close];
             });
@@ -153,10 +153,12 @@
    };
 }
 
-- (void)showPopoverWithOpenAction:(OpenAction)openAction {
+- (void)showPopoverWithOpenAction:(OpenAction)openAction message:(NSString *)message{
    [self showOpenSharedVMPopover];
    if ([self.openSharedVMPopover.contentViewController isKindOfClass:[OpenSharedVMViewController class]]) {
-      ((OpenSharedVMViewController *)(self.openSharedVMPopover.contentViewController)).openAction = openAction;
+      OpenSharedVMViewController *osvvc = ((OpenSharedVMViewController *)(self.openSharedVMPopover.contentViewController));
+      osvvc.openAction = openAction;
+      osvvc.message = message;
    }
 }
 

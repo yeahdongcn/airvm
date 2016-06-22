@@ -16,6 +16,8 @@
 @property (nonatomic, copy) NSString *vncPort;
 @property (nonatomic, copy) NSString * ipAddress;
 
+@property (nonatomic, copy) NSString *message;
+
 @end
 
 

@@ -10,6 +10,7 @@
 
 @interface ConfirmToShareViewController ()
 @property (weak) IBOutlet NSProgressIndicator *progressIndicator;
+@property (weak) IBOutlet NSTextField *shareMessageTextField;
 
 @end
 
@@ -22,12 +23,12 @@
 - (IBAction)onShareButtonPressed:(id)sender {
    if (self.shareAction) {
       self.progressIndicator.hidden = NO;
-      self.shareAction(YES);
+      self.shareAction(YES, self.shareMessageTextField.stringValue);
    }
 }
 - (IBAction)onCalcelButtonPressed:(id)sender {
    if (self.shareAction) {
-      self.shareAction(NO);
+      self.shareAction(NO, nil);
    }
 }
 

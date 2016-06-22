@@ -15,7 +15,7 @@
 
 - (instancetype)initWithAirVM:(AirVM *)airVM;
 - (NSString *)machineName;
-- (void)showPopoverWithOpenAction:(OpenAction)openAction;
+- (void)showPopoverWithOpenAction:(OpenAction)openAction message:(NSString *)message;
 - (void)dismissOpenSharedVMPopover;
 @property (weak) IBOutlet PersonView *portraitView;
 @end

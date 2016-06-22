@@ -26,6 +26,7 @@
 - (void)viewDidAppear {
    [super viewDidAppear];
    self.didResponse = NO;
+   [self setDescription:self.message];
 }
 
 - (IBAction)onOpenButtonPressed:(id)sender {

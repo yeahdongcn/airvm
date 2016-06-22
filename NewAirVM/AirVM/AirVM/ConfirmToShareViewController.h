@@ -8,7 +8,7 @@
 
 #import <Cocoa/Cocoa.h>
 
-typedef void (^ShareAction)(BOOL open);
+typedef void (^ShareAction)(BOOL open, NSString *message);
 
 @interface ConfirmToShareViewController : NSViewController
 
