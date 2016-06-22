@@ -26,8 +26,7 @@
    }
    NSArray *ret = [[NSArray alloc] init];
    CGFloat width = self.bounds.size.width;
-   CGFloat height = self.bounds.size.height;
-   NSMutableArray * array = [[NSMutableArray alloc] init];
+
    switch (numOfPersons) {
       case 1:
          ret = [NSArray arrayWithObjects:[self pointWithX:width/2 Y:(CENTER_POINT_Y + 2 * RADIUS)], nil];
@@ -68,14 +67,23 @@
                 [self pointWithX:(width/2 + 2*RADIUS * cos(M_PI_4)) Y:(CENTER_POINT_Y + 4 * RADIUS * cos(atan(2.0/4)))], nil];
          break;
       default:
-//         for (int i=0; i<numOfPersons; i++) {
-//            [array addObject:[self pointWithX:<#(CGFloat)#> Y:<#(CGFloat)#>]];;;
-//         }
-         ret = nil;
+         ret = [self locationOfPersonsWithBigNumber:numOfPersons];
          break;
    }
 
    return ret;
+}
+
+- (NSArray *)locationOfPersonsWithBigNumber:(NSInteger)numOfPersons {
+   NSMutableArray * array = [[NSMutableArray alloc] init];
+   CGFloat interval = 200.0f;
+   int numPerRow = self.bounds.size.width/interval;
+   for (int i=0; i<numOfPersons; i++) {
+      int row = i / numPerRow;
+      int col = i % numPerRow;
+      [array addObject:[self pointWithX:(col*interval+interval/2) Y:(self.bounds.size.height-row*interval-interval/2)]];
+   }
+   return [NSArray arrayWithArray:array];
 }
 
 - (NSValue *)pointWithX:(CGFloat)x Y:(CGFloat)y {
