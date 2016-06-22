@@ -25,11 +25,6 @@
 		9C31F5451D1942E7002E1737 /* service_on.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C31F5441D1942E7002E1737 /* service_on.png */; };
 		9C31F5541D1A0F98002E1737 /* ConfirmToShareViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C31F5521D1A0F98002E1737 /* ConfirmToShareViewController.m */; };
 		9C31F5551D1A0F98002E1737 /* ConfirmToShareViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C31F5531D1A0F98002E1737 /* ConfirmToShareViewController.xib */; };
-		E8D1AD8A1D1A66CD00B8CB25 /* MenuBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = E8D1AD841D1A66CD00B8CB25 /* MenuBarController.m */; };
-		E8D1AD8B1D1A66CD00B8CB25 /* StatusItemButton.m in Sources */ = {isa = PBXBuildFile; fileRef = E8D1AD861D1A66CD00B8CB25 /* StatusItemButton.m */; };
-		E8D1AD8C1D1A66CD00B8CB25 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E8D1AD871D1A66CD00B8CB25 /* Info.plist */; };
-		E8D1AD901D1A673500B8CB25 /* MyViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E8D1AD8D1D1A673500B8CB25 /* MyViewController.xib */; };
-		E8D1AD911D1A673500B8CB25 /* MyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E8D1AD8F1D1A673500B8CB25 /* MyViewController.m */; };
 		E8DC97801D17E74200F37D55 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E8DC977F1D17E74200F37D55 /* AppDelegate.m */; };
 		E8DC97831D17E74200F37D55 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E8DC97821D17E74200F37D55 /* main.m */; };
 		E8DC97861D17E74200F37D55 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E8DC97851D17E74200F37D55 /* ViewController.m */; };
@@ -100,14 +95,6 @@
 		9C31F5511D1A0F98002E1737 /* ConfirmToShareViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConfirmToShareViewController.h; sourceTree = "<group>"; };
 		9C31F5521D1A0F98002E1737 /* ConfirmToShareViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConfirmToShareViewController.m; sourceTree = "<group>"; };
 		9C31F5531D1A0F98002E1737 /* ConfirmToShareViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ConfirmToShareViewController.xib; sourceTree = "<group>"; };
-		E8D1AD831D1A66CD00B8CB25 /* MenuBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuBarController.h; sourceTree = "<group>"; };
-		E8D1AD841D1A66CD00B8CB25 /* MenuBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuBarController.m; sourceTree = "<group>"; };
-		E8D1AD851D1A66CD00B8CB25 /* StatusItemButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StatusItemButton.h; sourceTree = "<group>"; };
-		E8D1AD861D1A66CD00B8CB25 /* StatusItemButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StatusItemButton.m; sourceTree = "<group>"; };
-		E8D1AD871D1A66CD00B8CB25 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E8D1AD8D1D1A673500B8CB25 /* MyViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyViewController.xib; sourceTree = "<group>"; };
-		E8D1AD8E1D1A673500B8CB25 /* MyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyViewController.h; sourceTree = "<group>"; };
-		E8D1AD8F1D1A673500B8CB25 /* MyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyViewController.m; sourceTree = "<group>"; };
 		E8DC977B1D17E74200F37D55 /* AirVM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AirVM.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E8DC977E1D17E74200F37D55 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		E8DC977F1D17E74200F37D55 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -269,35 +256,10 @@
 		9C31F54B1D1A0E6D002E1737 /* Third Party */ = {
 			isa = PBXGroup;
 			children = (
-				E8D1AD891D1A66CD00B8CB25 /* MenuBarController */,
 				9C14D59C1D1A359900D5446C /* BonjourSDK */,
 				9C31F5271D192665002E1737 /* INAppStoreWindow */,
 			);
 			name = "Third Party";
-			sourceTree = "<group>";
-		};
-		E8D1AD881D1A66CD00B8CB25 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				E8D1AD871D1A66CD00B8CB25 /* Info.plist */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		E8D1AD891D1A66CD00B8CB25 /* MenuBarController */ = {
-			isa = PBXGroup;
-			children = (
-				E8D1AD8D1D1A673500B8CB25 /* MyViewController.xib */,
-				E8D1AD8E1D1A673500B8CB25 /* MyViewController.h */,
-				E8D1AD8F1D1A673500B8CB25 /* MyViewController.m */,
-				E8D1AD831D1A66CD00B8CB25 /* MenuBarController.h */,
-				E8D1AD841D1A66CD00B8CB25 /* MenuBarController.m */,
-				E8D1AD851D1A66CD00B8CB25 /* StatusItemButton.h */,
-				E8D1AD861D1A66CD00B8CB25 /* StatusItemButton.m */,
-				E8D1AD881D1A66CD00B8CB25 /* Supporting Files */,
-			);
-			name = MenuBarController;
-			path = ../../../../../../dev/osx/MenuBarController/MenuBarController;
 			sourceTree = "<group>";
 		};
 		E8DC97721D17E74200F37D55 = {
@@ -469,7 +431,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E8D1AD901D1A673500B8CB25 /* MyViewController.xib in Resources */,
 				9C31F5451D1942E7002E1737 /* service_on.png in Resources */,
 				9C31F52E1D19267D002E1737 /* Extensions in Resources */,
 				E8DC97881D17E74200F37D55 /* Assets.xcassets in Resources */,
@@ -482,7 +443,6 @@
 				9C31F5431D1942DD002E1737 /* service_off.png in Resources */,
 				9C31F53B1D1934E7002E1737 /* AirVMTitleBarViewController.xib in Resources */,
 				E8DC97D61D17E8D200F37D55 /* OpenSharedVMViewController.xib in Resources */,
-				E8D1AD8C1D1A66CD00B8CB25 /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -513,15 +473,12 @@
 				E8DC97D11D17E8D200F37D55 /* BJPublishActionButtonEnableTransformer.m in Sources */,
 				E8DC97D91D17E8D200F37D55 /* PersonView.m in Sources */,
 				9C14D59F1D1A359900D5446C /* BSBonjourServer.m in Sources */,
-				E8D1AD8B1D1A66CD00B8CB25 /* StatusItemButton.m in Sources */,
 				E8DC97D81D17E8D200F37D55 /* PersonClusterView.m in Sources */,
 				E8DC97D51D17E8D200F37D55 /* OpenSharedVMViewController.m in Sources */,
 				9C31F5331D1928B3002E1737 /* WAYAppStoreWindow.m in Sources */,
 				9C14D5A01D1A359900D5446C /* BSBonjourClient.m in Sources */,
 				E8DC97D71D17E8D200F37D55 /* Person.m in Sources */,
-				E8D1AD911D1A673500B8CB25 /* MyViewController.m in Sources */,
 				E8DC97861D17E74200F37D55 /* ViewController.m in Sources */,
-				E8D1AD8A1D1A66CD00B8CB25 /* MenuBarController.m in Sources */,
 				9C31F5361D1928F3002E1737 /* WAYWindow.m in Sources */,
 				9C31F53A1D1934E7002E1737 /* AirVMTitleBarViewController.m in Sources */,
 				9C14D59D1D1A359900D5446C /* AirVMManager.m in Sources */,
