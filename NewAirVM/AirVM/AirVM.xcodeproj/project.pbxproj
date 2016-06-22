@@ -177,6 +177,63 @@
 			name = INAppStoreWindow;
 			sourceTree = "<group>";
 		};
+		9C31F5471D1A0E25002E1737 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E8DC97C71D17E8D200F37D55 /* PersonClusterView.h */,
+				E8DC97C81D17E8D200F37D55 /* PersonClusterView.m */,
+				E8DC97C91D17E8D200F37D55 /* PersonView.h */,
+				E8DC97CA1D17E8D200F37D55 /* PersonView.m */,
+				9C31F5391D1934E7002E1737 /* AirVMTitleBarViewController.xib */,
+				E8DC97C41D17E8D200F37D55 /* OpenSharedVMViewController.xib */,
+				E8DC97C11D17E8D200F37D55 /* Main.storyboard */,
+				E8DC97CD1D17E8D200F37D55 /* PersonViewController.xib */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		9C31F5491D1A0E37002E1737 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E8DC97BC1D17E8D200F37D55 /* BJPublishActionButtonEnableTransformer.h */,
+				E8DC97BD1D17E8D200F37D55 /* BJPublishActionButtonEnableTransformer.m */,
+				E8DC97BE1D17E8D200F37D55 /* BJPublishActionButtonTransformer.h */,
+				E8DC97BF1D17E8D200F37D55 /* BJPublishActionButtonTransformer.m */,
+				E8DC97C51D17E8D200F37D55 /* Person.h */,
+				E8DC97C61D17E8D200F37D55 /* Person.m */,
+				E8DC97CE1D17E8D200F37D55 /* SharedVM.h */,
+				E8DC97CF1D17E8D200F37D55 /* SharedVM.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		9C31F54A1D1A0E44002E1737 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				E8DC97BA1D17E8D200F37D55 /* AirVMViewController.h */,
+				E8DC97BB1D17E8D200F37D55 /* AirVMViewController.m */,
+				9C31F5231D19264F002E1737 /* AirVMWindowController.h */,
+				9C31F5241D19264F002E1737 /* AirVMWindowController.m */,
+				9C31F5371D1934E7002E1737 /* AirVMTitleBarViewController.h */,
+				9C31F5381D1934E7002E1737 /* AirVMTitleBarViewController.m */,
+				E8DC97C21D17E8D200F37D55 /* OpenSharedVMViewController.h */,
+				E8DC97C31D17E8D200F37D55 /* OpenSharedVMViewController.m */,
+				E8DC97CB1D17E8D200F37D55 /* PersonViewController.h */,
+				E8DC97CC1D17E8D200F37D55 /* PersonViewController.m */,
+				E8DC97841D17E74200F37D55 /* ViewController.h */,
+				E8DC97851D17E74200F37D55 /* ViewController.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		9C31F54B1D1A0E6D002E1737 /* Third Party */ = {
+			isa = PBXGroup;
+			children = (
+				9C31F5271D192665002E1737 /* INAppStoreWindow */,
+			);
+			name = "Third Party";
+			sourceTree = "<group>";
+		};
 		E8A109CF1D17EA7E00CE02D1 /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -210,38 +267,13 @@
 		E8DC977D1D17E74200F37D55 /* AirVM */ = {
 			isa = PBXGroup;
 			children = (
-				9C31F5271D192665002E1737 /* INAppStoreWindow */,
-				E8DC97BA1D17E8D200F37D55 /* AirVMViewController.h */,
-				E8DC97BB1D17E8D200F37D55 /* AirVMViewController.m */,
-				9C31F5231D19264F002E1737 /* AirVMWindowController.h */,
-				9C31F5241D19264F002E1737 /* AirVMWindowController.m */,
-				9C31F5371D1934E7002E1737 /* AirVMTitleBarViewController.h */,
-				9C31F5381D1934E7002E1737 /* AirVMTitleBarViewController.m */,
-				9C31F5391D1934E7002E1737 /* AirVMTitleBarViewController.xib */,
-				E8DC97BC1D17E8D200F37D55 /* BJPublishActionButtonEnableTransformer.h */,
-				E8DC97BD1D17E8D200F37D55 /* BJPublishActionButtonEnableTransformer.m */,
-				E8DC97BE1D17E8D200F37D55 /* BJPublishActionButtonTransformer.h */,
-				E8DC97BF1D17E8D200F37D55 /* BJPublishActionButtonTransformer.m */,
+				9C31F54B1D1A0E6D002E1737 /* Third Party */,
+				9C31F54A1D1A0E44002E1737 /* Controller */,
+				9C31F5491D1A0E37002E1737 /* Model */,
+				9C31F5471D1A0E25002E1737 /* View */,
 				E8DC97C01D17E8D200F37D55 /* Bonjour-OSX.entitlements */,
-				E8DC97C11D17E8D200F37D55 /* Main.storyboard */,
-				E8DC97C21D17E8D200F37D55 /* OpenSharedVMViewController.h */,
-				E8DC97C31D17E8D200F37D55 /* OpenSharedVMViewController.m */,
-				E8DC97C41D17E8D200F37D55 /* OpenSharedVMViewController.xib */,
-				E8DC97C51D17E8D200F37D55 /* Person.h */,
-				E8DC97C61D17E8D200F37D55 /* Person.m */,
-				E8DC97C71D17E8D200F37D55 /* PersonClusterView.h */,
-				E8DC97C81D17E8D200F37D55 /* PersonClusterView.m */,
-				E8DC97C91D17E8D200F37D55 /* PersonView.h */,
-				E8DC97CA1D17E8D200F37D55 /* PersonView.m */,
-				E8DC97CB1D17E8D200F37D55 /* PersonViewController.h */,
-				E8DC97CC1D17E8D200F37D55 /* PersonViewController.m */,
-				E8DC97CD1D17E8D200F37D55 /* PersonViewController.xib */,
-				E8DC97CE1D17E8D200F37D55 /* SharedVM.h */,
-				E8DC97CF1D17E8D200F37D55 /* SharedVM.m */,
 				E8DC977E1D17E74200F37D55 /* AppDelegate.h */,
 				E8DC977F1D17E74200F37D55 /* AppDelegate.m */,
-				E8DC97841D17E74200F37D55 /* ViewController.h */,
-				E8DC97851D17E74200F37D55 /* ViewController.m */,
 				E8DC97871D17E74200F37D55 /* Assets.xcassets */,
 				E8DC978C1D17E74200F37D55 /* Info.plist */,
 				E8DC97811D17E74200F37D55 /* Supporting Files */,

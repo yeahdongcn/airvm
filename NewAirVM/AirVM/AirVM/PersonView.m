@@ -24,7 +24,7 @@
 #pragma mark Dragging Destination
 
 - (NSDragOperation)draggingEntered:(id<NSDraggingInfo>)sender {
-   return NSDragOperationAll;
+   return NSDragOperationEvery;
 }
 
 - (BOOL)performDragOperation:(id<NSDraggingInfo>)sender {
