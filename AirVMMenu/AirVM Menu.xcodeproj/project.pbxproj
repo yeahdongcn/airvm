@@ -19,15 +19,53 @@
 		32A2836E1A6CE62300D51798 /* MyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 32A2836D1A6CE62300D51798 /* MyViewController.m */; };
 		32A283731A6CF4DD00D51798 /* StatusItemButton.h in Headers */ = {isa = PBXBuildFile; fileRef = 32A283711A6CF4DD00D51798 /* StatusItemButton.h */; };
 		32A283741A6CF4DD00D51798 /* StatusItemButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 32A283721A6CF4DD00D51798 /* StatusItemButton.m */; };
-		E866D7711D1A76D900F4365A /* AirVMTitleBarViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E8D1AE7E1D1A72F900B8CB25 /* AirVMTitleBarViewController.xib */; };
-		E866D7721D1A76D900F4365A /* ConfirmToShareViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E8D1AE891D1A72F900B8CB25 /* ConfirmToShareViewController.xib */; };
-		E866D7731D1A76D900F4365A /* OpenSharedVMViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E8D1AE921D1A72F900B8CB25 /* OpenSharedVMViewController.xib */; };
-		E866D7741D1A76D900F4365A /* PersonViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E8D1AE9B1D1A72F900B8CB25 /* PersonViewController.xib */; };
 		E866D7751D1A76E100F4365A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E8D1AED51D1A756D00B8CB25 /* Main.storyboard */; };
 		E866D7781D1A79D900F4365A /* airvm32@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E866D7771D1A79D900F4365A /* airvm32@2x.png */; };
 		E866D7791D1A79F700F4365A /* airvm32@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E866D7771D1A79D900F4365A /* airvm32@2x.png */; };
 		E866D77B1D1A7A0800F4365A /* airvm16.png in Resources */ = {isa = PBXBuildFile; fileRef = E866D77A1D1A7A0800F4365A /* airvm16.png */; };
 		E866D77C1D1A7A0C00F4365A /* airvm16.png in Resources */ = {isa = PBXBuildFile; fileRef = E866D77A1D1A7A0800F4365A /* airvm16.png */; };
+		E866D7A71D1A807000F4365A /* AirVMTitleBarViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = E866D77D1D1A807000F4365A /* AirVMTitleBarViewController.h */; };
+		E866D7A81D1A807000F4365A /* AirVMTitleBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E866D77E1D1A807000F4365A /* AirVMTitleBarViewController.m */; };
+		E866D7A91D1A807000F4365A /* AirVMTitleBarViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E866D77F1D1A807000F4365A /* AirVMTitleBarViewController.xib */; };
+		E866D7AA1D1A807000F4365A /* AirVMViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = E866D7801D1A807000F4365A /* AirVMViewController.h */; };
+		E866D7AB1D1A807000F4365A /* AirVMViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E866D7811D1A807000F4365A /* AirVMViewController.m */; };
+		E866D7AC1D1A807000F4365A /* AirVMWindowController.h in Headers */ = {isa = PBXBuildFile; fileRef = E866D7821D1A807000F4365A /* AirVMWindowController.h */; };
+		E866D7AD1D1A807000F4365A /* AirVMWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = E866D7831D1A807000F4365A /* AirVMWindowController.m */; };
+		E866D7AE1D1A807000F4365A /* BJPublishActionButtonEnableTransformer.h in Headers */ = {isa = PBXBuildFile; fileRef = E866D7841D1A807000F4365A /* BJPublishActionButtonEnableTransformer.h */; };
+		E866D7AF1D1A807000F4365A /* BJPublishActionButtonEnableTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = E866D7851D1A807000F4365A /* BJPublishActionButtonEnableTransformer.m */; };
+		E866D7B01D1A807000F4365A /* BJPublishActionButtonTransformer.h in Headers */ = {isa = PBXBuildFile; fileRef = E866D7861D1A807000F4365A /* BJPublishActionButtonTransformer.h */; };
+		E866D7B11D1A807000F4365A /* BJPublishActionButtonTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = E866D7871D1A807000F4365A /* BJPublishActionButtonTransformer.m */; };
+		E866D7B21D1A807000F4365A /* ConfirmToShareViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = E866D7881D1A807000F4365A /* ConfirmToShareViewController.h */; };
+		E866D7B31D1A807000F4365A /* ConfirmToShareViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E866D7891D1A807000F4365A /* ConfirmToShareViewController.m */; };
+		E866D7B41D1A807000F4365A /* ConfirmToShareViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E866D78A1D1A807000F4365A /* ConfirmToShareViewController.xib */; };
+		E866D7B51D1A807000F4365A /* INAppStoreWindow.h in Headers */ = {isa = PBXBuildFile; fileRef = E866D78B1D1A807000F4365A /* INAppStoreWindow.h */; };
+		E866D7B61D1A807000F4365A /* INAppStoreWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = E866D78C1D1A807000F4365A /* INAppStoreWindow.m */; };
+		E866D7B71D1A807000F4365A /* INAppStoreWindowCompatibility.h in Headers */ = {isa = PBXBuildFile; fileRef = E866D78D1D1A807000F4365A /* INAppStoreWindowCompatibility.h */; };
+		E866D7B81D1A807000F4365A /* INWindowButton.h in Headers */ = {isa = PBXBuildFile; fileRef = E866D78E1D1A807000F4365A /* INWindowButton.h */; };
+		E866D7B91D1A807000F4365A /* INWindowButton.m in Sources */ = {isa = PBXBuildFile; fileRef = E866D78F1D1A807000F4365A /* INWindowButton.m */; };
+		E866D7BA1D1A807000F4365A /* OpenSharedVMViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = E866D7901D1A807000F4365A /* OpenSharedVMViewController.h */; };
+		E866D7BB1D1A807000F4365A /* OpenSharedVMViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E866D7911D1A807000F4365A /* OpenSharedVMViewController.m */; };
+		E866D7BC1D1A807000F4365A /* OpenSharedVMViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E866D7921D1A807000F4365A /* OpenSharedVMViewController.xib */; };
+		E866D7BD1D1A807000F4365A /* Person.h in Headers */ = {isa = PBXBuildFile; fileRef = E866D7931D1A807000F4365A /* Person.h */; };
+		E866D7BE1D1A807000F4365A /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = E866D7941D1A807000F4365A /* Person.m */; };
+		E866D7BF1D1A807000F4365A /* PersonClusterView.h in Headers */ = {isa = PBXBuildFile; fileRef = E866D7951D1A807000F4365A /* PersonClusterView.h */; };
+		E866D7C01D1A807000F4365A /* PersonClusterView.m in Sources */ = {isa = PBXBuildFile; fileRef = E866D7961D1A807000F4365A /* PersonClusterView.m */; };
+		E866D7C11D1A807000F4365A /* PersonView.h in Headers */ = {isa = PBXBuildFile; fileRef = E866D7971D1A807000F4365A /* PersonView.h */; };
+		E866D7C21D1A807000F4365A /* PersonView.m in Sources */ = {isa = PBXBuildFile; fileRef = E866D7981D1A807000F4365A /* PersonView.m */; };
+		E866D7C31D1A807000F4365A /* PersonViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = E866D7991D1A807000F4365A /* PersonViewController.h */; };
+		E866D7C41D1A807000F4365A /* PersonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E866D79A1D1A807000F4365A /* PersonViewController.m */; };
+		E866D7C51D1A807000F4365A /* PersonViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E866D79B1D1A807000F4365A /* PersonViewController.xib */; };
+		E866D7C61D1A807000F4365A /* refresh.png in Resources */ = {isa = PBXBuildFile; fileRef = E866D79C1D1A807000F4365A /* refresh.png */; };
+		E866D7C71D1A807000F4365A /* service_off.png in Resources */ = {isa = PBXBuildFile; fileRef = E866D79D1D1A807000F4365A /* service_off.png */; };
+		E866D7C81D1A807000F4365A /* service_on.png in Resources */ = {isa = PBXBuildFile; fileRef = E866D79E1D1A807000F4365A /* service_on.png */; };
+		E866D7C91D1A807000F4365A /* SharedVM.h in Headers */ = {isa = PBXBuildFile; fileRef = E866D79F1D1A807000F4365A /* SharedVM.h */; };
+		E866D7CA1D1A807000F4365A /* SharedVM.m in Sources */ = {isa = PBXBuildFile; fileRef = E866D7A01D1A807000F4365A /* SharedVM.m */; };
+		E866D7CB1D1A807000F4365A /* ViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = E866D7A11D1A807000F4365A /* ViewController.h */; };
+		E866D7CC1D1A807000F4365A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E866D7A21D1A807000F4365A /* ViewController.m */; };
+		E866D7CD1D1A807000F4365A /* WAYAppStoreWindow.h in Headers */ = {isa = PBXBuildFile; fileRef = E866D7A31D1A807000F4365A /* WAYAppStoreWindow.h */; };
+		E866D7CE1D1A807000F4365A /* WAYAppStoreWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = E866D7A41D1A807000F4365A /* WAYAppStoreWindow.m */; };
+		E866D7CF1D1A807000F4365A /* WAYWindow.h in Headers */ = {isa = PBXBuildFile; fileRef = E866D7A51D1A807000F4365A /* WAYWindow.h */; };
+		E866D7D01D1A807000F4365A /* WAYWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = E866D7A61D1A807000F4365A /* WAYWindow.m */; };
 		E8D1AE1A1D1A6E6B00B8CB25 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E8D1AE191D1A6E6B00B8CB25 /* Assets.xcassets */; };
 		E8D1AE1B1D1A6E7500B8CB25 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E8D1AE191D1A6E6B00B8CB25 /* Assets.xcassets */; };
 		E8D1AE711D1A72A900B8CB25 /* AirVMManager.h in Headers */ = {isa = PBXBuildFile; fileRef = E8D1AE671D1A72A900B8CB25 /* AirVMManager.h */; };
@@ -40,48 +78,6 @@
 		E8D1AE781D1A72A900B8CB25 /* BSBonjourServer.h in Headers */ = {isa = PBXBuildFile; fileRef = E8D1AE6E1D1A72A900B8CB25 /* BSBonjourServer.h */; };
 		E8D1AE791D1A72A900B8CB25 /* BSBonjourServer.m in Sources */ = {isa = PBXBuildFile; fileRef = E8D1AE6F1D1A72A900B8CB25 /* BSBonjourServer.m */; };
 		E8D1AE7A1D1A72A900B8CB25 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E8D1AE701D1A72A900B8CB25 /* Info.plist */; };
-		E8D1AEA71D1A72F900B8CB25 /* AirVMTitleBarViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = E8D1AE7C1D1A72F900B8CB25 /* AirVMTitleBarViewController.h */; };
-		E8D1AEA81D1A72F900B8CB25 /* AirVMTitleBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E8D1AE7D1D1A72F900B8CB25 /* AirVMTitleBarViewController.m */; };
-		E8D1AEA91D1A72F900B8CB25 /* AirVMTitleBarViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E8D1AE7E1D1A72F900B8CB25 /* AirVMTitleBarViewController.xib */; };
-		E8D1AEAA1D1A72F900B8CB25 /* AirVMViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = E8D1AE7F1D1A72F900B8CB25 /* AirVMViewController.h */; };
-		E8D1AEAB1D1A72F900B8CB25 /* AirVMViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E8D1AE801D1A72F900B8CB25 /* AirVMViewController.m */; };
-		E8D1AEAC1D1A72F900B8CB25 /* AirVMWindowController.h in Headers */ = {isa = PBXBuildFile; fileRef = E8D1AE811D1A72F900B8CB25 /* AirVMWindowController.h */; };
-		E8D1AEAD1D1A72F900B8CB25 /* AirVMWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = E8D1AE821D1A72F900B8CB25 /* AirVMWindowController.m */; };
-		E8D1AEAE1D1A72F900B8CB25 /* BJPublishActionButtonEnableTransformer.h in Headers */ = {isa = PBXBuildFile; fileRef = E8D1AE831D1A72F900B8CB25 /* BJPublishActionButtonEnableTransformer.h */; };
-		E8D1AEAF1D1A72F900B8CB25 /* BJPublishActionButtonEnableTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = E8D1AE841D1A72F900B8CB25 /* BJPublishActionButtonEnableTransformer.m */; };
-		E8D1AEB01D1A72F900B8CB25 /* BJPublishActionButtonTransformer.h in Headers */ = {isa = PBXBuildFile; fileRef = E8D1AE851D1A72F900B8CB25 /* BJPublishActionButtonTransformer.h */; };
-		E8D1AEB11D1A72F900B8CB25 /* BJPublishActionButtonTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = E8D1AE861D1A72F900B8CB25 /* BJPublishActionButtonTransformer.m */; };
-		E8D1AEB21D1A72F900B8CB25 /* ConfirmToShareViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = E8D1AE871D1A72F900B8CB25 /* ConfirmToShareViewController.h */; };
-		E8D1AEB31D1A72F900B8CB25 /* ConfirmToShareViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E8D1AE881D1A72F900B8CB25 /* ConfirmToShareViewController.m */; };
-		E8D1AEB41D1A72F900B8CB25 /* ConfirmToShareViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E8D1AE891D1A72F900B8CB25 /* ConfirmToShareViewController.xib */; };
-		E8D1AEB51D1A72F900B8CB25 /* INAppStoreWindow.h in Headers */ = {isa = PBXBuildFile; fileRef = E8D1AE8A1D1A72F900B8CB25 /* INAppStoreWindow.h */; };
-		E8D1AEB61D1A72F900B8CB25 /* INAppStoreWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = E8D1AE8B1D1A72F900B8CB25 /* INAppStoreWindow.m */; };
-		E8D1AEB71D1A72F900B8CB25 /* INAppStoreWindowCompatibility.h in Headers */ = {isa = PBXBuildFile; fileRef = E8D1AE8C1D1A72F900B8CB25 /* INAppStoreWindowCompatibility.h */; };
-		E8D1AEB81D1A72F900B8CB25 /* INWindowButton.h in Headers */ = {isa = PBXBuildFile; fileRef = E8D1AE8D1D1A72F900B8CB25 /* INWindowButton.h */; };
-		E8D1AEB91D1A72F900B8CB25 /* INWindowButton.m in Sources */ = {isa = PBXBuildFile; fileRef = E8D1AE8E1D1A72F900B8CB25 /* INWindowButton.m */; };
-		E8D1AEBB1D1A72F900B8CB25 /* OpenSharedVMViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = E8D1AE901D1A72F900B8CB25 /* OpenSharedVMViewController.h */; };
-		E8D1AEBC1D1A72F900B8CB25 /* OpenSharedVMViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E8D1AE911D1A72F900B8CB25 /* OpenSharedVMViewController.m */; };
-		E8D1AEBD1D1A72F900B8CB25 /* OpenSharedVMViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E8D1AE921D1A72F900B8CB25 /* OpenSharedVMViewController.xib */; };
-		E8D1AEBE1D1A72F900B8CB25 /* Person.h in Headers */ = {isa = PBXBuildFile; fileRef = E8D1AE931D1A72F900B8CB25 /* Person.h */; };
-		E8D1AEBF1D1A72F900B8CB25 /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = E8D1AE941D1A72F900B8CB25 /* Person.m */; };
-		E8D1AEC01D1A72F900B8CB25 /* PersonClusterView.h in Headers */ = {isa = PBXBuildFile; fileRef = E8D1AE951D1A72F900B8CB25 /* PersonClusterView.h */; };
-		E8D1AEC11D1A72F900B8CB25 /* PersonClusterView.m in Sources */ = {isa = PBXBuildFile; fileRef = E8D1AE961D1A72F900B8CB25 /* PersonClusterView.m */; };
-		E8D1AEC21D1A72F900B8CB25 /* PersonView.h in Headers */ = {isa = PBXBuildFile; fileRef = E8D1AE971D1A72F900B8CB25 /* PersonView.h */; };
-		E8D1AEC31D1A72F900B8CB25 /* PersonView.m in Sources */ = {isa = PBXBuildFile; fileRef = E8D1AE981D1A72F900B8CB25 /* PersonView.m */; };
-		E8D1AEC41D1A72F900B8CB25 /* PersonViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = E8D1AE991D1A72F900B8CB25 /* PersonViewController.h */; };
-		E8D1AEC51D1A72F900B8CB25 /* PersonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E8D1AE9A1D1A72F900B8CB25 /* PersonViewController.m */; };
-		E8D1AEC61D1A72F900B8CB25 /* PersonViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E8D1AE9B1D1A72F900B8CB25 /* PersonViewController.xib */; };
-		E8D1AEC71D1A72F900B8CB25 /* refresh.png in Resources */ = {isa = PBXBuildFile; fileRef = E8D1AE9C1D1A72F900B8CB25 /* refresh.png */; };
-		E8D1AEC81D1A72F900B8CB25 /* service_off.png in Resources */ = {isa = PBXBuildFile; fileRef = E8D1AE9D1D1A72F900B8CB25 /* service_off.png */; };
-		E8D1AEC91D1A72F900B8CB25 /* service_on.png in Resources */ = {isa = PBXBuildFile; fileRef = E8D1AE9E1D1A72F900B8CB25 /* service_on.png */; };
-		E8D1AECA1D1A72F900B8CB25 /* SharedVM.h in Headers */ = {isa = PBXBuildFile; fileRef = E8D1AE9F1D1A72F900B8CB25 /* SharedVM.h */; };
-		E8D1AECB1D1A72F900B8CB25 /* SharedVM.m in Sources */ = {isa = PBXBuildFile; fileRef = E8D1AEA01D1A72F900B8CB25 /* SharedVM.m */; };
-		E8D1AECC1D1A72F900B8CB25 /* ViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = E8D1AEA11D1A72F900B8CB25 /* ViewController.h */; };
-		E8D1AECD1D1A72F900B8CB25 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E8D1AEA21D1A72F900B8CB25 /* ViewController.m */; };
-		E8D1AECE1D1A72F900B8CB25 /* WAYAppStoreWindow.h in Headers */ = {isa = PBXBuildFile; fileRef = E8D1AEA31D1A72F900B8CB25 /* WAYAppStoreWindow.h */; };
-		E8D1AECF1D1A72F900B8CB25 /* WAYAppStoreWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = E8D1AEA41D1A72F900B8CB25 /* WAYAppStoreWindow.m */; };
-		E8D1AED01D1A72F900B8CB25 /* WAYWindow.h in Headers */ = {isa = PBXBuildFile; fileRef = E8D1AEA51D1A72F900B8CB25 /* WAYWindow.h */; };
-		E8D1AED11D1A72F900B8CB25 /* WAYWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = E8D1AEA61D1A72F900B8CB25 /* WAYWindow.m */; };
 		E8D1AED21D1A733600B8CB25 /* MyViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 32A2836A1A6CE61A00D51798 /* MyViewController.xib */; };
 		E8D1AED61D1A756D00B8CB25 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E8D1AED51D1A756D00B8CB25 /* Main.storyboard */; };
 /* End PBXBuildFile section */
@@ -116,6 +112,48 @@
 		32E73D111ABDAB5A00186370 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		E866D7771D1A79D900F4365A /* airvm32@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "airvm32@2x.png"; path = "Assets.xcassets/AppIcon.appiconset/airvm32@2x.png"; sourceTree = "<group>"; };
 		E866D77A1D1A7A0800F4365A /* airvm16.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = airvm16.png; path = Assets.xcassets/AppIcon.appiconset/airvm16.png; sourceTree = "<group>"; };
+		E866D77D1D1A807000F4365A /* AirVMTitleBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AirVMTitleBarViewController.h; sourceTree = "<group>"; };
+		E866D77E1D1A807000F4365A /* AirVMTitleBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AirVMTitleBarViewController.m; sourceTree = "<group>"; };
+		E866D77F1D1A807000F4365A /* AirVMTitleBarViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AirVMTitleBarViewController.xib; sourceTree = "<group>"; };
+		E866D7801D1A807000F4365A /* AirVMViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AirVMViewController.h; sourceTree = "<group>"; };
+		E866D7811D1A807000F4365A /* AirVMViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AirVMViewController.m; sourceTree = "<group>"; };
+		E866D7821D1A807000F4365A /* AirVMWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AirVMWindowController.h; sourceTree = "<group>"; };
+		E866D7831D1A807000F4365A /* AirVMWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AirVMWindowController.m; sourceTree = "<group>"; };
+		E866D7841D1A807000F4365A /* BJPublishActionButtonEnableTransformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BJPublishActionButtonEnableTransformer.h; sourceTree = "<group>"; };
+		E866D7851D1A807000F4365A /* BJPublishActionButtonEnableTransformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BJPublishActionButtonEnableTransformer.m; sourceTree = "<group>"; };
+		E866D7861D1A807000F4365A /* BJPublishActionButtonTransformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BJPublishActionButtonTransformer.h; sourceTree = "<group>"; };
+		E866D7871D1A807000F4365A /* BJPublishActionButtonTransformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BJPublishActionButtonTransformer.m; sourceTree = "<group>"; };
+		E866D7881D1A807000F4365A /* ConfirmToShareViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConfirmToShareViewController.h; sourceTree = "<group>"; };
+		E866D7891D1A807000F4365A /* ConfirmToShareViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConfirmToShareViewController.m; sourceTree = "<group>"; };
+		E866D78A1D1A807000F4365A /* ConfirmToShareViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ConfirmToShareViewController.xib; sourceTree = "<group>"; };
+		E866D78B1D1A807000F4365A /* INAppStoreWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = INAppStoreWindow.h; sourceTree = "<group>"; };
+		E866D78C1D1A807000F4365A /* INAppStoreWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = INAppStoreWindow.m; sourceTree = "<group>"; };
+		E866D78D1D1A807000F4365A /* INAppStoreWindowCompatibility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = INAppStoreWindowCompatibility.h; sourceTree = "<group>"; };
+		E866D78E1D1A807000F4365A /* INWindowButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = INWindowButton.h; sourceTree = "<group>"; };
+		E866D78F1D1A807000F4365A /* INWindowButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = INWindowButton.m; sourceTree = "<group>"; };
+		E866D7901D1A807000F4365A /* OpenSharedVMViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpenSharedVMViewController.h; sourceTree = "<group>"; };
+		E866D7911D1A807000F4365A /* OpenSharedVMViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OpenSharedVMViewController.m; sourceTree = "<group>"; };
+		E866D7921D1A807000F4365A /* OpenSharedVMViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OpenSharedVMViewController.xib; sourceTree = "<group>"; };
+		E866D7931D1A807000F4365A /* Person.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
+		E866D7941D1A807000F4365A /* Person.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
+		E866D7951D1A807000F4365A /* PersonClusterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersonClusterView.h; sourceTree = "<group>"; };
+		E866D7961D1A807000F4365A /* PersonClusterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersonClusterView.m; sourceTree = "<group>"; };
+		E866D7971D1A807000F4365A /* PersonView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersonView.h; sourceTree = "<group>"; };
+		E866D7981D1A807000F4365A /* PersonView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersonView.m; sourceTree = "<group>"; };
+		E866D7991D1A807000F4365A /* PersonViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersonViewController.h; sourceTree = "<group>"; };
+		E866D79A1D1A807000F4365A /* PersonViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersonViewController.m; sourceTree = "<group>"; };
+		E866D79B1D1A807000F4365A /* PersonViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PersonViewController.xib; sourceTree = "<group>"; };
+		E866D79C1D1A807000F4365A /* refresh.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = refresh.png; sourceTree = "<group>"; };
+		E866D79D1D1A807000F4365A /* service_off.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = service_off.png; sourceTree = "<group>"; };
+		E866D79E1D1A807000F4365A /* service_on.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = service_on.png; sourceTree = "<group>"; };
+		E866D79F1D1A807000F4365A /* SharedVM.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SharedVM.h; sourceTree = "<group>"; };
+		E866D7A01D1A807000F4365A /* SharedVM.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SharedVM.m; sourceTree = "<group>"; };
+		E866D7A11D1A807000F4365A /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		E866D7A21D1A807000F4365A /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		E866D7A31D1A807000F4365A /* WAYAppStoreWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WAYAppStoreWindow.h; sourceTree = "<group>"; };
+		E866D7A41D1A807000F4365A /* WAYAppStoreWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WAYAppStoreWindow.m; sourceTree = "<group>"; };
+		E866D7A51D1A807000F4365A /* WAYWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WAYWindow.h; sourceTree = "<group>"; };
+		E866D7A61D1A807000F4365A /* WAYWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WAYWindow.m; sourceTree = "<group>"; };
 		E8D1AE191D1A6E6B00B8CB25 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E8D1AE671D1A72A900B8CB25 /* AirVMManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AirVMManager.h; sourceTree = "<group>"; };
 		E8D1AE681D1A72A900B8CB25 /* AirVMManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AirVMManager.m; sourceTree = "<group>"; };
@@ -127,48 +165,6 @@
 		E8D1AE6E1D1A72A900B8CB25 /* BSBonjourServer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSBonjourServer.h; sourceTree = "<group>"; };
 		E8D1AE6F1D1A72A900B8CB25 /* BSBonjourServer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSBonjourServer.m; sourceTree = "<group>"; };
 		E8D1AE701D1A72A900B8CB25 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E8D1AE7C1D1A72F900B8CB25 /* AirVMTitleBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AirVMTitleBarViewController.h; sourceTree = "<group>"; };
-		E8D1AE7D1D1A72F900B8CB25 /* AirVMTitleBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AirVMTitleBarViewController.m; sourceTree = "<group>"; };
-		E8D1AE7E1D1A72F900B8CB25 /* AirVMTitleBarViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AirVMTitleBarViewController.xib; sourceTree = "<group>"; };
-		E8D1AE7F1D1A72F900B8CB25 /* AirVMViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AirVMViewController.h; sourceTree = "<group>"; };
-		E8D1AE801D1A72F900B8CB25 /* AirVMViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AirVMViewController.m; sourceTree = "<group>"; };
-		E8D1AE811D1A72F900B8CB25 /* AirVMWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AirVMWindowController.h; sourceTree = "<group>"; };
-		E8D1AE821D1A72F900B8CB25 /* AirVMWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AirVMWindowController.m; sourceTree = "<group>"; };
-		E8D1AE831D1A72F900B8CB25 /* BJPublishActionButtonEnableTransformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BJPublishActionButtonEnableTransformer.h; sourceTree = "<group>"; };
-		E8D1AE841D1A72F900B8CB25 /* BJPublishActionButtonEnableTransformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BJPublishActionButtonEnableTransformer.m; sourceTree = "<group>"; };
-		E8D1AE851D1A72F900B8CB25 /* BJPublishActionButtonTransformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BJPublishActionButtonTransformer.h; sourceTree = "<group>"; };
-		E8D1AE861D1A72F900B8CB25 /* BJPublishActionButtonTransformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BJPublishActionButtonTransformer.m; sourceTree = "<group>"; };
-		E8D1AE871D1A72F900B8CB25 /* ConfirmToShareViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConfirmToShareViewController.h; sourceTree = "<group>"; };
-		E8D1AE881D1A72F900B8CB25 /* ConfirmToShareViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConfirmToShareViewController.m; sourceTree = "<group>"; };
-		E8D1AE891D1A72F900B8CB25 /* ConfirmToShareViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ConfirmToShareViewController.xib; sourceTree = "<group>"; };
-		E8D1AE8A1D1A72F900B8CB25 /* INAppStoreWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = INAppStoreWindow.h; sourceTree = "<group>"; };
-		E8D1AE8B1D1A72F900B8CB25 /* INAppStoreWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = INAppStoreWindow.m; sourceTree = "<group>"; };
-		E8D1AE8C1D1A72F900B8CB25 /* INAppStoreWindowCompatibility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = INAppStoreWindowCompatibility.h; sourceTree = "<group>"; };
-		E8D1AE8D1D1A72F900B8CB25 /* INWindowButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = INWindowButton.h; sourceTree = "<group>"; };
-		E8D1AE8E1D1A72F900B8CB25 /* INWindowButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = INWindowButton.m; sourceTree = "<group>"; };
-		E8D1AE901D1A72F900B8CB25 /* OpenSharedVMViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpenSharedVMViewController.h; sourceTree = "<group>"; };
-		E8D1AE911D1A72F900B8CB25 /* OpenSharedVMViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OpenSharedVMViewController.m; sourceTree = "<group>"; };
-		E8D1AE921D1A72F900B8CB25 /* OpenSharedVMViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OpenSharedVMViewController.xib; sourceTree = "<group>"; };
-		E8D1AE931D1A72F900B8CB25 /* Person.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
-		E8D1AE941D1A72F900B8CB25 /* Person.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
-		E8D1AE951D1A72F900B8CB25 /* PersonClusterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersonClusterView.h; sourceTree = "<group>"; };
-		E8D1AE961D1A72F900B8CB25 /* PersonClusterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersonClusterView.m; sourceTree = "<group>"; };
-		E8D1AE971D1A72F900B8CB25 /* PersonView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersonView.h; sourceTree = "<group>"; };
-		E8D1AE981D1A72F900B8CB25 /* PersonView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersonView.m; sourceTree = "<group>"; };
-		E8D1AE991D1A72F900B8CB25 /* PersonViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersonViewController.h; sourceTree = "<group>"; };
-		E8D1AE9A1D1A72F900B8CB25 /* PersonViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersonViewController.m; sourceTree = "<group>"; };
-		E8D1AE9B1D1A72F900B8CB25 /* PersonViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PersonViewController.xib; sourceTree = "<group>"; };
-		E8D1AE9C1D1A72F900B8CB25 /* refresh.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = refresh.png; sourceTree = "<group>"; };
-		E8D1AE9D1D1A72F900B8CB25 /* service_off.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = service_off.png; sourceTree = "<group>"; };
-		E8D1AE9E1D1A72F900B8CB25 /* service_on.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = service_on.png; sourceTree = "<group>"; };
-		E8D1AE9F1D1A72F900B8CB25 /* SharedVM.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SharedVM.h; sourceTree = "<group>"; };
-		E8D1AEA01D1A72F900B8CB25 /* SharedVM.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SharedVM.m; sourceTree = "<group>"; };
-		E8D1AEA11D1A72F900B8CB25 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		E8D1AEA21D1A72F900B8CB25 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		E8D1AEA31D1A72F900B8CB25 /* WAYAppStoreWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WAYAppStoreWindow.h; sourceTree = "<group>"; };
-		E8D1AEA41D1A72F900B8CB25 /* WAYAppStoreWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WAYAppStoreWindow.m; sourceTree = "<group>"; };
-		E8D1AEA51D1A72F900B8CB25 /* WAYWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WAYWindow.h; sourceTree = "<group>"; };
-		E8D1AEA61D1A72F900B8CB25 /* WAYWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WAYWindow.m; sourceTree = "<group>"; };
 		E8D1AED51D1A756D00B8CB25 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -278,50 +274,50 @@
 		E8D1AE7B1D1A72F000B8CB25 /* AirVM */ = {
 			isa = PBXGroup;
 			children = (
+				E866D77D1D1A807000F4365A /* AirVMTitleBarViewController.h */,
+				E866D77E1D1A807000F4365A /* AirVMTitleBarViewController.m */,
+				E866D77F1D1A807000F4365A /* AirVMTitleBarViewController.xib */,
+				E866D7801D1A807000F4365A /* AirVMViewController.h */,
+				E866D7811D1A807000F4365A /* AirVMViewController.m */,
+				E866D7821D1A807000F4365A /* AirVMWindowController.h */,
+				E866D7831D1A807000F4365A /* AirVMWindowController.m */,
+				E866D7841D1A807000F4365A /* BJPublishActionButtonEnableTransformer.h */,
+				E866D7851D1A807000F4365A /* BJPublishActionButtonEnableTransformer.m */,
+				E866D7861D1A807000F4365A /* BJPublishActionButtonTransformer.h */,
+				E866D7871D1A807000F4365A /* BJPublishActionButtonTransformer.m */,
+				E866D7881D1A807000F4365A /* ConfirmToShareViewController.h */,
+				E866D7891D1A807000F4365A /* ConfirmToShareViewController.m */,
+				E866D78A1D1A807000F4365A /* ConfirmToShareViewController.xib */,
+				E866D78B1D1A807000F4365A /* INAppStoreWindow.h */,
+				E866D78C1D1A807000F4365A /* INAppStoreWindow.m */,
+				E866D78D1D1A807000F4365A /* INAppStoreWindowCompatibility.h */,
+				E866D78E1D1A807000F4365A /* INWindowButton.h */,
+				E866D78F1D1A807000F4365A /* INWindowButton.m */,
+				E866D7901D1A807000F4365A /* OpenSharedVMViewController.h */,
+				E866D7911D1A807000F4365A /* OpenSharedVMViewController.m */,
+				E866D7921D1A807000F4365A /* OpenSharedVMViewController.xib */,
+				E866D7931D1A807000F4365A /* Person.h */,
+				E866D7941D1A807000F4365A /* Person.m */,
+				E866D7951D1A807000F4365A /* PersonClusterView.h */,
+				E866D7961D1A807000F4365A /* PersonClusterView.m */,
+				E866D7971D1A807000F4365A /* PersonView.h */,
+				E866D7981D1A807000F4365A /* PersonView.m */,
+				E866D7991D1A807000F4365A /* PersonViewController.h */,
+				E866D79A1D1A807000F4365A /* PersonViewController.m */,
+				E866D79B1D1A807000F4365A /* PersonViewController.xib */,
+				E866D79C1D1A807000F4365A /* refresh.png */,
+				E866D79D1D1A807000F4365A /* service_off.png */,
+				E866D79E1D1A807000F4365A /* service_on.png */,
+				E866D79F1D1A807000F4365A /* SharedVM.h */,
+				E866D7A01D1A807000F4365A /* SharedVM.m */,
+				E866D7A11D1A807000F4365A /* ViewController.h */,
+				E866D7A21D1A807000F4365A /* ViewController.m */,
+				E866D7A31D1A807000F4365A /* WAYAppStoreWindow.h */,
+				E866D7A41D1A807000F4365A /* WAYAppStoreWindow.m */,
+				E866D7A51D1A807000F4365A /* WAYWindow.h */,
+				E866D7A61D1A807000F4365A /* WAYWindow.m */,
 				E866D77A1D1A7A0800F4365A /* airvm16.png */,
 				E866D7771D1A79D900F4365A /* airvm32@2x.png */,
-				E8D1AE7C1D1A72F900B8CB25 /* AirVMTitleBarViewController.h */,
-				E8D1AE7D1D1A72F900B8CB25 /* AirVMTitleBarViewController.m */,
-				E8D1AE7E1D1A72F900B8CB25 /* AirVMTitleBarViewController.xib */,
-				E8D1AE7F1D1A72F900B8CB25 /* AirVMViewController.h */,
-				E8D1AE801D1A72F900B8CB25 /* AirVMViewController.m */,
-				E8D1AE811D1A72F900B8CB25 /* AirVMWindowController.h */,
-				E8D1AE821D1A72F900B8CB25 /* AirVMWindowController.m */,
-				E8D1AE831D1A72F900B8CB25 /* BJPublishActionButtonEnableTransformer.h */,
-				E8D1AE841D1A72F900B8CB25 /* BJPublishActionButtonEnableTransformer.m */,
-				E8D1AE851D1A72F900B8CB25 /* BJPublishActionButtonTransformer.h */,
-				E8D1AE861D1A72F900B8CB25 /* BJPublishActionButtonTransformer.m */,
-				E8D1AE871D1A72F900B8CB25 /* ConfirmToShareViewController.h */,
-				E8D1AE881D1A72F900B8CB25 /* ConfirmToShareViewController.m */,
-				E8D1AE891D1A72F900B8CB25 /* ConfirmToShareViewController.xib */,
-				E8D1AE8A1D1A72F900B8CB25 /* INAppStoreWindow.h */,
-				E8D1AE8B1D1A72F900B8CB25 /* INAppStoreWindow.m */,
-				E8D1AE8C1D1A72F900B8CB25 /* INAppStoreWindowCompatibility.h */,
-				E8D1AE8D1D1A72F900B8CB25 /* INWindowButton.h */,
-				E8D1AE8E1D1A72F900B8CB25 /* INWindowButton.m */,
-				E8D1AE901D1A72F900B8CB25 /* OpenSharedVMViewController.h */,
-				E8D1AE911D1A72F900B8CB25 /* OpenSharedVMViewController.m */,
-				E8D1AE921D1A72F900B8CB25 /* OpenSharedVMViewController.xib */,
-				E8D1AE931D1A72F900B8CB25 /* Person.h */,
-				E8D1AE941D1A72F900B8CB25 /* Person.m */,
-				E8D1AE951D1A72F900B8CB25 /* PersonClusterView.h */,
-				E8D1AE961D1A72F900B8CB25 /* PersonClusterView.m */,
-				E8D1AE971D1A72F900B8CB25 /* PersonView.h */,
-				E8D1AE981D1A72F900B8CB25 /* PersonView.m */,
-				E8D1AE991D1A72F900B8CB25 /* PersonViewController.h */,
-				E8D1AE9A1D1A72F900B8CB25 /* PersonViewController.m */,
-				E8D1AE9B1D1A72F900B8CB25 /* PersonViewController.xib */,
-				E8D1AE9C1D1A72F900B8CB25 /* refresh.png */,
-				E8D1AE9D1D1A72F900B8CB25 /* service_off.png */,
-				E8D1AE9E1D1A72F900B8CB25 /* service_on.png */,
-				E8D1AE9F1D1A72F900B8CB25 /* SharedVM.h */,
-				E8D1AEA01D1A72F900B8CB25 /* SharedVM.m */,
-				E8D1AEA11D1A72F900B8CB25 /* ViewController.h */,
-				E8D1AEA21D1A72F900B8CB25 /* ViewController.m */,
-				E8D1AEA31D1A72F900B8CB25 /* WAYAppStoreWindow.h */,
-				E8D1AEA41D1A72F900B8CB25 /* WAYAppStoreWindow.m */,
-				E8D1AEA51D1A72F900B8CB25 /* WAYWindow.h */,
-				E8D1AEA61D1A72F900B8CB25 /* WAYWindow.m */,
 			);
 			name = AirVM;
 			sourceTree = "<group>";
@@ -333,31 +329,31 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E8D1AECE1D1A72F900B8CB25 /* WAYAppStoreWindow.h in Headers */,
-				E8D1AEA71D1A72F900B8CB25 /* AirVMTitleBarViewController.h in Headers */,
-				E8D1AEB81D1A72F900B8CB25 /* INWindowButton.h in Headers */,
+				E866D7CD1D1A807000F4365A /* WAYAppStoreWindow.h in Headers */,
+				E866D7A71D1A807000F4365A /* AirVMTitleBarViewController.h in Headers */,
+				E866D7B81D1A807000F4365A /* INWindowButton.h in Headers */,
 				329F6C1019FE633600439723 /* MenuBarController.h in Headers */,
-				E8D1AEAA1D1A72F900B8CB25 /* AirVMViewController.h in Headers */,
+				E866D7AA1D1A807000F4365A /* AirVMViewController.h in Headers */,
 				E8D1AE741D1A72A900B8CB25 /* BSBonjourClient.h in Headers */,
 				E8D1AE711D1A72A900B8CB25 /* AirVMManager.h in Headers */,
 				32A283731A6CF4DD00D51798 /* StatusItemButton.h in Headers */,
-				E8D1AEAC1D1A72F900B8CB25 /* AirVMWindowController.h in Headers */,
+				E866D7AC1D1A807000F4365A /* AirVMWindowController.h in Headers */,
 				E8D1AE731D1A72A900B8CB25 /* BonjourSDK.h in Headers */,
-				E8D1AEB21D1A72F900B8CB25 /* ConfirmToShareViewController.h in Headers */,
-				E8D1AEB51D1A72F900B8CB25 /* INAppStoreWindow.h in Headers */,
-				E8D1AEB01D1A72F900B8CB25 /* BJPublishActionButtonTransformer.h in Headers */,
-				E8D1AEBB1D1A72F900B8CB25 /* OpenSharedVMViewController.h in Headers */,
-				E8D1AED01D1A72F900B8CB25 /* WAYWindow.h in Headers */,
-				E8D1AEC01D1A72F900B8CB25 /* PersonClusterView.h in Headers */,
-				E8D1AECA1D1A72F900B8CB25 /* SharedVM.h in Headers */,
-				E8D1AEB71D1A72F900B8CB25 /* INAppStoreWindowCompatibility.h in Headers */,
-				E8D1AECC1D1A72F900B8CB25 /* ViewController.h in Headers */,
+				E866D7B21D1A807000F4365A /* ConfirmToShareViewController.h in Headers */,
+				E866D7B51D1A807000F4365A /* INAppStoreWindow.h in Headers */,
+				E866D7B01D1A807000F4365A /* BJPublishActionButtonTransformer.h in Headers */,
+				E866D7BA1D1A807000F4365A /* OpenSharedVMViewController.h in Headers */,
+				E866D7CF1D1A807000F4365A /* WAYWindow.h in Headers */,
+				E866D7BF1D1A807000F4365A /* PersonClusterView.h in Headers */,
+				E866D7C91D1A807000F4365A /* SharedVM.h in Headers */,
+				E866D7B71D1A807000F4365A /* INAppStoreWindowCompatibility.h in Headers */,
+				E866D7CB1D1A807000F4365A /* ViewController.h in Headers */,
 				E8D1AE781D1A72A900B8CB25 /* BSBonjourServer.h in Headers */,
-				E8D1AEC41D1A72F900B8CB25 /* PersonViewController.h in Headers */,
-				E8D1AEC21D1A72F900B8CB25 /* PersonView.h in Headers */,
-				E8D1AEAE1D1A72F900B8CB25 /* BJPublishActionButtonEnableTransformer.h in Headers */,
+				E866D7C31D1A807000F4365A /* PersonViewController.h in Headers */,
+				E866D7C11D1A807000F4365A /* PersonView.h in Headers */,
+				E866D7AE1D1A807000F4365A /* BJPublishActionButtonEnableTransformer.h in Headers */,
 				E8D1AE761D1A72A900B8CB25 /* BSBonjourConnection.h in Headers */,
-				E8D1AEBE1D1A72F900B8CB25 /* Person.h in Headers */,
+				E866D7BD1D1A807000F4365A /* Person.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -441,18 +437,18 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E866D7C61D1A807000F4365A /* refresh.png in Resources */,
+				E866D7B41D1A807000F4365A /* ConfirmToShareViewController.xib in Resources */,
+				E866D7C51D1A807000F4365A /* PersonViewController.xib in Resources */,
 				E8D1AED21D1A733600B8CB25 /* MyViewController.xib in Resources */,
-				E8D1AEC91D1A72F900B8CB25 /* service_on.png in Resources */,
-				E8D1AEBD1D1A72F900B8CB25 /* OpenSharedVMViewController.xib in Resources */,
-				E8D1AEB41D1A72F900B8CB25 /* ConfirmToShareViewController.xib in Resources */,
-				E8D1AEA91D1A72F900B8CB25 /* AirVMTitleBarViewController.xib in Resources */,
 				E866D77B1D1A7A0800F4365A /* airvm16.png in Resources */,
+				E866D7BC1D1A807000F4365A /* OpenSharedVMViewController.xib in Resources */,
 				E8D1AED61D1A756D00B8CB25 /* Main.storyboard in Resources */,
-				E8D1AEC61D1A72F900B8CB25 /* PersonViewController.xib in Resources */,
 				E866D7781D1A79D900F4365A /* airvm32@2x.png in Resources */,
-				E8D1AEC71D1A72F900B8CB25 /* refresh.png in Resources */,
-				E8D1AEC81D1A72F900B8CB25 /* service_off.png in Resources */,
 				E8D1AE7A1D1A72A900B8CB25 /* Info.plist in Resources */,
+				E866D7C71D1A807000F4365A /* service_off.png in Resources */,
+				E866D7C81D1A807000F4365A /* service_on.png in Resources */,
+				E866D7A91D1A807000F4365A /* AirVMTitleBarViewController.xib in Resources */,
 				E8D1AE1A1D1A6E6B00B8CB25 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -464,10 +460,6 @@
 				E866D77C1D1A7A0C00F4365A /* airvm16.png in Resources */,
 				E866D7791D1A79F700F4365A /* airvm32@2x.png in Resources */,
 				E866D7751D1A76E100F4365A /* Main.storyboard in Resources */,
-				E866D7711D1A76D900F4365A /* AirVMTitleBarViewController.xib in Resources */,
-				E866D7721D1A76D900F4365A /* ConfirmToShareViewController.xib in Resources */,
-				E866D7731D1A76D900F4365A /* OpenSharedVMViewController.xib in Resources */,
-				E866D7741D1A76D900F4365A /* PersonViewController.xib in Resources */,
 				E8D1AE1B1D1A6E7500B8CB25 /* Assets.xcassets in Resources */,
 				32A283681A6CE5E600D51798 /* AirVM Menu.framework in Resources */,
 				32A2834F1A6CE57500D51798 /* Images.xcassets in Resources */,
@@ -483,29 +475,29 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E8D1AECD1D1A72F900B8CB25 /* ViewController.m in Sources */,
-				E8D1AEAF1D1A72F900B8CB25 /* BJPublishActionButtonEnableTransformer.m in Sources */,
+				E866D7CC1D1A807000F4365A /* ViewController.m in Sources */,
+				E866D7AF1D1A807000F4365A /* BJPublishActionButtonEnableTransformer.m in Sources */,
 				32A283741A6CF4DD00D51798 /* StatusItemButton.m in Sources */,
 				E8D1AE771D1A72A900B8CB25 /* BSBonjourConnection.m in Sources */,
 				329F6C2719FE661600439723 /* MenuBarController.m in Sources */,
-				E8D1AEC51D1A72F900B8CB25 /* PersonViewController.m in Sources */,
-				E8D1AEB31D1A72F900B8CB25 /* ConfirmToShareViewController.m in Sources */,
+				E866D7C41D1A807000F4365A /* PersonViewController.m in Sources */,
+				E866D7B31D1A807000F4365A /* ConfirmToShareViewController.m in Sources */,
 				E8D1AE791D1A72A900B8CB25 /* BSBonjourServer.m in Sources */,
 				E8D1AE721D1A72A900B8CB25 /* AirVMManager.m in Sources */,
 				E8D1AE751D1A72A900B8CB25 /* BSBonjourClient.m in Sources */,
-				E8D1AEAB1D1A72F900B8CB25 /* AirVMViewController.m in Sources */,
-				E8D1AEC11D1A72F900B8CB25 /* PersonClusterView.m in Sources */,
-				E8D1AEA81D1A72F900B8CB25 /* AirVMTitleBarViewController.m in Sources */,
-				E8D1AECF1D1A72F900B8CB25 /* WAYAppStoreWindow.m in Sources */,
-				E8D1AEBF1D1A72F900B8CB25 /* Person.m in Sources */,
-				E8D1AEBC1D1A72F900B8CB25 /* OpenSharedVMViewController.m in Sources */,
-				E8D1AEB91D1A72F900B8CB25 /* INWindowButton.m in Sources */,
-				E8D1AEB11D1A72F900B8CB25 /* BJPublishActionButtonTransformer.m in Sources */,
-				E8D1AEC31D1A72F900B8CB25 /* PersonView.m in Sources */,
-				E8D1AED11D1A72F900B8CB25 /* WAYWindow.m in Sources */,
-				E8D1AEAD1D1A72F900B8CB25 /* AirVMWindowController.m in Sources */,
-				E8D1AEB61D1A72F900B8CB25 /* INAppStoreWindow.m in Sources */,
-				E8D1AECB1D1A72F900B8CB25 /* SharedVM.m in Sources */,
+				E866D7AB1D1A807000F4365A /* AirVMViewController.m in Sources */,
+				E866D7C01D1A807000F4365A /* PersonClusterView.m in Sources */,
+				E866D7A81D1A807000F4365A /* AirVMTitleBarViewController.m in Sources */,
+				E866D7CE1D1A807000F4365A /* WAYAppStoreWindow.m in Sources */,
+				E866D7BE1D1A807000F4365A /* Person.m in Sources */,
+				E866D7BB1D1A807000F4365A /* OpenSharedVMViewController.m in Sources */,
+				E866D7B91D1A807000F4365A /* INWindowButton.m in Sources */,
+				E866D7B11D1A807000F4365A /* BJPublishActionButtonTransformer.m in Sources */,
+				E866D7C21D1A807000F4365A /* PersonView.m in Sources */,
+				E866D7D01D1A807000F4365A /* WAYWindow.m in Sources */,
+				E866D7AD1D1A807000F4365A /* AirVMWindowController.m in Sources */,
+				E866D7B61D1A807000F4365A /* INAppStoreWindow.m in Sources */,
+				E866D7CA1D1A807000F4365A /* SharedVM.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
