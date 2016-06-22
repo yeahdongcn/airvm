@@ -10,7 +10,6 @@
 		32A2834B1A6CE57500D51798 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 32A2834A1A6CE57500D51798 /* AppDelegate.m */; };
 		32A2834D1A6CE57500D51798 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 32A2834C1A6CE57500D51798 /* main.m */; };
 		32A2834F1A6CE57500D51798 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 32A2834E1A6CE57500D51798 /* Images.xcassets */; };
-		32A283521A6CE57500D51798 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 32A283501A6CE57500D51798 /* MainMenu.xib */; };
 		32A2836B1A6CE61A00D51798 /* MyViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 32A2836A1A6CE61A00D51798 /* MyViewController.xib */; };
 		32A2836E1A6CE62300D51798 /* MyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 32A2836D1A6CE62300D51798 /* MyViewController.m */; };
 		E866D7751D1A76E100F4365A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E8D1AED51D1A756D00B8CB25 /* Main.storyboard */; };
@@ -43,6 +42,7 @@
 		E8C27A481D1A9FC300C23F48 /* BSBonjourServer.m in Sources */ = {isa = PBXBuildFile; fileRef = E8D1AE6F1D1A72A900B8CB25 /* BSBonjourServer.m */; };
 		E8C27A491D1A9FC300C23F48 /* MenuBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 329F6C2619FE661600439723 /* MenuBarController.m */; };
 		E8C27A4A1D1A9FC300C23F48 /* StatusItemButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 32A283721A6CF4DD00D51798 /* StatusItemButton.m */; };
+		E8C27A4C1D1AA12C00C23F48 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 32A283501A6CE57500D51798 /* MainMenu.xib */; };
 		E8D1AE1B1D1A6E7500B8CB25 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E8D1AE191D1A6E6B00B8CB25 /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
@@ -325,6 +325,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E8C27A4C1D1AA12C00C23F48 /* MainMenu.xib in Resources */,
 				E866D7D11D1A821D00F4365A /* AirVMTitleBarViewController.xib in Resources */,
 				E866D7D21D1A821D00F4365A /* ConfirmToShareViewController.xib in Resources */,
 				E866D7D31D1A821D00F4365A /* OpenSharedVMViewController.xib in Resources */,
@@ -335,7 +336,6 @@
 				E8D1AE1B1D1A6E7500B8CB25 /* Assets.xcassets in Resources */,
 				32A2834F1A6CE57500D51798 /* Images.xcassets in Resources */,
 				32A2836B1A6CE61A00D51798 /* MyViewController.xib in Resources */,
-				32A283521A6CE57500D51798 /* MainMenu.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
