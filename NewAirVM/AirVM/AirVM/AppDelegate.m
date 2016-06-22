@@ -65,7 +65,6 @@
 }
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
-    
     self.bonjourServer = [[BSBonjourServer alloc] initWithServiceType:kServiceName
                                                     transportProtocol:kServiceProtocol
                                                              delegate:self];
@@ -74,8 +73,6 @@
     self.status = Stopped;
     self.statusText = @"Not Published";
     self.bonjourClient = [[BSBonjourClient alloc] initWithServiceType:kServiceName transportProtocol:kServiceProtocol delegate:self];
-    //[self startServer];
-    //[self.bonjourClient startSearching];
 }
 
 - (void)applicationWillTerminate:(NSNotification *)aNotification {
@@ -93,7 +90,6 @@
 }
 
 - (IBAction)toggleAction:(id)sender {
-    
     if (self.status == Started) {
         self.status = Stopping;
         [self stopServer];
@@ -103,15 +99,13 @@
     }
 }
 
-- (void)startServer
-{
+- (void)startServer {
     NSLog(@"start servic");
     [self.bonjourClient startSearching];
     [self.bonjourServer publish];
 }
 
-- (void)stopServer
-{
+- (void)stopServer {
     NSLog(@"stop servic");
     [self.bonjourClient stopSearching];
     [self.bonjourClient.foundServices removeAllObjects];
@@ -132,8 +126,7 @@
     NSLog([NSString stringWithFormat:@"Service published with name: %@", name]);
 }
 
-- (void)registerFailed:(NSError *)error
-{
+- (void)registerFailed:(NSError *)error {
     self.status = Stopped;
     NSAlert *alert = [NSAlert alertWithError:error];
     //[alert beginSheetModalForWindow:self.window completionHandler:nil];
@@ -186,7 +179,6 @@
 }
 
 - (void)updateServiceList {
-    
     self.connectOthers = NO;
     [[AirVMManager sharedInstance] resetAirVMs];
     for (NSNetService* service in self.bonjourClient.foundServices) {
@@ -235,7 +227,6 @@
 }
 
 - (NSString *)getIPAddress {
-    
     NSString *address = @"error";
     struct ifaddrs *interfaces = NULL;
     struct ifaddrs *temp_addr = NULL;
@@ -251,18 +242,14 @@
                 if([[NSString stringWithUTF8String:temp_addr->ifa_name] isEqualToString:@"en0"]) {
                     // Get NSString from C String
                     address = [NSString stringWithUTF8String:inet_ntoa(((struct sockaddr_in *)temp_addr->ifa_addr)->sin_addr)];
-                    
                 }
-                
             }
-            
             temp_addr = temp_addr->ifa_next;
         }
     }
     // Free memory
     freeifaddrs(interfaces);
     return address;
-    
 }
 
 @end
