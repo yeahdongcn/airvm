@@ -7,7 +7,7 @@
 //
 
 #import <Cocoa/Cocoa.h>
-#import <BonjourSDK/BonjourSDK.h>
+#import "BonjourSDK.h"
 #import "PersonView.h"
 #import "OpenSharedVMViewController.h"
 

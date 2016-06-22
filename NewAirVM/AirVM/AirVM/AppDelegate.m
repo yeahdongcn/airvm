@@ -22,7 +22,7 @@
 #include <ifaddrs.h>
 #include <arpa/inet.h>
 
-#import <BonjourSDK/BonjourSDK.h>
+#import "BonjourSDK.h"
 
 #import "BJPublishActionButtonTransformer.h"
 #import "BJPublishActionButtonEnableTransformer.h"
