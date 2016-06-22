@@ -16,10 +16,11 @@
 @implementation AirVMTitleBarViewController
 
 - (void)viewDidLoad {
-    [super viewDidLoad];
-    self.refreshButton.enabled = NO;
+   [super viewDidLoad];
+   self.refreshButton.enabled = YES;
     // Do view setup here.
 }
+
 - (IBAction)onRefreshButtonPressed:(id)sender {
    [(AppDelegate *)([[NSApplication sharedApplication] delegate]) refreshService];
 }

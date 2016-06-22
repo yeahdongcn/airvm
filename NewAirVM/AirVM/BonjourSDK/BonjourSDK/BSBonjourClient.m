@@ -139,7 +139,6 @@
 }
 
 
-
 #pragma mark -
 #pragma mark NSNetServiceBrowserDelegate
 - (void)netServiceBrowserWillSearch:(NSNetServiceBrowser *)aNetServiceBrowser {

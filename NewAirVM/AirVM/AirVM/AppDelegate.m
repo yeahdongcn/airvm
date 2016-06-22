@@ -65,14 +65,14 @@
 }
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
-    self.bonjourServer = [[BSBonjourServer alloc] initWithServiceType:kServiceName
+   self.bonjourServer = [[BSBonjourServer alloc] initWithServiceType:kServiceName
                                                     transportProtocol:kServiceProtocol
                                                              delegate:self];
-
-    self.connectOthers = NO;
-    self.status = Stopped;
-    self.statusText = @"Not Published";
-    self.bonjourClient = [[BSBonjourClient alloc] initWithServiceType:kServiceName transportProtocol:kServiceProtocol delegate:self];
+   self.connectOthers = NO;
+   self.status = Stopped;
+   self.statusText = @"Not Published";
+   self.bonjourClient = [[BSBonjourClient alloc] initWithServiceType:kServiceName transportProtocol:kServiceProtocol delegate:self];
+   [self startServer];
 }
 
 - (void)applicationWillTerminate:(NSNotification *)aNotification {
@@ -100,9 +100,9 @@
 }
 
 - (void)startServer {
-    NSLog(@"start servic");
-    [self.bonjourClient startSearching];
-    [self.bonjourServer publish];
+   NSLog(@"start servic");
+   [self.bonjourServer publish];
+   [self.bonjourClient startSearching];
 }
 
 - (void)stopServer {
@@ -201,7 +201,6 @@
                          @"vncPort"    : @"9547"};
     NSData *data =   [NSJSONSerialization dataWithJSONObject:dic options:NSJSONWritingPrettyPrinted error:nil];
     [connection sendData:data];
-    
 }
 - (void)sendOpenSharedVM:(SharedVM *)vm withConnection:(BSBonjourConnection *)connection {
    NSString *message = vm.message;
